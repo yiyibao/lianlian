@@ -77,6 +77,7 @@ git rebase master-----保持与本地一致
 git br -a可看到远端所有分支
 clone后新创建的分支拿到本地仓库方法：
 git fetch origin newname
+git fetch -p
 git br
 git co newname
 git br-----即可拿到
