@@ -39,7 +39,7 @@
 
 
         .yo-scroller {
-             /*@include border(0 1px 0 0, $line-color, solid);*/
+            @include border(0 1px 0 0, $line-color, solid);
             position: absolute;
         }
         .yo-list > .item{
@@ -82,7 +82,7 @@
         &:last-child {
             @include flex(1);
             width: auto;
-            /*@include justify-content(center);*/
+            @include justify-content(center);
             .yo-scroller{
                 @include border(0 0 0 0, transparent, solid);
                 position: absolute;
@@ -96,7 +96,7 @@
                 }
             }
         }
-    }
+    }    
 }
 
 .select-checkbox{

@@ -1,48 +1,26 @@
-body{
-    background-color: #f6f6f6;padding-top:20px;
+@import  "../fragment/yo-search";
+@import  "../fragment/yo-header";
+
+
+#root{
+    height:100%;
 }
-#root,.app{
-    height:100%
-}
-.app{
-    @include flexbox();
-    @include flex-direction(column);
-    a{
-        color:#585858;
-    }
-    header{
-        height:.46rem;
-    }
-    .section{
-        flex:1;
-    }
-    footer{
-        height:.56rem;
-        @include border(1px 0 0 0, #fff);
-        ul{
-            @include flexbox();
-            @include justify-content(space-around);
-           li  a{
-                height:100%;
-                @include flexbox();
-                @include flex-direction(column);
-                @include justify-content(center);
-                @include align-items(center);
-                i{
-                    font-size:.20rem;
-                }
-                b{
-                    font-style: normal;font-size:.12rem;
-                }
-            }
-            .active{
-                color:#fd4848;font-weight: bold;
-            }
-        }
-    }
-}
-@font-face{
-    font-family: yofont;
-    src:url(/iconfont/iconfont.woff) format("woff"),
-    url(/iconfont/iconfont.ttf) format("truetype");
-}
+@font-face {
+  font-family: yofont;
+  src: url(/iconfont/iconfont.woff) format("woff"), url(/iconfont/iconfont.woff) format("truetype"); }
+
+@font-face {
+  font-family: yofont;
+  src: url(/iconfont/iconfont-search.woff) format("woff"), url(/iconfont/iconfont-search.woff) format("truetype"); }
+ @include yo-search(
+   $input-bgcolor:#eee,
+   $bgcolor:#fff,
+   $input-radius:.2rem
+ 
+
+  
+);
+ @font-face {
+  font-family: yofont;
+  src: url(/iconfont/iconfont-my.woff) format("woff"), url(/iconfont/iconfont-my.woff) format("truetype"); }
+

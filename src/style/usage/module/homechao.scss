@@ -1,0 +1,22 @@
+
+
+
+
+ ul.chaolist{
+   @include flexbox()
+   li{
+     @include flex();
+     img{
+      width:100%;
+     }
+   }
+   
+  }
+.title{
+  height: 1rem;
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
+

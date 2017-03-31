@@ -1,0 +1,140 @@
+.my-header{
+  
+  padding-top:.75rem;
+  background-color: #f66;
+  height:2.2rem;
+  .wrap{
+    margin-left: 1rem;
+      .hi{
+    color: #fff;
+    font-size: .14rem;
+    }
+    li{
+      list-style: none;
+    }
+    .huanying{
+      line-height: .4rem;
+
+    }
+    .input{
+    @include flexbox();
+    @justify-content(space-around);
+    .login{
+     
+      display: inline-block;
+      width: .65rem;
+      height: .35rem;
+     /* @include border(1px 0 0 0, #fff);*/
+     border:1px solid #fff;
+     
+      margin: .2rem .15rem 0 0;
+      padding:.05rem;
+      font-size: .14rem;
+      text-align:center;
+      line-height: .2.4rem;
+      color: #fff;
+      border-radius: .1rem;
+    }
+    .register{
+      
+        display: inline-block;
+       width: .65rem;
+      height: .35rem;
+      border: 1px solid #fff;
+      margin: .2rem 0 0 .15rem ;
+      padding:.05rem;
+      font-size: .14rem;
+      text-align:center;
+      line-height: .2.4rem;
+      color: #fff;
+      border-radius: .1rem;
+
+    }
+    .exit{
+      width: .5rem;
+      height:.35rem;
+     display: inline-block;
+      padding:.05rem;
+      margin:.2rem 0rem 0 .3rem;
+    }
+  }
+  
+  }
+}
+.account-list{
+  background-color: #fff;
+  margin:0 0 .2rem 0;
+  color:#666;
+  font-size: .28rem;
+  @include flexbox();
+  @include flex-direction(column);
+  .ll-ui-row{
+    background-color: #fff;
+    padding:0 .3rem;
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(flex-start);
+    height:.5rem;
+    border-bottom:.01rem solid red;
+    .cell{
+     /* border-bottom:1px solid red;*/
+      zoom:0.5;
+    }
+    .cell:first-child{
+      border:none;
+      margin-right: .24rem;
+        height:.28rem;
+         width: .28rem;
+           background-image: url(http://m.lianlianlife.com/images/menu/sprite.png?1484804959021);
+           background-repeat: no-repeat;
+      .icon-menu-address{
+        background-position: -107px -52px; 
+        display:inline-block;   
+        width: .28rem;
+        height:.28rem;  
+      }
+       
+       .tuihuo{
+        background-position: -52px -107px; 
+       }
+    }
+    .cell:last-child{
+      line-height: 
+      .5rem;
+width:50%;
+color: #f55;
+font-size: .28rem;
+
+position: relative;
+line-height: .3rem;
+.look{
+  margin-left: .6rem;
+}
+}
+
+
+      
+/*.
+}
+
+
+
+      .cell-address{
+        margin-left: .2rem;
+      }
+      .icon-a{
+        margin-left: .4rem;
+      }
+     
+    .cell{
+     font-size: .20rem;
+     
+     
+      
+      .cell{
+        zoom:0.5;
+      }
+    }
+*/
+  }
+}
