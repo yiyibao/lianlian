@@ -63,127 +63,11 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 109);
+/******/ 	return __webpack_require__(__webpack_require__.s = 57);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
-
-module.exports = window.React;
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-
-exports.default = function (instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-};
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-
-var _defineProperty = __webpack_require__(79);
-
-var _defineProperty2 = _interopRequireDefault(_defineProperty);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
-      (0, _defineProperty2.default)(target, descriptor.key, descriptor);
-    }
-  }
-
-  return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) defineProperties(Constructor, staticProps);
-    return Constructor;
-  };
-}();
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-
-var _setPrototypeOf = __webpack_require__(189);
-
-var _setPrototypeOf2 = _interopRequireDefault(_setPrototypeOf);
-
-var _create = __webpack_require__(188);
-
-var _create2 = _interopRequireDefault(_create);
-
-var _typeof2 = __webpack_require__(17);
-
-var _typeof3 = _interopRequireDefault(_typeof2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = function (subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : (0, _typeof3.default)(superClass)));
-  }
-
-  subClass.prototype = (0, _create2.default)(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      enumerable: false,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) _setPrototypeOf2.default ? (0, _setPrototypeOf2.default)(subClass, superClass) : subClass.__proto__ = superClass;
-};
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-
-var _typeof2 = __webpack_require__(17);
-
-var _typeof3 = _interopRequireDefault(_typeof2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = function (self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return call && ((typeof call === "undefined" ? "undefined" : (0, _typeof3.default)(call)) === "object" || typeof call === "function") ? call : self;
-};
-
-/***/ }),
-/* 5 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -369,128 +253,13 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
-  Copyright (c) 2016 Jed Watson.
-  Licensed under the MIT License (MIT), see
-  http://jedwatson.github.io/classnames
-*/
-/* global define */
-
-(function () {
-	'use strict';
-
-	var hasOwn = {}.hasOwnProperty;
-
-	function classNames () {
-		var classes = [];
-
-		for (var i = 0; i < arguments.length; i++) {
-			var arg = arguments[i];
-			if (!arg) continue;
-
-			var argType = typeof arg;
-
-			if (argType === 'string' || argType === 'number') {
-				classes.push(arg);
-			} else if (Array.isArray(arg)) {
-				classes.push(classNames.apply(null, arg));
-			} else if (argType === 'object') {
-				for (var key in arg) {
-					if (hasOwn.call(arg, key) && arg[key]) {
-						classes.push(key);
-					}
-				}
-			}
-		}
-
-		return classes.join(' ');
-	}
-
-	if (typeof module !== 'undefined' && module.exports) {
-		module.exports = classNames;
-	} else if (true) {
-		// register as 'classnames', consistent with npm package name
-		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
-			return classNames;
-		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	} else {
-		window.classNames = classNames;
-	}
-}());
-
-
-/***/ }),
-/* 7 */
+/* 1 */
 /***/ (function(module, exports) {
 
-// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
-var global = module.exports = typeof window != 'undefined' && window.Math == Math
-  ? window : typeof self != 'undefined' && self.Math == Math ? self : Function('return this')();
-if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
+module.exports = window.React;
 
 /***/ }),
-/* 8 */
-/***/ (function(module, exports) {
-
-var core = module.exports = {version: '2.4.0'};
-if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Thank's IE8 for his funny defineProperty
-module.exports = !__webpack_require__(22)(function(){
-  return Object.defineProperty({}, 'a', {get: function(){ return 7; }}).a != 7;
-});
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports) {
-
-var hasOwnProperty = {}.hasOwnProperty;
-module.exports = function(it, key){
-  return hasOwnProperty.call(it, key);
-};
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var anObject       = __webpack_require__(21)
-  , IE8_DOM_DEFINE = __webpack_require__(66)
-  , toPrimitive    = __webpack_require__(45)
-  , dP             = Object.defineProperty;
-
-exports.f = __webpack_require__(9) ? Object.defineProperty : function defineProperty(O, P, Attributes){
-  anObject(O);
-  P = toPrimitive(P, true);
-  anObject(Attributes);
-  if(IE8_DOM_DEFINE)try {
-    return dP(O, P, Attributes);
-  } catch(e){ /* empty */ }
-  if('get' in Attributes || 'set' in Attributes)throw TypeError('Accessors not supported!');
-  if('value' in Attributes)O[P] = Attributes.value;
-  return O;
-};
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// to indexed object, toObject with fallback for non-array-like ES3 strings
-var IObject = __webpack_require__(67)
-  , defined = __webpack_require__(35);
-module.exports = function(it){
-  return IObject(defined(it));
-};
-
-/***/ }),
-/* 13 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -549,229 +318,10 @@ function invariant(condition, format, a, b, c, d, e, f) {
 }
 
 module.exports = invariant;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 14 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var global    = __webpack_require__(7)
-  , core      = __webpack_require__(8)
-  , ctx       = __webpack_require__(64)
-  , hide      = __webpack_require__(15)
-  , PROTOTYPE = 'prototype';
-
-var $export = function(type, name, source){
-  var IS_FORCED = type & $export.F
-    , IS_GLOBAL = type & $export.G
-    , IS_STATIC = type & $export.S
-    , IS_PROTO  = type & $export.P
-    , IS_BIND   = type & $export.B
-    , IS_WRAP   = type & $export.W
-    , exports   = IS_GLOBAL ? core : core[name] || (core[name] = {})
-    , expProto  = exports[PROTOTYPE]
-    , target    = IS_GLOBAL ? global : IS_STATIC ? global[name] : (global[name] || {})[PROTOTYPE]
-    , key, own, out;
-  if(IS_GLOBAL)source = name;
-  for(key in source){
-    // contains in native
-    own = !IS_FORCED && target && target[key] !== undefined;
-    if(own && key in exports)continue;
-    // export native or passed
-    out = own ? target[key] : source[key];
-    // prevent global pollution for namespaces
-    exports[key] = IS_GLOBAL && typeof target[key] != 'function' ? source[key]
-    // bind timers to global for call from export context
-    : IS_BIND && own ? ctx(out, global)
-    // wrap global constructors for prevent change them in library
-    : IS_WRAP && target[key] == out ? (function(C){
-      var F = function(a, b, c){
-        if(this instanceof C){
-          switch(arguments.length){
-            case 0: return new C;
-            case 1: return new C(a);
-            case 2: return new C(a, b);
-          } return new C(a, b, c);
-        } return C.apply(this, arguments);
-      };
-      F[PROTOTYPE] = C[PROTOTYPE];
-      return F;
-    // make static versions for prototype methods
-    })(out) : IS_PROTO && typeof out == 'function' ? ctx(Function.call, out) : out;
-    // export proto methods to core.%CONSTRUCTOR%.methods.%NAME%
-    if(IS_PROTO){
-      (exports.virtual || (exports.virtual = {}))[key] = out;
-      // export proto methods to core.%CONSTRUCTOR%.prototype.%NAME%
-      if(type & $export.R && expProto && !expProto[key])hide(expProto, key, out);
-    }
-  }
-};
-// type bitmap
-$export.F = 1;   // forced
-$export.G = 2;   // global
-$export.S = 4;   // static
-$export.P = 8;   // proto
-$export.B = 16;  // bind
-$export.W = 32;  // wrap
-$export.U = 64;  // safe
-$export.R = 128; // real proto method for `library` 
-module.exports = $export;
-
-/***/ }),
-/* 15 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var dP         = __webpack_require__(11)
-  , createDesc = __webpack_require__(28);
-module.exports = __webpack_require__(9) ? function(object, key, value){
-  return dP.f(object, key, createDesc(1, value));
-} : function(object, key, value){
-  object[key] = value;
-  return object;
-};
-
-/***/ }),
-/* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var store      = __webpack_require__(43)('wks')
-  , uid        = __webpack_require__(29)
-  , Symbol     = __webpack_require__(7).Symbol
-  , USE_SYMBOL = typeof Symbol == 'function';
-
-var $exports = module.exports = function(name){
-  return store[name] || (store[name] =
-    USE_SYMBOL && Symbol[name] || (USE_SYMBOL ? Symbol : uid)('Symbol.' + name));
-};
-
-$exports.store = store;
-
-/***/ }),
-/* 17 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-
-var _iterator = __webpack_require__(191);
-
-var _iterator2 = _interopRequireDefault(_iterator);
-
-var _symbol = __webpack_require__(190);
-
-var _symbol2 = _interopRequireDefault(_symbol);
-
-var _typeof = typeof _symbol2.default === "function" && typeof _iterator2.default === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default && obj !== _symbol2.default.prototype ? "symbol" : typeof obj; };
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = typeof _symbol2.default === "function" && _typeof(_iterator2.default) === "symbol" ? function (obj) {
-  return typeof obj === "undefined" ? "undefined" : _typeof(obj);
-} : function (obj) {
-  return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default && obj !== _symbol2.default.prototype ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof(obj);
-};
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports) {
-
-module.exports = window.ReactDOM;
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.DELAY_TIME_FOR_INFINITE_WITHOUT_HEIGHT = undefined;
-
-var _typeof2 = __webpack_require__(17);
-
-var _typeof3 = _interopRequireDefault(_typeof2);
-
-exports.getArrayByLength = getArrayByLength;
-exports.shallowEqual = shallowEqual;
-exports.getElementOffsetY = getElementOffsetY;
-exports.inheritProps = inheritProps;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function getArrayByLength(length) {
-    var ret = [];
-    for (var i = 0; i < length; i++) {
-        ret[i] = null;
-    }
-    return ret;
-}
-
-function is(x, y) {
-    var ret = void 0;
-    if (x === y) {
-        ret = x !== 0 || y !== 0 || 1 / x === 1 / y;
-    } else {
-        // return x !== x && y !== y;
-        ret = isNaN(x) && isNaN(y);
-    }
-
-    return ret;
-}
-
-function shallowEqual(objA, objB) {
-    if (is(objA, objB)) {
-        return true;
-    }
-
-    if ((typeof objA === 'undefined' ? 'undefined' : (0, _typeof3.default)(objA)) !== 'object' || objA === null || (typeof objB === 'undefined' ? 'undefined' : (0, _typeof3.default)(objB)) !== 'object' || objB === null) {
-        return false;
-    }
-
-    var keysA = Object.keys(objA);
-    var keysB = Object.keys(objB);
-
-    if (keysA.length !== keysB.length) {
-        return false;
-    }
-
-    var hasOwnProperty = Object.prototype.hasOwnProperty;
-
-    for (var i = 0; i < keysA.length; i++) {
-        if (!hasOwnProperty.call(objB, keysA[i]) || !is(objA[keysA[i]], objB[keysA[i]])) {
-            return false;
-        }
-    }
-
-    return true;
-}
-
-function getElementOffsetY(ele, parent) {
-    var y = 0;
-    while (ele !== parent && ele !== null) {
-        y += ele.offsetTop;
-        ele = ele.offsetParent;
-    }
-    return y;
-}
-
-var DELAY_TIME_FOR_INFINITE_WITHOUT_HEIGHT = exports.DELAY_TIME_FOR_INFINITE_WITHOUT_HEIGHT = 250;
-
-function inheritProps(props, attrs) {
-    return attrs.reduce(function (ret, attr) {
-        ret[attr] = props[attr];
-        return ret;
-    }, {});
-}
-
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "util.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ }),
-/* 20 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -815,113 +365,68 @@ function reactProdInvariant(code) {
 module.exports = reactProdInvariant;
 
 /***/ }),
-/* 21 */
+/* 4 */
+/***/ (function(module, exports) {
+
+module.exports = window.ReactDOM;
+
+/***/ }),
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(23);
-module.exports = function(it){
-  if(!isObject(it))throw TypeError(it + ' is not an object!');
-  return it;
-};
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+  Copyright (c) 2016 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+/* global define */
+
+(function () {
+	'use strict';
+
+	var hasOwn = {}.hasOwnProperty;
+
+	function classNames () {
+		var classes = [];
+
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (!arg) continue;
+
+			var argType = typeof arg;
+
+			if (argType === 'string' || argType === 'number') {
+				classes.push(arg);
+			} else if (Array.isArray(arg)) {
+				classes.push(classNames.apply(null, arg));
+			} else if (argType === 'object') {
+				for (var key in arg) {
+					if (hasOwn.call(arg, key) && arg[key]) {
+						classes.push(key);
+					}
+				}
+			}
+		}
+
+		return classes.join(' ');
+	}
+
+	if (typeof module !== 'undefined' && module.exports) {
+		module.exports = classNames;
+	} else if (true) {
+		// register as 'classnames', consistent with npm package name
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
+			return classNames;
+		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {
+		window.classNames = classNames;
+	}
+}());
+
 
 /***/ }),
-/* 22 */
-/***/ (function(module, exports) {
-
-module.exports = function(exec){
-  try {
-    return !!exec();
-  } catch(e){
-    return true;
-  }
-};
-
-/***/ }),
-/* 23 */
-/***/ (function(module, exports) {
-
-module.exports = function(it){
-  return typeof it === 'object' ? it !== null : typeof it === 'function';
-};
-
-/***/ }),
-/* 24 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 19.1.2.14 / 15.2.3.14 Object.keys(O)
-var $keys       = __webpack_require__(71)
-  , enumBugKeys = __webpack_require__(36);
-
-module.exports = Object.keys || function keys(O){
-  return $keys(O, enumBugKeys);
-};
-
-/***/ }),
-/* 25 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-
-var _assign = __webpack_require__(187);
-
-var _assign2 = _interopRequireDefault(_assign);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _assign2.default || function (target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i];
-
-    for (var key in source) {
-      if (Object.prototype.hasOwnProperty.call(source, key)) {
-        target[key] = source[key];
-      }
-    }
-  }
-
-  return target;
-};
-
-/***/ }),
-/* 26 */
-/***/ (function(module, exports) {
-
-module.exports = window.ReactRouter;
-
-/***/ }),
-/* 27 */
-/***/ (function(module, exports) {
-
-exports.f = {}.propertyIsEnumerable;
-
-/***/ }),
-/* 28 */
-/***/ (function(module, exports) {
-
-module.exports = function(bitmap, value){
-  return {
-    enumerable  : !(bitmap & 1),
-    configurable: !(bitmap & 2),
-    writable    : !(bitmap & 4),
-    value       : value
-  };
-};
-
-/***/ }),
-/* 29 */
-/***/ (function(module, exports) {
-
-var id = 0
-  , px = Math.random();
-module.exports = function(key){
-  return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
-};
-
-/***/ }),
-/* 30 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -937,7 +442,7 @@ module.exports = function(key){
 
 
 
-var emptyFunction = __webpack_require__(51);
+var emptyFunction = __webpack_require__(12);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -991,511 +496,95 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 module.exports = warning;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 31 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("F:\\react-app\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
-var _fastclick = __webpack_require__(98);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 
-var _fastclick2 = _interopRequireDefault(_fastclick);
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-var _reactTapEventPlugin = __webpack_require__(126);
-
-var _reactTapEventPlugin2 = _interopRequireDefault(_reactTapEventPlugin);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Created by Ellery1 on 16/7/8.
- */
-if (!window.___yoTapEventInjected) {
-    // 不要觉得这里没用
-    // 因为yo-router也用了tap-event-plugin，如果不加try catch会报引用两次tap-event-plugin的警告
-    try {
-        (0, _reactTapEventPlugin2.default)();
-    } catch (e) {}
-
-    if (document.readyState === 'complete' || document.readyState === 'interactive') {
-        _fastclick2.default.attach(document.body);
+exports.getArrayByLength = getArrayByLength;
+exports.shallowEqual = shallowEqual;
+exports.getElementOffsetY = getElementOffsetY;
+exports.inheritProps = inheritProps;
+function getArrayByLength(length) {
+    var ret = [];
+    for (var i = 0; i < length; i++) {
+        ret[i] = null;
     }
-
-    document.addEventListener('DOMContentLoaded', function () {
-        _fastclick2.default.attach(document.body);
-    });
-    document.body.addEventListener('touchmove', function (evt) {
-        evt.preventDefault();
-    });
-    window.___yoTapEventInjected = true;
+    return ret;
 }
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "tapEventPluginInit.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ }),
-/* 32 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _extends2 = __webpack_require__(25);
-
-var _extends3 = _interopRequireDefault(_extends2);
-
-var _classCallCheck2 = __webpack_require__(1);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(2);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = __webpack_require__(4);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(3);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _util = __webpack_require__(19);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * @component LazyImage
- * @author jiao.shen
- * @description 懒加载图片组件，只能在 `Scroller` 和 `List` 中使用。
- *
- * 使用这个组件代替img标签后，会延迟加载这个图片，直到List组件的滚动使得该图片位于可视区域之内。
- * @instructions {instruInfo: ./lazyimage.md}{instruUrl: scroller/lazyimage.html?hideIcon}
- * @version  3.0.2
- */
-var TO_BE_LOADED = 0;
-var LOADING = 1;
-var LOADED = 2;
-
-var _class = function (_Component) {
-    (0, _inherits3.default)(_class, _Component);
-
-    function _class(props) {
-        (0, _classCallCheck3.default)(this, _class);
-
-        // 0->等待load,1->loading,2->loaded
-        var _this = (0, _possibleConstructorReturn3.default)(this, (_class.__proto__ || Object.getPrototypeOf(_class)).call(this, props));
-
-        _this.loading = TO_BE_LOADED;
-        _this.state = {
-            src: _this.props.defaultImage
-        };
-        return _this;
+function is(x, y) {
+    var ret = void 0;
+    if (x === y) {
+        ret = x !== 0 || y !== 0 || 1 / x === 1 / y;
+    } else {
+        // return x !== x && y !== y;
+        ret = isNaN(x) && isNaN(y);
     }
 
-    (0, _createClass3.default)(_class, [{
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            this.refresh(this.context);
-            var scroller = this.context.list || this.context.scroller;
-            if (scroller) {
-                scroller.childLazyImages.push(this);
-            }
-        }
+    return ret;
+}
 
-        // 父组件render时,需要重置这个组件的loaded状态和context
-
-    }, {
-        key: 'componentWillReceiveProps',
-        value: function componentWillReceiveProps(nextProps, nextContext) {
-            this.refresh(nextContext);
-
-            if (this.state.src !== nextProps.src) {
-                this.loading = TO_BE_LOADED;
-                this.setState({ src: this.props.defaultImage });
-            }
-        }
-    }, {
-        key: 'componentWillUnmount',
-        value: function componentWillUnmount() {
-            var scroller = this.context.list || this.context.scroller;
-            if (scroller) {
-                scroller.childLazyImages.splice(scroller.childLazyImages.indexOf(this), 1);
-            }
-            this.canLoadImage = false;
-        }
-    }, {
-        key: 'refresh',
-        value: function refresh(context) {
-            this.canLoadImage = true;
-            this.offsetY = context.offsetY;
-            this.itemRef = context.itemRef;
-            this.infinite = context.infinite;
-            // 如果不是infinite的列表，那么应该获取offsetTop(这个开销还挺大的，不过没得优化了)，反之，则使用translateY
-            if (!this.infinite) {
-                this.offsetTop = (0, _util.getElementOffsetY)(this.img);
-                this.height = this.img.offsetHeight;
-            }
-        }
-    }, {
-        key: 'load',
-        value: function load(callback) {
-            var _this2 = this;
-
-            if (this.loading === TO_BE_LOADED) {
-                var src = this.props.src,
-                    tmpImg = new Image();
-
-                this.loading = LOADING;
-                tmpImg.onload = function () {
-                    // 在lazyimage正在加载时组件unmount(主要是在SPA模式下有可能发生关闭view的情况)会报错
-                    // 因此这里需要简单判断一下组件的实例是否还存在
-                    if (_this2 && _this2.canLoadImage) {
-                        _this2.loading = LOADED;
-                        _this2.setState({ src: src, loaded: true });
-                        if (callback) {
-                            callback();
-                        }
-                    }
-                };
-                tmpImg.src = src;
-            }
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            var _this3 = this;
-
-            var _props = this.props,
-                height = _props.height,
-                style = _props.style,
-                customAttr = _props.customAttr;
-            // 解决和touchable组件结合使用的问题，必须能够接收这四个属性
-
-            if (this.context.list) {
-                if (height == null && style.height == null) {
-                    throw Error('yo-lazyimage: 在List组件中使用LazyImage必须指定图片的高度。');
-                }
-            }
-
-            return _react2.default.createElement('img', (0, _extends3.default)({}, (0, _util.inheritProps)(this.props, ['onTouchStart', 'onTouchMove', 'onTouchEnd', 'onTouchCancel', 'width', 'height', 'className', 'title', 'style']), {
-                alt: this.props.alt,
-                ref: function ref(img) {
-                    if (img) _this3.img = img;
-                },
-                src: this.state.src
-            }, customAttr));
-        }
-    }]);
-    return _class;
-}(_react.Component);
-
-_class.contextTypes = {
-    // 从父组件context接收的属性
-    // list/scroller组件实例的引用
-    list: _react.PropTypes.object,
-    scroller: _react.PropTypes.object,
-    // listitem的offsetY(infinite模式下)
-    offsetY: _react.PropTypes.number,
-    // listitem实例的引用
-    itemRef: _react.PropTypes.object,
-    // 是否是Scroller下面的Lazyload,而不是List下面的
-    isScroller: _react.PropTypes.bool,
-    // 是否是infinite列表
-    infinite: _react.PropTypes.bool
-};
-_class.propTypes = {
-    /**
-     * @property defaultImage
-     * @type String
-     * @default null
-     * @description 默认图片，在原图片还没有完成加载时展示。
-     */
-    defaultImage: _react.PropTypes.string,
-    /**
-     * @property src
-     * @type String
-     * @default null
-     * @description 图片src，必需。
-     */
-    src: _react.PropTypes.string.isRequired,
-    /**
-     * @property className
-     * @type String
-     * @default null
-     * @description 给img标签加的类名。
-     */
-    className: _react.PropTypes.string,
-    /**
-     * @property width
-     * @type Number
-     * @default null
-     * @description 图片宽度。
-     */
-    width: _react.PropTypes.oneOfType([_react.PropTypes.number, _react.PropTypes.string]),
-    /**
-     * @property height
-     * @type Number
-     * @default null
-     * @description 图片高度。
-     */
-    height: _react.PropTypes.oneOfType([_react.PropTypes.number, _react.PropTypes.string]),
-    /**
-     * @property customAttr
-     * @type Object
-     * @default null
-     * @description 附加给img dom节点的自定义属性，属性名需要以data-开头。
-     */
-    customAttr: _react.PropTypes.object,
-    /**
-     * @property style
-     * @type Object
-     * @default null
-     * @description 附加给img dom节点的style。
-     */
-    style: _react.PropTypes.object,
-    /**
-     * @property alt
-     * @type String
-     * @default null
-     * @description 和img标签的alt属性相同。
-     */
-    alt: _react.PropTypes.string,
-    /**
-     * @property title
-     * @type String
-     * @default null
-     * @description 和img标签的title属性相同。
-     */
-    title: _react.PropTypes.string,
-    onTouchStart: _react.PropTypes.func,
-    onTouchMove: _react.PropTypes.func,
-    onTouchEnd: _react.PropTypes.func,
-    onTouchCancel: _react.PropTypes.func
-};
-_class.defaultProps = {
-    defaultImage: null,
-    src: null,
-    className: null,
-    width: null,
-    height: null,
-    customAttr: {},
-    style: null
-};
-exports.default = _class;
-
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ }),
-/* 33 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.loading = undefined;
-
-var _objectWithoutProperties2 = __webpack_require__(80);
-
-var _objectWithoutProperties3 = _interopRequireDefault(_objectWithoutProperties2);
-
-var _extends2 = __webpack_require__(25);
-
-var _extends3 = _interopRequireDefault(_extends2);
-
-var _classCallCheck2 = __webpack_require__(1);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(2);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = __webpack_require__(4);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(3);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(18);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _modal = __webpack_require__(102);
-
-var _modal2 = _interopRequireDefault(_modal);
-
-var _loading = __webpack_require__(101);
-
-var _loading2 = _interopRequireDefault(_loading);
-
-__webpack_require__(61);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var container = document.createElement('div'); /**
-                                                * 加载动画api
-                                                * @component loading
-                                                * @type {Object}
-                                                * @version 3.0.0
-                                                * @description Loading API，调用后弹出一个居中的Loading Icon。
-                                                *
-                                                * @instructions {instruInfo: ./loading.md}{instruUrl: loading.html?hideIcon}
-                                                * @author zongze.li
-                                                */
-
-document.body.appendChild(container);
-
-var that = null;
-
-var loadingApiPropTypes = {
-    /**
-     * @property text
-     * @type String
-     * @default ''
-     * @description loading伴随动画图标的文字。
-     */
-    text: _react.PropTypes.string,
-    /**
-     * @property extraClass
-     * @type String
-     * @default ''
-     * @description 附加给loading组件内层的div的额外class。
-     */
-    extraClass: _react.PropTypes.string,
-    /**
-     * @property modalExtraClass
-     * @type String
-     * @default ''
-     * @description 附加给外层modal组件的额外class。
-     */
-    modalExtraClass: _react.PropTypes.string,
-    /**
-     * @property show
-     * @type Bool
-     * @default false
-     * @description 是否显示loading，true为显示loading动画，false为隐藏。
-     */
-    show: _react.PropTypes.bool,
-    /**
-     * @property contentOffset
-     * @type Array
-     * @default [0,0]
-     * @description 内容区在水平/垂直方向上的偏移,例如[0,-100]可以使模态框内容区向上偏移100个像素。
-     */
-    contentOffset: _react.PropTypes.arrayOf(_react.PropTypes.number),
-    /**
-     * @property maskOffset
-     * @type Array
-     * @default [0,0]
-     * @description 蒙层遮盖的范围。如果不需要蒙层遮盖住整个屏幕,可以设置这个属性。
-     *
-     * 数组的第一个元素代表蒙层上边缘距离屏幕顶部的距离,第二个元素代表下边缘距离底部的距离。
-     */
-    maskOffset: _react.PropTypes.arrayOf(_react.PropTypes.number)
-};
-
-var loadingApiDefaultProps = {
-    text: '',
-    extraClass: '',
-    show: false,
-    contentOffset: [0, 0],
-    maskOffset: [0, 0]
-};
-
-var LoadingApi = function (_Component) {
-    (0, _inherits3.default)(LoadingApi, _Component);
-
-    function LoadingApi(props) {
-        (0, _classCallCheck3.default)(this, LoadingApi);
-
-        var _this = (0, _possibleConstructorReturn3.default)(this, (LoadingApi.__proto__ || Object.getPrototypeOf(LoadingApi)).call(this, props));
-
-        _this.state = (0, _extends3.default)({}, props);
-        that = _this;
-        return _this;
+function shallowEqual(objA, objB) {
+    if (is(objA, objB)) {
+        return true;
     }
 
-    (0, _createClass3.default)(LoadingApi, [{
-        key: 'render',
-        value: function render() {
-            var _state = this.state,
-                text = _state.text,
-                modalExtraClass = _state.modalExtraClass,
-                extraClass = _state.extraClass,
-                restProps = (0, _objectWithoutProperties3.default)(_state, ['text', 'modalExtraClass', 'extraClass']);
-
-            return _react2.default.createElement(
-                _modal2.default,
-                (0, _extends3.default)({
-                    align: 'center',
-                    extraClass: modalExtraClass
-                }, restProps),
-                _react2.default.createElement(_loading2.default, {
-                    extraClass: extraClass,
-                    text: text
-                })
-            );
-        }
-    }]);
-    return LoadingApi;
-}(_react.Component);
-
-LoadingApi.propTypes = loadingApiPropTypes;
-LoadingApi.defaultProps = loadingApiDefaultProps;
-
-_reactDom2.default.render(_react2.default.createElement(LoadingApi, null), container);
-exports.default = _loading2.default;
-var loading = exports.loading = {
-    /**
-     * show展示
-     * @method show
-     * @category loading
-     * @version 3.0.0
-     * @param {Object} options 需要设置的组件属性，如预留顶部高度，额外样式之类的，具体见上面的属性文档描述。
-     * @description api方法：显示Loding层，并设置传入的options参数中的属性。
-     */
-    show: function show(options) {
-        that.setState(Object.assign({}, options, { show: true }));
-    },
-    /**
-     * hide隐藏
-     * @method hide
-     * @category loading
-     * @version 3.0.0
-     * @description api方法：隐藏Loding层。
-     */
-    hide: function hide() {
-        that.setState({ show: false });
+    if ((typeof objA === 'undefined' ? 'undefined' : _typeof(objA)) !== 'object' || objA === null || (typeof objB === 'undefined' ? 'undefined' : _typeof(objB)) !== 'object' || objB === null) {
+        return false;
     }
-};
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+    var keysA = Object.keys(objA);
+    var keysB = Object.keys(objB);
+
+    if (keysA.length !== keysB.length) {
+        return false;
+    }
+
+    var hasOwnProperty = Object.prototype.hasOwnProperty;
+
+    for (var i = 0; i < keysA.length; i++) {
+        if (!hasOwnProperty.call(objB, keysA[i]) || !is(objA[keysA[i]], objB[keysA[i]])) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+function getElementOffsetY(ele, parent) {
+    var y = 0;
+    while (ele !== parent && ele !== null) {
+        y += ele.offsetTop;
+        ele = ele.offsetParent;
+    }
+    return y;
+}
+
+var DELAY_TIME_FOR_INFINITE_WITHOUT_HEIGHT = exports.DELAY_TIME_FOR_INFINITE_WITHOUT_HEIGHT = 250;
+
+function inheritProps(props, attrs) {
+    return attrs.reduce(function (ret, attr) {
+        ret[attr] = props[attr];
+        return ret;
+    }, {});
+}
+
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "util.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 34 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1511,12 +600,12 @@ var loading = exports.loading = {
 
 
 
-var _prodInvariant = __webpack_require__(20);
+var _prodInvariant = __webpack_require__(3);
 
-var ReactErrorUtils = __webpack_require__(56);
+var ReactErrorUtils = __webpack_require__(16);
 
-var invariant = __webpack_require__(13);
-var warning = __webpack_require__(30);
+var invariant = __webpack_require__(2);
+var warning = __webpack_require__(6);
 
 /**
  * Injected dependencies:
@@ -1724,175 +813,82 @@ var EventPluginUtils = {
 };
 
 module.exports = EventPluginUtils;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 35 */
-/***/ (function(module, exports) {
+/* 9 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-// 7.2.1 RequireObjectCoercible(argument)
-module.exports = function(it){
-  if(it == undefined)throw TypeError("Can't call method on  " + it);
-  return it;
-};
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetTag_js__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getPrototype_js__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isObjectLike_js__ = __webpack_require__(88);
 
-/***/ }),
-/* 36 */
-/***/ (function(module, exports) {
 
-// IE 8- don't enum bug keys
-module.exports = (
-  'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf'
-).split(',');
 
-/***/ }),
-/* 37 */
-/***/ (function(module, exports) {
 
-module.exports = {};
+/** `Object#toString` result references. */
+var objectTag = '[object Object]';
 
-/***/ }),
-/* 38 */
-/***/ (function(module, exports) {
+/** Used for built-in method references. */
+var funcProto = Function.prototype,
+    objectProto = Object.prototype;
 
-module.exports = true;
+/** Used to resolve the decompiled source of functions. */
+var funcToString = funcProto.toString;
 
-/***/ }),
-/* 39 */
-/***/ (function(module, exports, __webpack_require__) {
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
 
-// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-var anObject    = __webpack_require__(21)
-  , dPs         = __webpack_require__(150)
-  , enumBugKeys = __webpack_require__(36)
-  , IE_PROTO    = __webpack_require__(42)('IE_PROTO')
-  , Empty       = function(){ /* empty */ }
-  , PROTOTYPE   = 'prototype';
+/** Used to infer the `Object` constructor. */
+var objectCtorString = funcToString.call(Object);
 
-// Create object with fake `null` prototype: use iframe Object with cleared prototype
-var createDict = function(){
-  // Thrash, waste and sodomy: IE GC bug
-  var iframe = __webpack_require__(65)('iframe')
-    , i      = enumBugKeys.length
-    , lt     = '<'
-    , gt     = '>'
-    , iframeDocument;
-  iframe.style.display = 'none';
-  __webpack_require__(143).appendChild(iframe);
-  iframe.src = 'javascript:'; // eslint-disable-line no-script-url
-  // createDict = iframe.contentWindow.Object;
-  // html.removeChild(iframe);
-  iframeDocument = iframe.contentWindow.document;
-  iframeDocument.open();
-  iframeDocument.write(lt + 'script' + gt + 'document.F=Object' + lt + '/script' + gt);
-  iframeDocument.close();
-  createDict = iframeDocument.F;
-  while(i--)delete createDict[PROTOTYPE][enumBugKeys[i]];
-  return createDict();
-};
+/**
+ * Checks if `value` is a plain object, that is, an object created by the
+ * `Object` constructor or one with a `[[Prototype]]` of `null`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.8.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a plain object, else `false`.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ * }
+ *
+ * _.isPlainObject(new Foo);
+ * // => false
+ *
+ * _.isPlainObject([1, 2, 3]);
+ * // => false
+ *
+ * _.isPlainObject({ 'x': 0, 'y': 0 });
+ * // => true
+ *
+ * _.isPlainObject(Object.create(null));
+ * // => true
+ */
+function isPlainObject(value) {
+  if (!__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__isObjectLike_js__["a" /* default */])(value) || __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__baseGetTag_js__["a" /* default */])(value) != objectTag) {
+    return false;
+  }
+  var proto = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__getPrototype_js__["a" /* default */])(value);
+  if (proto === null) {
+    return true;
+  }
+  var Ctor = hasOwnProperty.call(proto, 'constructor') && proto.constructor;
+  return typeof Ctor == 'function' && Ctor instanceof Ctor &&
+    funcToString.call(Ctor) == objectCtorString;
+}
 
-module.exports = Object.create || function create(O, Properties){
-  var result;
-  if(O !== null){
-    Empty[PROTOTYPE] = anObject(O);
-    result = new Empty;
-    Empty[PROTOTYPE] = null;
-    // add "__proto__" for Object.getPrototypeOf polyfill
-    result[IE_PROTO] = O;
-  } else result = createDict();
-  return Properties === undefined ? result : dPs(result, Properties);
-};
+/* harmony default export */ __webpack_exports__["a"] = (isPlainObject);
 
 
 /***/ }),
-/* 40 */
-/***/ (function(module, exports) {
-
-exports.f = Object.getOwnPropertySymbols;
-
-/***/ }),
-/* 41 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var def = __webpack_require__(11).f
-  , has = __webpack_require__(10)
-  , TAG = __webpack_require__(16)('toStringTag');
-
-module.exports = function(it, tag, stat){
-  if(it && !has(it = stat ? it : it.prototype, TAG))def(it, TAG, {configurable: true, value: tag});
-};
-
-/***/ }),
-/* 42 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var shared = __webpack_require__(43)('keys')
-  , uid    = __webpack_require__(29);
-module.exports = function(key){
-  return shared[key] || (shared[key] = uid(key));
-};
-
-/***/ }),
-/* 43 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var global = __webpack_require__(7)
-  , SHARED = '__core-js_shared__'
-  , store  = global[SHARED] || (global[SHARED] = {});
-module.exports = function(key){
-  return store[key] || (store[key] = {});
-};
-
-/***/ }),
-/* 44 */
-/***/ (function(module, exports) {
-
-// 7.1.4 ToInteger
-var ceil  = Math.ceil
-  , floor = Math.floor;
-module.exports = function(it){
-  return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
-};
-
-/***/ }),
-/* 45 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 7.1.1 ToPrimitive(input [, PreferredType])
-var isObject = __webpack_require__(23);
-// instead of the ES6 spec version, we didn't implement @@toPrimitive case
-// and the second argument - flag - preferred type is a string
-module.exports = function(it, S){
-  if(!isObject(it))return it;
-  var fn, val;
-  if(S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it)))return val;
-  if(typeof (fn = it.valueOf) == 'function' && !isObject(val = fn.call(it)))return val;
-  if(!S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it)))return val;
-  throw TypeError("Can't convert object to primitive value");
-};
-
-/***/ }),
-/* 46 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var global         = __webpack_require__(7)
-  , core           = __webpack_require__(8)
-  , LIBRARY        = __webpack_require__(38)
-  , wksExt         = __webpack_require__(47)
-  , defineProperty = __webpack_require__(11).f;
-module.exports = function(name){
-  var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});
-  if(name.charAt(0) != '_' && !(name in $Symbol))defineProperty($Symbol, name, {value: wksExt.f(name)});
-};
-
-/***/ }),
-/* 47 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports.f = __webpack_require__(16);
-
-/***/ }),
-/* 48 */
+/* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1920,73 +916,13 @@ function warning(message) {
 }
 
 /***/ }),
-/* 49 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 11 */
+/***/ (function(module, exports) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-exports.store = exports.mapDispathToProps = exports.mapStateToProps = undefined;
-
-var _redux = __webpack_require__(81);
-
-function changer() {
-	var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : { title: "BANG-DAN" };
-	var action = arguments[1];
-
-	switch (action.type) {
-		case 'SETTITLE':
-			return { title: action.title };
-		default:
-			return state;
-	}
-}
-//Redux state----->props
-function mapStateToProps(state) {
-	return {
-		value: state.title
-	};
-}
-
-//Redux action----->props
-function mapDispathToProps(dispath) {
-	return {
-		onChange: function onChange(action) {
-			return dispath(action);
-		}
-	};
-}
-var store = (0, _redux.createStore)(changer);
-exports.mapStateToProps = mapStateToProps;
-exports.mapDispathToProps = mapDispathToProps;
-exports.store = store;
-
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "store.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+module.exports = window.ReactRouter;
 
 /***/ }),
-/* 50 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Provider__ = __webpack_require__(178);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__connect_connect__ = __webpack_require__(179);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Provider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connectAdvanced", function() { return __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connect", function() { return __WEBPACK_IMPORTED_MODULE_2__connect_connect__["a"]; });
-
-
-
-
-
-
-/***/ }),
-/* 51 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2030,939 +966,119 @@ emptyFunction.thatReturnsArgument = function (arg) {
 module.exports = emptyFunction;
 
 /***/ }),
-/* 52 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("F:\\react-app\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
+var _fastclick = __webpack_require__(50);
 
-var _extends2 = __webpack_require__(25);
+var _fastclick2 = _interopRequireDefault(_fastclick);
 
-var _extends3 = _interopRequireDefault(_extends2);
+var _reactTapEventPlugin = __webpack_require__(72);
 
-var _classCallCheck2 = __webpack_require__(1);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(2);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = __webpack_require__(4);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(3);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _ListCore = __webpack_require__(99);
-
-var _ListCore2 = _interopRequireDefault(_ListCore);
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _src = __webpack_require__(53);
-
-var _src2 = _interopRequireDefault(_src);
-
-var _ListItem = __webpack_require__(100);
-
-var _ListItem2 = _interopRequireDefault(_ListItem);
-
-var _lazyimage = __webpack_require__(32);
-
-var _lazyimage2 = _interopRequireDefault(_lazyimage);
-
-var _classnames = __webpack_require__(6);
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
-var _util = __webpack_require__(19);
-
-__webpack_require__(31);
-
-__webpack_require__(127);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var defaultProps = {
-    infinite: false,
-    offsetY: 0,
-    infiniteSize: 12,
-    itemTouchClass: 'item-touch',
-    onScroll: function onScroll() {},
-    onInfiniteAppend: function onInfiniteAppend() {},
-    renderItem: function renderItem(item) {
-        return typeof item.get === 'function' ? item.get('text') : item.text;
-    },
-
-    extraClass: '',
-    containerExtraClass: '',
-    groupTitleExtraClass: '',
-    usePullRefresh: false,
-    onRefresh: function onRefresh() {},
-
-    useLoadMore: false,
-    onLoad: function onLoad() {},
-    onItemTap: function onItemTap() {},
-
-    shouldItemUpdate: null,
-    itemExtraClass: function itemExtraClass() {
-        return '';
-    },
-    onItemTouchStart: function onItemTouchStart() {},
-
-    disabled: false,
-    directionLockThreshold: 50,
-    style: null,
-    scrollWithoutTouchStart: true,
-    staticSection: null,
-    staticSectionHeight: null,
-    deceleration: 0.0015,
-    stickyOffset: 0
-}; /**
-    * @component List
-    * @version 3.0.0
-    * @description 列表组件，继承了Scroller的特性，有下拉刷新和加载更多功能。
-    *
-    * 除此之外，List优化了长列表的性能，在数据源较大时能够提升滚动的性能并避免内存溢出。
-    *
-    * 使用列表组件实现的组件：GroupList、Calendar、SwipeMenuList。
-    *
-    * 特别感谢大明哥(leeds.li)和她的不定高无穷列表的实现思路。
-    * @author jiao.shen
-    * @instructions {instruInfo: ./list/list.md}{instruUrl: list/infinite_mode_with_height.html?hideIcon}
-    * @instructions {instruInfo: ./list/example.md}{instruUrl: list/base.html?hideIcon}
-    * @instructions {instruInfo: ./list/modify_height.md}{instruUrl: list/modify_height.html?hideIcon}
-    * @instructions {instruInfo: ./list/static_section.md}{instruUrl: list/static_section.html?hideIcon}
-    */
-
-
-var propTypes = {
-    /**
-     * @property dataSource
-     * @type Array/Immutable List
-     * @default none
-     * @description 组件的数据源，数组或者Immutable List类型，内部元素必须是对象或者Immutable Map。
-     * 如果需要给无穷列表的项定高度，可以给元素添加height属性(数字类型)，
-     * 也可以通过itemHeight属性统一设置列表项的高度(见itemHeight属性的描述)，
-     * 如果列表元素有text属性且没有传入renderItem，会直接以text的值作为listitem的内容渲染。
-     */
-    dataSource: _react.PropTypes.oneOfType([_react.PropTypes.arrayOf(_react.PropTypes.shape({
-        height: _react.PropTypes.number,
-        text: _react.PropTypes.oneOfType([_react.PropTypes.number, _react.PropTypes.string]),
-        key: _react.PropTypes.oneOfType([_react.PropTypes.number, _react.PropTypes.string])
-    })), _react.PropTypes.object]).isRequired,
-    /**
-     * @property renderItem
-     * @type Function
-     * @default (item)=>item.text
-     * @description 定制如何根据列表项数据对象渲染列表项的函数，接收参数item(数据对象)和index(在数据源中的index)，返回一个JSX。
-     * 如果传入字符串，则会应用于所有列表项。
-     *
-     * 例子:`` renderItem={(item)=><p>{item.someAttr}</p>} ``
-     */
-    renderItem: _react.PropTypes.func,
-    /**
-     * @property onItemTap
-     * @type Function
-     * @default null
-     * @param {Object} item 列表项对应的数据对象
-     * @param {Number} index 列表项在数据源中的index
-     * @param {DOMElement} target 当前tap事件的target
-     * @description 点击列表项时的事件回调，接收三个参数item(列表项对应的数据对象)，index(列表项在数据源中的index)以及target(当前事件的event.target)，
-     *
-     * List实现了独特的手势系统以达到iOS列表的手势效果，任何情况下都应该使用这个属性为ListItem绑定事件，而不是给ListItem中的节点绑定onTouchTap事件。
-     */
-    onItemTap: _react.PropTypes.func,
-    /**
-     * @property infinite
-     * @type Bool
-     * @default false
-     * @description 是否使用无穷列表模式。
-     *
-     * 开启无穷列表模式后，列表中只会保留infiniteSize个节点，并随着滚动复用这些节点，以此来优化大列表的性能，但是滚动过程中会有性能损耗。
-     * 如果你的列表项数量不大(比如只有几十个)，请不要开启无穷模式。
-     */
-    infinite: _react.PropTypes.bool,
-    /**
-     * @property infiniteSize
-     * @type Number
-     * @default 12
-     * @description 无穷列表模式下，保留在列表容器中列表项的个数(参见无穷列表模式的说明).
-     *
-     * 注意:这个值应该随着列表容器的高度和列表项高度选取一个合适的值，否则可能出现列表容器底部出现空白的情况。
-     * 如果这个值设置的过大，会降低列表的滚动性能，因此请根据实际情况(List容器的高度和列表项的高度)灵活配置。
-     */
-    infiniteSize: _react.PropTypes.number,
-    /**
-     * @property itemHeight
-     * @type Number
-     * @default null
-     * @description 无穷列表中列表项的高度。
-     *
-     * 如果数据源中的对象没有height属性，也没有设置itemHeight，则会使用不定高的无穷列表模式。
-     * 在不定高模式下，每个项的高度会在渲染进容器以后确定，因此比定高模式多一次offsetHeight的查询，性能会差一些。
-     */
-    itemHeight: _react.PropTypes.number,
-    /**
-     * @property offsetY
-     * @type Number
-     * @default 0
-     * @description 组件的初始位置的Y坐标。
-     */
-    offsetY: _react.PropTypes.number,
-    /**
-     * @property itemExtraClass
-     * @type String/Function
-     * @default "item item-wrap"
-     * @param {Object} item 列表项对应的数据对象
-     * @param {Number} index 列表项在数据源中的index
-     * 可以接受字符串形式。例如"custom-list-item"（会自动应用在所有列表项容器上）
-     * 或者一个函数，这个函数接受参数item（列表项对应的dataSource中的数据对象），index（数据源index）
-     *
-     * 例:(item)=>{return item.customClassName}/'custom-item-classname'。
-     * @description 给列表项容器元素添加的class
-     */
-    itemExtraClass: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.func]),
-    /**
-     * @skip
-     * 给grouptitle定制的属性,不会向外暴露。
-     */
-    groupTitleExtraClass: _react.PropTypes.string,
-    /**
-     * @property itemTouchClass
-     * @type String/Function
-     * @default item-touch
-     * @param {Object} item 列表项对应的数据对象
-     * @param {Number} index 列表项在数据源中的index
-     * @description 列表项被点击时的className，可以接收字符串或者函数，使用方式与itemExtraClass一致。
-     */
-    itemTouchClass: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.func]),
-    /**
-     * @property onScroll
-     * @type Function
-     * @default null
-     * @param {Number} y 当前列表的y轴偏移
-     * @param {Enum {'up','down'}} direction 列表滚动的方向,向上('up')或者向下('down')
-     * @description 绑定给list内部scroller的onScroll回调,在列表滚动时触发。
-     */
-    onScroll: _react.PropTypes.func,
-    /**
-     * @property style
-     * @type Object
-     * @default null
-     * @description 给List容器节点绑定的额外样式。
-     * @version 3.0.2
-     */
-    style: _react.PropTypes.object,
-    /**
-     * @property onInfiniteAppend
-     * @type Function
-     * @default null
-     * @param {Array} visibleList 当前渲染在列表容器中的数据项数组
-     * @description 无穷列表中列表项update时触发的事件回调，接收参数visibleList(数组)，为目前渲染在列表容器中的数据项。
-     */
-    onInfiniteAppend: _react.PropTypes.func,
-    /**
-     * @property staticSection
-     * @type Element
-     * @default null
-     * @version 3.0.3
-     * @description 在所有列表项之上渲染的一块静态区域，在开启Infinite模式时，这块区域不会参与列表项的回收复用。
-     */
-    staticSection: _react.PropTypes.element,
-    /**
-     * @property extraClass
-     * @type String
-     * @default null
-     * @description 组件容器元素的额外className。
-     */
-    extraClass: _react.PropTypes.string,
-    /**
-     * @property containerExtraClass
-     * @type String
-     * @default null
-     * @description 列表容器元素额外的className(对应ul.yo-list节点)。
-     */
-    containerExtraClass: _react.PropTypes.string,
-    /**
-     * @property usePullRefresh
-     * @type Bool
-     * @default false
-     * @description 是否使用下拉刷新，见Scroller同名属性。
-     */
-    usePullRefresh: _react.PropTypes.bool,
-    /**
-     * 下拉刷新高度
-     *
-     * @property pullRefreshHeight
-     * @type Number
-     * @description 触发下拉刷新状态的高度（一般即为下拉刷新提示区域的高度）。
-     * @default 40
-     */
-    pullRefreshHeight: _react.PropTypes.number,
-    /**
-     * 下拉刷新渲染函数
-     *
-     * @property renderPullRefresh
-     * @type Function
-     * @returns {JSX} 用来渲染 pullRefresh 的 JSX
-     * @description () => JSX
-     *
-     * 自定义的下拉刷新渲染函数。
-     */
-    renderPullRefresh: _react.PropTypes.func,
-    /**
-     * @property onRefresh
-     * @type Function
-     * @param {Array} dataSource 当前的数据源
-     * @default null
-     * @description 下拉刷新触发的事件回调。
-     */
-    onRefresh: _react.PropTypes.func,
-    /**
-     * @property useLoadMore
-     * @type Bool
-     * @default false
-     * @description 是否开启加载更多，见Scroller同名属性。
-     */
-    useLoadMore: _react.PropTypes.bool,
-    /**
-     * 加载更多高度
-     *
-     * @property loadMoreHeight
-     * @type Number
-     * @description 触发加载更多状态的高度（一般即为加载更多提示区域的高度）。
-     * @default 40
-     */
-    loadMoreHeight: _react.PropTypes.number,
-    /**
-     * 加载更多渲染函数
-     *
-     * @property renderLoadMore
-     * @type Function
-     * @returns {JSX} 用来渲染 loadMore 的 JSX
-     * @description () => JSX
-     *
-     * 自定义的加载更多渲染函数。
-     */
-    renderLoadMore: _react.PropTypes.func,
-    /**
-     * @property onLoad
-     * @type Function
-     * @param {Array} dataSource 当前数据源
-     * @default null
-     * @description 加载更多时触发的事件回调。
-     */
-    onLoad: _react.PropTypes.func,
-    /**
-     * @property shouldItemUpdate
-     * @type Function
-     * @default null
-     * @param {Object} next 即将传给列表项组件的item对象
-     * @param {Object} now 当前列表项组件对应的item对象
-     * @description 绑定给列表项组件的shouldComponentUpdate，可以避免额外的render，用于提升列表的滚动性能。
-     *
-     * 实验表明，组件的render开销对于某些老式手机(例如三星Note2)是不能忽视的，因此list默认为所有的列表项组件配置了shouldComponentUpdate，会根据
-     * item的_guid属性(List组件自己做的，不需要使用者传入)做比较决定是否需要render，这样可以最小化render的次数。有些情况下，这种比较方式会阻止使用者期待触发的render，导致组件更新行为违反了使用者的意愿，这时候需要通过设置shouldItemUpdate属性改变默认的shouldComponentUpdate的返回值
-     *
-     * shouldItemUpdate能够接受两个参数，next(ListItem组件的下一个props中的item属性)，
-     * now(ListItem当前的props的item属性)。它必须返回一个布尔值，false则会跳过render，true会继续执行render(与shouldComponentUpdate返回值的含义相同)。
-     */
-    shouldItemUpdate: _react.PropTypes.func,
-    /**
-     * @property disabled
-     * @type Bool
-     * @default false
-     * @description 是否禁止滚动，参见Scroller的同名属性。
-     */
-    disabled: _react.PropTypes.bool,
-    /**
-     * @property stickyOffset
-     * @type Number
-     * @default 0
-     * @description 给staticSection内部吸顶容器设置的y轴偏移。
-     * @version 3.0.6
-     */
-    stickyOffset: _react.PropTypes.number,
-    /**
-     * @skip
-     * @property onItemTouchStart
-     * 专门给SwipeMenuList使用的属性，不向外暴露
-     */
-    onItemTouchStart: _react.PropTypes.func,
-    onListItemUpdate: _react.PropTypes.func,
-    /**
-     * 方向锁定阈值
-     *
-     * @property directionLockThreshold
-     * @type Number
-     * @description 只允许单向滚动的时候，会根据这个阈值来判定响应哪个方向上的位移：某一方向位移减去另一个方向位移超过阈值，就会判定为这个方向的滚动。
-     * @default 5
-     * @version 3.0.2
-     */
-    directionLockThreshold: _react.PropTypes.number,
-    /**
-     * @property deceleration
-     * @type Number
-     * @description 滚动视图开始惯性滚动时减速的加速度，默认为0.001。
-     * @version 3.0.6
-     */
-    deceleration: _react.PropTypes.number,
-    /**
-     * @property scrollWithoutTouchStart
-     * @type Bool
-     * @default false
-     * @description ** 实验中的属性 **
-     * 在默认情况下一次用户触发（非调用scrollTo方法）scroller的滚动需要由touchstart事件来启动，在某些情况下，例如scroller从disable状态切换到enable状态时，
-     * 可能不能接收到这一瞬间的touchstart事件，这可能导致用户期待的滚动过程没有发生。
-     * 开启这个属性为true以后将允许scroller用touchmove启动滚动过程，这可以解决上述场景的问题。
-     * @version 3.0.2
-     */
-    scrollWithoutTouchStart: _react.PropTypes.bool
-};
-
-var List = function (_Component) {
-    (0, _inherits3.default)(List, _Component);
-
-    function List(props) {
-        (0, _classCallCheck3.default)(this, List);
-
-        var _this = (0, _possibleConstructorReturn3.default)(this, (List.__proto__ || Object.getPrototypeOf(List)).call(this, props));
-
-        var dataSource = props.dataSource,
-            offsetY = props.offsetY,
-            itemHeight = props.itemHeight,
-            infinite = props.infinite,
-            infiniteSize = props.infiniteSize;
-
-
-        _this.childLazyImages = [];
-        _this.staticSectionContaienr = null;
-        _this.listModel = new _ListCore2.default({
-            dataSource: dataSource,
-            offsetY: offsetY,
-            infinite: infinite,
-            itemHeight: itemHeight,
-            infiniteSize: infiniteSize
-        });
-        _this.state = {
-            visibleList: _this.listModel.visibleList,
-            totalHeight: _this.listModel.totalHeight
-        };
-        return _this;
-    }
-
-    (0, _createClass3.default)(List, [{
-        key: 'getChildContext',
-        value: function getChildContext() {
-            return { list: this, infinite: this.listModel.infinite };
-        }
-    }, {
-        key: 'componentWillMount',
-        value: function componentWillMount() {
-            var _this2 = this;
-
-            this.listModel.registerEventHandler('change', function (visibleList, totalHeight) {
-                _this2.setState({ visibleList: visibleList, totalHeight: totalHeight });
-                _this2.props.onInfiniteAppend(visibleList, totalHeight);
-            }).registerEventHandler('scrollTo', function (offsetY, time, easing) {
-                if (_this2.scroller) {
-                    _this2.scroller.scrollTo(0, offsetY, time, easing);
-                }
-            });
-        }
-    }, {
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            var _this3 = this;
-
-            // 在不定高模式下,需要等待所有列表项完成定位才能刷新scroller, didmount的时候虽然dom已经渲染完成
-            // 但是所有列表项做定位尚未完成
-            setTimeout(function () {
-                // 一定要优先刷新staticSectionHeight，否则下面的一系列操作都可能出现不准确的情况
-                _this3.refreshStaticSectionHeight();
-                if (_this3.scroller) {
-                    // 用来标记列表是否在滚动,和手势有关,在gesture.js中可以查到这个属性是如何被使用的
-                    _this3.scroller.isScrolling = false;
-                }
-                // 刷新scroller,因为infinite不定高模式的totalHeight要等到item渲染完毕才能计算出来
-                if (_this3.listModel.infinite && _this3.scroller) {
-                    _this3.scroller.refresh({ scrollerHeight: _this3.listModel.totalHeight }, true);
-                }
-                // 如果设置了offsetY,滚动到offsetY
-                var offsetY = _this3.props.offsetY;
-
-                if (offsetY !== 0) {
-                    _this3.scrollTo(offsetY, 0);
-                }
-                // 刷新lazyload图片,不然头几个item的懒加载图片都不会加载
-                // 加setTimeout是为了处理不定高的场景,因为不定高的列表会先把列表项渲染进容器然后再去做定位
-                // 所以didmount时间触发的时候,列表项还没有完成定位
-                _this3.tryLoadLazyImages(offsetY);
-            }, this.listModel.isHeightFixed ? 0 : _util.DELAY_TIME_FOR_INFINITE_WITHOUT_HEIGHT);
-        }
-
-        /**
-         * @param nextProps
-         * dataSource,infiniteSize是根据初始值计算出来的状态,在这里需要进行reset
-         * 其他属性不需要reset
-         */
-
-    }, {
-        key: 'componentWillReceiveProps',
-        value: function componentWillReceiveProps(nextProps) {
-            var _this4 = this;
-
-            var dataSource = nextProps.dataSource,
-                infiniteSize = nextProps.infiniteSize,
-                offsetY = nextProps.offsetY;
-
-            this.listModel.refresh({
-                dataSource: dataSource,
-                refreshAll: true,
-                infiniteSize: infiniteSize
-            });
-
-            // 等待dom更新结束后再做以下操作
-            setTimeout(function () {
-                if (_this4.props.offsetY !== offsetY) {
-                    _this4.scrollTo(offsetY, 0);
-                }
-                _this4.refreshStaticSectionHeight();
-                _this4.tryLoadLazyImages(_this4.listModel.offsetY);
-                // 当offsetY位于可滚动范围之外时自动调整
-                if (_this4.scroller && -_this4.scroller.maxScrollY < _this4.listModel.offsetY) {
-                    _this4.scrollTo(_this4.scroller.maxScrollY, 300);
-                }
-            }, 0);
-        }
-    }, {
-        key: 'componentDidUpdate',
-        value: function componentDidUpdate() {
-            // infinite模式的lazyload不需要再didupdate时刷新
-            // 因为infinite的节点是复用的,而随着滚动会不定的render,因此会触发大量的didupdate,浪费性能
-            // 所以可以在receiveprops时做刷新,因为节点复用的缘故,不需要等待dom render
-            if (!this.listModel.infinite) {
-                this.tryLoadLazyImages(this.listModel.offsetY);
-            }
-            // infinite模式下，刷新列表的总高度
-            if (this.scroller && this.listModel.infinite) {
-                this.scroller.refresh({ scrollerHeight: this.state.totalHeight }, true);
-            }
-        }
-
-        /**
-         * 绑定给Scoller的ScrollEnd事件回调
-         */
-
-    }, {
-        key: 'onScrollEnd',
-        value: function onScrollEnd() {
-            // 滚动停止后重置isScrolling标志
-            this.scroller.isScrolling = false;
-        }
-
-        /**
-         * @param offsetY
-         * @param manually
-         * 随着Scroller的滚动更新visibleList
-         */
-
-    }, {
-        key: 'onScroll',
-        value: function onScroll(offsetY, manually) {
-            if (this.scroller && offsetY !== this.listModel.offsetY) {
-                if (!manually) {
-                    this.scroller.isScrolling = true;
-                }
-                this.listModel.onScrollTo(offsetY, manually);
-                this.props.onScroll(-offsetY, this.listModel.direction);
-                this.tryLoadLazyImages(offsetY);
-            }
-        }
-
-        /**
-         * @skip
-         * @method refreshStaticSectionHeight
-         * @description 获取staticSectionHeight，然后更新列表的总高度
-         */
-
-    }, {
-        key: 'refreshStaticSectionHeight',
-        value: function refreshStaticSectionHeight() {
-            if (this.staticSectionContaienr != null) {
-                this.listModel.staticSectionHeight = this.staticSectionContaienr.offsetHeight;
-                this.listModel.totalHeight = this.listModel.getTotalHeight();
-                // 获取到最新的totalHeight之后需要刷新一下
-                if (this.scroller && this.listModel.infinite) {
-                    this.scroller.refresh({ scrollerHeight: this.listModel.totalHeight }, true);
-                }
-            }
-        }
-
-        /**
-         * @method refresh
-         * @description 刷新列表,应该在列表容器高度发生改变时调用
-         */
-
-    }, {
-        key: 'refresh',
-        value: function refresh() {
-            this.scroller.refresh({ scrollerHeight: this.state.totalHeight });
-        }
-
-        /**
-         * @method stopRefreshing
-         * @param {Bool} [successed]  下拉刷新是否成功,默认为false
-         * @description 中止下拉刷新过程。在列表发生下拉刷新之后你应该调用这个方法去中止它(比如服务器响应已经返回的时候),否则刷新不会自动终止。
-         */
-
-    }, {
-        key: 'stopRefreshing',
-        value: function stopRefreshing(successed) {
-            if (this.scroller) {
-                this.scroller.stopRefreshing(successed);
-            }
-        }
-
-        /**
-         * @method stopLoading
-         * @param {Bool} [successed]  加载更多是否成功,默认为false
-         * @description 中止加载更多过程,使用方式和场景与stopRefreshing一致。
-         */
-
-    }, {
-        key: 'stopLoading',
-        value: function stopLoading(successed) {
-            if (this.scroller) {
-                this.scroller.stopLoading(successed);
-            }
-        }
-
-        /**
-         * @method startRefreshing
-         * @description 模拟下拉刷新,调用这个方法后,会立刻停止当前的滚动并回到列表顶部,然后开始下拉刷新过程。
-         *
-         * 注意:你仍然需要手动调用stopRefreshing方法
-         */
-
-    }, {
-        key: 'startRefreshing',
-        value: function startRefreshing() {
-            if (this.scroller.isScrolling) {
-                this.scroller.stopAnimate();
-                this.scroller.isScrolling = false;
-            }
-
-            if (this.listModel.infinite) {
-                this.scroller.startRefreshing(0);
-                this.onScroll(0, true);
-            } else {
-                this.scroller.startRefreshing();
-            }
-        }
-
-        /**
-         * 尝试加载处于可视区域内的lazyimage
-         * @param y
-         */
-
-    }, {
-        key: 'tryLoadLazyImages',
-        value: function tryLoadLazyImages(y) {
-            var _this5 = this;
-
-            y = y - this.listModel.staticSectionHeight;
-            if (this.childLazyImages.length && this.scroller) {
-                this.childLazyImages.forEach(function (child) {
-                    var containerBottomY = y + _this5.scroller.wrapperHeight;
-                    if (_this5.listModel.infinite) {
-                        if (containerBottomY > child.itemRef.translateY) {
-                            child.load();
-                        }
-                    } else if (child.loading !== 2) {
-                        var listItemDom = child.itemRef.domNode;
-                        var offsetTop = listItemDom.offsetTop;
-                        if (listItemDom && containerBottomY > offsetTop) {
-                            child.load();
-                        }
-                    }
-                });
-            }
-        }
-
-        /**
-         * @method scrollTo
-         * @param {Number} y 要滚动到的目标y坐标
-         * @param {Number} [time] 动画时间,默认为0。
-         * (在开启了无穷模式的情况下,为了提高滚动的性能,不管time传入什么值都会被重设为0.因为快速滚过很长的距离在无穷模式下会带来巨大的性能损耗)
-         * @description 让List滚动到某个位置
-         */
-
-    }, {
-        key: 'scrollTo',
-        value: function scrollTo() {
-            var offsetY = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-            var time = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-
-            if (this.scroller) {
-                // 考虑到infinite的渲染机制,滚动一个过长的距离会触发大量的dom更新,性能会很差
-                // 因此当当前offetY大于一定数值时就将time设为0,2000是个magic number,凭感觉设的
-                var aniDuration = this.listModel.infinite ? 0 : time;
-                this.scroller.scrollTo(0, offsetY, aniDuration);
-                this.onScroll(-offsetY, true);
-            }
-        }
-
-        /**
-         * @method stopAnimate
-         * @description 立刻停止滚动。
-         */
-
-    }, {
-        key: 'stopAnimate',
-        value: function stopAnimate() {
-            if (this.scroller) {
-                this.scroller.stopAnimate();
-            }
-        }
-
-        /**
-         * @param item
-         * @param i
-         * @returns {JSX}
-         * 渲染列表项容器
-         */
-
-    }, {
-        key: 'renderItemWrap',
-        value: function renderItemWrap(item, i) {
-            var _props = this.props,
-                _onItemTap = _props.onItemTap,
-                renderItem = _props.renderItem,
-                onListItemUpdate = _props.onListItemUpdate,
-                groupTitleExtraClass = _props.groupTitleExtraClass,
-                shouldItemUpdate = _props.shouldItemUpdate,
-                onItemTouchStart = _props.onItemTouchStart;
-            var _props2 = this.props,
-                itemTouchClass = _props2.itemTouchClass,
-                itemExtraClass = _props2.itemExtraClass;
-
-            var realActiveClass = itemTouchClass,
-                realExtraClass = itemExtraClass;
-            // 由于itemExtraClass可以传入string或者函数,这里统一为函数
-            // 做法是将string转换成一个返回该string的id函数
-            if (typeof itemExtraClass === 'string' || itemExtraClass === null) {
-                realExtraClass = function realExtraClass() {
-                    return itemExtraClass;
-                };
-            }
-            // the same
-            if (typeof itemTouchClass === 'string' || itemTouchClass === null) {
-                realActiveClass = function realActiveClass() {
-                    return itemTouchClass;
-                };
-            }
-
-            return _react2.default.createElement(_ListItem2.default, {
-                parent: this,
-                itemTouchClass: realActiveClass,
-                key: this.listModel.infinite ? i : item.key,
-                renderItem: renderItem,
-                onItemTap: function onItemTap(target) {
-                    _onItemTap(item.srcData, item._index, target);
-                },
-                shouldItemUpdate: shouldItemUpdate,
-                onItemTouchStart: onItemTouchStart,
-                item: item,
-                itemExtraClass: realExtraClass,
-                groupTitleExtraClass: groupTitleExtraClass,
-                listModel: this.listModel,
-                onListItemUpdate: onListItemUpdate
-            });
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            var _this6 = this;
-
-            var _props3 = this.props,
-                containerExtraClass = _props3.containerExtraClass,
-                infiniteSize = _props3.infiniteSize,
-                _onRefresh = _props3.onRefresh,
-                _onLoad = _props3.onLoad;
-            var infinite = this.listModel.infinite;
-
-            var containerClass = (0, _classnames2.default)('yo-list', containerExtraClass, infinite ? 'yo-list-infinite' : '');
-            var visibleList = this.state.visibleList;
-
-
-            return _react2.default.createElement(
-                _src2.default,
-                (0, _extends3.default)({}, (0, _util.inheritProps)(this.props, ['scrollWithoutTouchStart', 'style', 'directionLockThreshold', 'disabled', 'extraClass', 'pullRefreshHeight', 'renderPullRefresh', 'loadMoreHeight', 'renderLoadMore', 'useLoadMore', 'usePullRefresh', 'deceleration', 'stickyOffset']), {
-                    tap: true,
-                    autoRefresh: !infinite,
-                    ref: function ref(scroller) {
-                        if (scroller) {
-                            _this6.scroller = scroller;
-                        }
-                    },
-                    onScroll: function onScroll(evt) {
-                        return _this6.onScroll(-evt.contentOffset.y);
-                    },
-                    onScrollEnd: function onScrollEnd() {
-                        return _this6.onScrollEnd();
-                    },
-                    onRefresh: function onRefresh() {
-                        _onRefresh(_this6.listModel.dataSource);
-                    },
-                    onLoad: function onLoad() {
-                        _onLoad(_this6.listModel.dataSource);
-                    },
-                    enableLazyLoad: false
-                }),
-                this.props.staticSection != null ? _react2.default.createElement(
-                    'div',
-                    {
-                        ref: function ref(dom) {
-                            if (dom) {
-                                _this6.staticSectionContaienr = dom;
-                            }
-                        },
-                        className: 'yo-list-static-section'
-                    },
-                    this.props.staticSection
-                ) : null,
-                _react2.default.createElement(
-                    'ul',
-                    {
-                        className: containerClass,
-                        ref: function ref(dom) {
-                            _this6.listContainer = dom;
-                        }
-                    },
-                    infinite ?
-                    // 无穷列表模式,在列表容器内设置固定数目的槽,随着滚动不停更新这些槽内部的内容和translateY
-                    (0, _util.getArrayByLength)(infiniteSize).fill(1).map(function (__, i) {
-                        var item = visibleList.find(function (it) {
-                            return it._order === i;
-                        });
-                        return item ? _this6.renderItemWrap(item, i) : null;
-                    }) :
-                    // 静态列表,渲染出所有的item
-                    visibleList.map(function (item, i) {
-                        return _this6.renderItemWrap(item, i);
-                    })
-                )
-            );
-        }
-    }]);
-    return List;
-}(_react.Component);
-
-List.INFINITE_SCROLLTO_WITH_ANIMATION_DISTANCE = 2000;
-List.childContextTypes = {
-    list: _react.PropTypes.object,
-    infinite: _react.PropTypes.bool
-};
-exports.default = List;
-
-
-List.defaultProps = defaultProps;
-List.propTypes = propTypes;
-List.LazyImage = _lazyimage2.default;
-
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ }),
-/* 53 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _classCallCheck2 = __webpack_require__(1);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(2);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = __webpack_require__(4);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(3);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(18);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _utils = __webpack_require__(105);
-
-var _utils2 = _interopRequireDefault(_utils);
-
-var _util = __webpack_require__(19);
-
-var _classnames = __webpack_require__(6);
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
-var _lazyimage = __webpack_require__(32);
-
-var _lazyimage2 = _interopRequireDefault(_lazyimage);
-
-var _sticky = __webpack_require__(106);
-
-var _sticky2 = _interopRequireDefault(_sticky);
-
-__webpack_require__(130);
+var _reactTapEventPlugin2 = _interopRequireDefault(_reactTapEventPlugin);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
- * 滚动组件
- *
- * @component Scroller
- * @version 3.0.0
- * @description 滚动组件,用来提供滚动容器。
- *
- * - 提供了横向滚动和纵向滚动。
- * - 提供了『下拉刷新』和『加载更多』功能。
- * - 提供了 `transition` 和 `requestAnimationFrame` 两种实现滚动的方式。
- * - 提供了 `transform` 和 `position:absolute` 两种实现位移的方式。
- *
- * 确定高度：Scroller 必须有一个确定的高度才能正常工作，因为它实际上就是将一系列不确定高度的子组件装进一个确定高度的容器。实现确定高度的方式有很多种：flex、指定高度、position: absolute等等。
- *
- * 内容容器：作为一个滚动组件，Scroller 会创建一个 div 作为滚动容器。如果 Scroller 的子元素只有一个，则会把这个子元素当做内容容器；否则，会创建一个 div 作为内容容器。
- * @instructions {instruInfo: ./scroller/basic.md}{instruUrl: scroller/base.html?hideIcon}
- * @instructions {instruInfo: ./scroller/refresh.md}{instruUrl: scroller/refresh.html?hideIcon}
- * @instructions {instruInfo: ./scroller/scrollevent.md}{instruUrl: scroller/scroll.html?hideIcon}
+ * Created by Ellery1 on 16/7/8.
  */
+if (!window.___yoTapEventInjected) {
+    // 不要觉得这里没用
+    // 因为yo-router也用了tap-event-plugin，如果不加try catch会报引用两次tap-event-plugin的警告
+    try {
+        (0, _reactTapEventPlugin2.default)();
+    } catch (e) {}
+
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        _fastclick2.default.attach(document.body);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        _fastclick2.default.attach(document.body);
+    });
+    document.body.addEventListener('touchmove', function (evt) {
+        evt.preventDefault();
+    });
+    window.___yoTapEventInjected = true;
+}
+
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "tapEventPluginInit.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("F:\\react-app\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(4);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _utils = __webpack_require__(55);
+
+var _utils2 = _interopRequireDefault(_utils);
+
+var _util = __webpack_require__(7);
+
+var _classnames = __webpack_require__(5);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _lazyimage = __webpack_require__(51);
+
+var _lazyimage2 = _interopRequireDefault(_lazyimage);
+
+var _sticky = __webpack_require__(56);
+
+var _sticky2 = _interopRequireDefault(_sticky);
+
+__webpack_require__(74);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 滚动组件
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @component Scroller
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @version 3.0.0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @description 滚动组件,用来提供滚动容器。
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * - 提供了横向滚动和纵向滚动。
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * - 提供了『下拉刷新』和『加载更多』功能。
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * - 提供了 `transition` 和 `requestAnimationFrame` 两种实现滚动的方式。
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * - 提供了 `transform` 和 `position:absolute` 两种实现位移的方式。
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 确定高度：Scroller 必须有一个确定的高度才能正常工作，因为它实际上就是将一系列不确定高度的子组件装进一个确定高度的容器。实现确定高度的方式有很多种：flex、指定高度、position: absolute等等。
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 内容容器：作为一个滚动组件，Scroller 会创建一个 div 作为滚动容器。如果 Scroller 的子元素只有一个，则会把这个子元素当做内容容器；否则，会创建一个 div 作为内容容器。
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @instructions {instruInfo: ./scroller/basic.md}{instruUrl: scroller/base.html?hideIcon}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @instructions {instruInfo: ./scroller/refresh.md}{instruUrl: scroller/refresh.html?hideIcon}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @instructions {instruInfo: ./scroller/scrollevent.md}{instruUrl: scroller/scroll.html?hideIcon}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 
 // TODO: 干掉各种 magic number！！！
+
+
 var REFRESHSTATUS = {
     PULL: 'pullrefresh_pull',
     RELEASE: 'pullrefresh_release',
@@ -3324,12 +1440,12 @@ var propTypes = {
 };
 
 var Scroller = function (_Component) {
-    (0, _inherits3.default)(Scroller, _Component);
+    _inherits(Scroller, _Component);
 
     function Scroller(props) {
-        (0, _classCallCheck3.default)(this, Scroller);
+        _classCallCheck(this, Scroller);
 
-        var _this = (0, _possibleConstructorReturn3.default)(this, (Scroller.__proto__ || Object.getPrototypeOf(Scroller)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (Scroller.__proto__ || Object.getPrototypeOf(Scroller)).call(this, props));
 
         _this.x = 0;
         _this.y = 0;
@@ -3347,7 +1463,7 @@ var Scroller = function (_Component) {
         return _this;
     }
 
-    (0, _createClass3.default)(Scroller, [{
+    _createClass(Scroller, [{
         key: 'getChildContext',
         value: function getChildContext() {
             return { scroller: this, isScroller: this.props.enableLazyLoad };
@@ -4620,6 +2736,7 @@ var Scroller = function (_Component) {
             return scrollerContent;
         }
     }]);
+
     return Scroller;
 }(_react.Component);
 
@@ -4636,108 +2753,10 @@ Scroller.propTypes = propTypes;
 Scroller.Sticky = _sticky2.default;
 Scroller.LazyImage = _lazyimage2.default;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 54 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _classCallCheck2 = __webpack_require__(1);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(2);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = __webpack_require__(4);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(3);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouter = __webpack_require__(26);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var HomeHeader = function (_React$Component) {
-	(0, _inherits3.default)(HomeHeader, _React$Component);
-
-	function HomeHeader() {
-		(0, _classCallCheck3.default)(this, HomeHeader);
-		return (0, _possibleConstructorReturn3.default)(this, (HomeHeader.__proto__ || Object.getPrototypeOf(HomeHeader)).apply(this, arguments));
-	}
-
-	(0, _createClass3.default)(HomeHeader, [{
-		key: "back",
-		value: function back() {
-			_reactRouter.browserHistory.goBack();
-		}
-	}, {
-		key: "refresh",
-		value: function refresh() {
-			location.reload(false); //false从缓存中获得，true则从服务器获得
-		}
-	}, {
-		key: "render",
-		value: function render() {
-			return _react2.default.createElement(
-				"div",
-				null,
-				_react2.default.createElement(
-					"header",
-					{ className: "yo-header-a" },
-					_react2.default.createElement(
-						"i",
-						{ className: "yo-ico regret", onClick: this.back },
-						"\uDB80\uDF43"
-					),
-					_react2.default.createElement(
-						"form",
-						{ className: "yo-search" },
-						_react2.default.createElement(
-							"label",
-							{ className: "action" },
-							_react2.default.createElement(
-								"span",
-								{ className: "yo-ico" },
-								"\uE65E"
-							),
-							_react2.default.createElement("input", { className: "input", type: "text", placeholder: "\u8BF7\u8F93\u5165\u5173\u952E\u5B57" })
-						)
-					),
-					_react2.default.createElement(
-						"i",
-						{ className: "yo-ico affirm", onClick: this.refresh },
-						"\uE67A"
-					)
-				)
-			);
-		}
-	}]);
-	return HomeHeader;
-}(_react2.default.Component);
-
-exports.default = HomeHeader;
-
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "homeHeader.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ }),
-/* 55 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4753,15 +2772,15 @@ exports.default = HomeHeader;
 
 
 
-var _prodInvariant = __webpack_require__(20);
+var _prodInvariant = __webpack_require__(3);
 
-var EventPluginRegistry = __webpack_require__(115);
-var EventPluginUtils = __webpack_require__(34);
-var ReactErrorUtils = __webpack_require__(56);
+var EventPluginRegistry = __webpack_require__(61);
+var EventPluginUtils = __webpack_require__(8);
+var ReactErrorUtils = __webpack_require__(16);
 
-var accumulateInto = __webpack_require__(57);
-var forEachAccumulated = __webpack_require__(58);
-var invariant = __webpack_require__(13);
+var accumulateInto = __webpack_require__(17);
+var forEachAccumulated = __webpack_require__(18);
+var invariant = __webpack_require__(2);
 
 /**
  * Internal store for event listeners
@@ -5018,10 +3037,10 @@ var EventPluginHub = {
 };
 
 module.exports = EventPluginHub;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 56 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5101,10 +3120,10 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 module.exports = ReactErrorUtils;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 57 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5121,9 +3140,9 @@ module.exports = ReactErrorUtils;
 
 
 
-var _prodInvariant = __webpack_require__(20);
+var _prodInvariant = __webpack_require__(3);
 
-var invariant = __webpack_require__(13);
+var invariant = __webpack_require__(2);
 
 /**
  * Accumulates items that must not be null or undefined into the first one. This
@@ -5165,10 +3184,10 @@ function accumulateInto(current, next) {
 }
 
 module.exports = accumulateInto;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 58 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5204,7 +3223,7 @@ function forEachAccumulated(arr, cb, scope) {
 module.exports = forEachAccumulated;
 
 /***/ }),
-/* 59 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5220,7 +3239,7 @@ module.exports = forEachAccumulated;
 
 
 
-var shallowEqual = __webpack_require__(91);
+var shallowEqual = __webpack_require__(42);
 
 /**
  * Does a shallow comparison for props and state.
@@ -5234,19 +3253,19 @@ function shallowCompare(instance, nextProps, nextState) {
 module.exports = shallowCompare;
 
 /***/ }),
-/* 60 */
+/* 20 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 61 */
+/* 21 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 62 */
+/* 22 */
 /***/ (function(module, exports) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {/* globals __webpack_amd_options__ */
@@ -5255,223 +3274,403 @@ module.exports = __webpack_amd_options__;
 /* WEBPACK VAR INJECTION */}.call(exports, {}))
 
 /***/ }),
-/* 63 */
+/* 23 */
 /***/ (function(module, exports) {
 
-var toString = {}.toString;
+var g;
 
-module.exports = function(it){
-  return toString.call(it).slice(8, -1);
-};
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
 
-/***/ }),
-/* 64 */
-/***/ (function(module, exports, __webpack_require__) {
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
 
-// optional / simple context binding
-var aFunction = __webpack_require__(139);
-module.exports = function(fn, that, length){
-  aFunction(fn);
-  if(that === undefined)return fn;
-  switch(length){
-    case 1: return function(a){
-      return fn.call(that, a);
-    };
-    case 2: return function(a, b){
-      return fn.call(that, a, b);
-    };
-    case 3: return function(a, b, c){
-      return fn.call(that, a, b, c);
-    };
-  }
-  return function(/* ...args */){
-    return fn.apply(that, arguments);
-  };
-};
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
 
 /***/ }),
-/* 65 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var isObject = __webpack_require__(23)
-  , document = __webpack_require__(7).document
-  // in old IE typeof document.createElement is 'object'
-  , is = isObject(document) && isObject(document.createElement);
-module.exports = function(it){
-  return is ? document.createElement(it) : {};
-};
-
-/***/ }),
-/* 66 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = !__webpack_require__(9) && !__webpack_require__(22)(function(){
-  return Object.defineProperty(__webpack_require__(65)('div'), 'a', {get: function(){ return 7; }}).a != 7;
-});
-
-/***/ }),
-/* 67 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// fallback for non-array-like ES3 and non-enumerable old V8 strings
-var cof = __webpack_require__(63);
-module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
-  return cof(it) == 'String' ? it.split('') : Object(it);
-};
-
-/***/ }),
-/* 68 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var LIBRARY        = __webpack_require__(38)
-  , $export        = __webpack_require__(14)
-  , redefine       = __webpack_require__(72)
-  , hide           = __webpack_require__(15)
-  , has            = __webpack_require__(10)
-  , Iterators      = __webpack_require__(37)
-  , $iterCreate    = __webpack_require__(145)
-  , setToStringTag = __webpack_require__(41)
-  , getPrototypeOf = __webpack_require__(152)
-  , ITERATOR       = __webpack_require__(16)('iterator')
-  , BUGGY          = !([].keys && 'next' in [].keys()) // Safari has buggy iterators w/o `next`
-  , FF_ITERATOR    = '@@iterator'
-  , KEYS           = 'keys'
-  , VALUES         = 'values';
-
-var returnThis = function(){ return this; };
-
-module.exports = function(Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCED){
-  $iterCreate(Constructor, NAME, next);
-  var getMethod = function(kind){
-    if(!BUGGY && kind in proto)return proto[kind];
-    switch(kind){
-      case KEYS: return function keys(){ return new Constructor(this, kind); };
-      case VALUES: return function values(){ return new Constructor(this, kind); };
-    } return function entries(){ return new Constructor(this, kind); };
-  };
-  var TAG        = NAME + ' Iterator'
-    , DEF_VALUES = DEFAULT == VALUES
-    , VALUES_BUG = false
-    , proto      = Base.prototype
-    , $native    = proto[ITERATOR] || proto[FF_ITERATOR] || DEFAULT && proto[DEFAULT]
-    , $default   = $native || getMethod(DEFAULT)
-    , $entries   = DEFAULT ? !DEF_VALUES ? $default : getMethod('entries') : undefined
-    , $anyNative = NAME == 'Array' ? proto.entries || $native : $native
-    , methods, key, IteratorPrototype;
-  // Fix native
-  if($anyNative){
-    IteratorPrototype = getPrototypeOf($anyNative.call(new Base));
-    if(IteratorPrototype !== Object.prototype){
-      // Set @@toStringTag to native iterators
-      setToStringTag(IteratorPrototype, TAG, true);
-      // fix for some old engines
-      if(!LIBRARY && !has(IteratorPrototype, ITERATOR))hide(IteratorPrototype, ITERATOR, returnThis);
-    }
-  }
-  // fix Array#{values, @@iterator}.name in V8 / FF
-  if(DEF_VALUES && $native && $native.name !== VALUES){
-    VALUES_BUG = true;
-    $default = function values(){ return $native.call(this); };
-  }
-  // Define iterator
-  if((!LIBRARY || FORCED) && (BUGGY || VALUES_BUG || !proto[ITERATOR])){
-    hide(proto, ITERATOR, $default);
-  }
-  // Plug for library
-  Iterators[NAME] = $default;
-  Iterators[TAG]  = returnThis;
-  if(DEFAULT){
-    methods = {
-      values:  DEF_VALUES ? $default : getMethod(VALUES),
-      keys:    IS_SET     ? $default : getMethod(KEYS),
-      entries: $entries
-    };
-    if(FORCED)for(key in methods){
-      if(!(key in proto))redefine(proto, key, methods[key]);
-    } else $export($export.P + $export.F * (BUGGY || VALUES_BUG), NAME, methods);
-  }
-  return methods;
-};
-
-/***/ }),
-/* 69 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var pIE            = __webpack_require__(27)
-  , createDesc     = __webpack_require__(28)
-  , toIObject      = __webpack_require__(12)
-  , toPrimitive    = __webpack_require__(45)
-  , has            = __webpack_require__(10)
-  , IE8_DOM_DEFINE = __webpack_require__(66)
-  , gOPD           = Object.getOwnPropertyDescriptor;
-
-exports.f = __webpack_require__(9) ? gOPD : function getOwnPropertyDescriptor(O, P){
-  O = toIObject(O);
-  P = toPrimitive(P, true);
-  if(IE8_DOM_DEFINE)try {
-    return gOPD(O, P);
-  } catch(e){ /* empty */ }
-  if(has(O, P))return createDesc(!pIE.f.call(O, P), O[P]);
-};
-
-/***/ }),
-/* 70 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
-var $keys      = __webpack_require__(71)
-  , hiddenKeys = __webpack_require__(36).concat('length', 'prototype');
-
-exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O){
-  return $keys(O, hiddenKeys);
-};
-
-/***/ }),
-/* 71 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var has          = __webpack_require__(10)
-  , toIObject    = __webpack_require__(12)
-  , arrayIndexOf = __webpack_require__(141)(false)
-  , IE_PROTO     = __webpack_require__(42)('IE_PROTO');
-
-module.exports = function(object, names){
-  var O      = toIObject(object)
-    , i      = 0
-    , result = []
-    , key;
-  for(key in O)if(key != IE_PROTO)has(O, key) && result.push(key);
-  // Don't enum bug & hidden keys
-  while(names.length > i)if(has(O, key = names[i++])){
-    ~arrayIndexOf(result, key) || result.push(key);
-  }
-  return result;
-};
-
-/***/ }),
-/* 72 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(15);
-
-/***/ }),
-/* 73 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 7.1.13 ToObject(argument)
-var defined = __webpack_require__(35);
-module.exports = function(it){
-  return Object(defined(it));
-};
-
-/***/ }),
-/* 74 */
+/* 24 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__root_js__ = __webpack_require__(175);
+/* harmony export (immutable) */ __webpack_exports__["a"] = compose;
+/**
+ * Composes single-argument functions from right to left. The rightmost
+ * function can take multiple arguments as it provides the signature for
+ * the resulting composite function.
+ *
+ * @param {...Function} funcs The functions to compose.
+ * @returns {Function} A function obtained by composing the argument functions
+ * from right to left. For example, compose(f, g, h) is identical to doing
+ * (...args) => f(g(h(...args))).
+ */
+
+function compose() {
+  for (var _len = arguments.length, funcs = Array(_len), _key = 0; _key < _len; _key++) {
+    funcs[_key] = arguments[_key];
+  }
+
+  if (funcs.length === 0) {
+    return function (arg) {
+      return arg;
+    };
+  }
+
+  if (funcs.length === 1) {
+    return funcs[0];
+  }
+
+  var last = funcs[funcs.length - 1];
+  var rest = funcs.slice(0, -1);
+  return function () {
+    return rest.reduceRight(function (composed, f) {
+      return f(composed);
+    }, last.apply(undefined, arguments));
+  };
+}
+
+/***/ }),
+/* 25 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_symbol_observable__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return ActionTypes; });
+/* harmony export (immutable) */ __webpack_exports__["a"] = createStore;
+
+
+
+/**
+ * These are private action types reserved by Redux.
+ * For any unknown actions, you must return the current state.
+ * If the current state is undefined, you must return the initial state.
+ * Do not reference these action types directly in your code.
+ */
+var ActionTypes = {
+  INIT: '@@redux/INIT'
+};
+
+/**
+ * Creates a Redux store that holds the state tree.
+ * The only way to change the data in the store is to call `dispatch()` on it.
+ *
+ * There should only be a single store in your app. To specify how different
+ * parts of the state tree respond to actions, you may combine several reducers
+ * into a single reducer function by using `combineReducers`.
+ *
+ * @param {Function} reducer A function that returns the next state tree, given
+ * the current state tree and the action to handle.
+ *
+ * @param {any} [preloadedState] The initial state. You may optionally specify it
+ * to hydrate the state from the server in universal apps, or to restore a
+ * previously serialized user session.
+ * If you use `combineReducers` to produce the root reducer function, this must be
+ * an object with the same shape as `combineReducers` keys.
+ *
+ * @param {Function} enhancer The store enhancer. You may optionally specify it
+ * to enhance the store with third-party capabilities such as middleware,
+ * time travel, persistence, etc. The only store enhancer that ships with Redux
+ * is `applyMiddleware()`.
+ *
+ * @returns {Store} A Redux store that lets you read the state, dispatch actions
+ * and subscribe to changes.
+ */
+function createStore(reducer, preloadedState, enhancer) {
+  var _ref2;
+
+  if (typeof preloadedState === 'function' && typeof enhancer === 'undefined') {
+    enhancer = preloadedState;
+    preloadedState = undefined;
+  }
+
+  if (typeof enhancer !== 'undefined') {
+    if (typeof enhancer !== 'function') {
+      throw new Error('Expected the enhancer to be a function.');
+    }
+
+    return enhancer(createStore)(reducer, preloadedState);
+  }
+
+  if (typeof reducer !== 'function') {
+    throw new Error('Expected the reducer to be a function.');
+  }
+
+  var currentReducer = reducer;
+  var currentState = preloadedState;
+  var currentListeners = [];
+  var nextListeners = currentListeners;
+  var isDispatching = false;
+
+  function ensureCanMutateNextListeners() {
+    if (nextListeners === currentListeners) {
+      nextListeners = currentListeners.slice();
+    }
+  }
+
+  /**
+   * Reads the state tree managed by the store.
+   *
+   * @returns {any} The current state tree of your application.
+   */
+  function getState() {
+    return currentState;
+  }
+
+  /**
+   * Adds a change listener. It will be called any time an action is dispatched,
+   * and some part of the state tree may potentially have changed. You may then
+   * call `getState()` to read the current state tree inside the callback.
+   *
+   * You may call `dispatch()` from a change listener, with the following
+   * caveats:
+   *
+   * 1. The subscriptions are snapshotted just before every `dispatch()` call.
+   * If you subscribe or unsubscribe while the listeners are being invoked, this
+   * will not have any effect on the `dispatch()` that is currently in progress.
+   * However, the next `dispatch()` call, whether nested or not, will use a more
+   * recent snapshot of the subscription list.
+   *
+   * 2. The listener should not expect to see all state changes, as the state
+   * might have been updated multiple times during a nested `dispatch()` before
+   * the listener is called. It is, however, guaranteed that all subscribers
+   * registered before the `dispatch()` started will be called with the latest
+   * state by the time it exits.
+   *
+   * @param {Function} listener A callback to be invoked on every dispatch.
+   * @returns {Function} A function to remove this change listener.
+   */
+  function subscribe(listener) {
+    if (typeof listener !== 'function') {
+      throw new Error('Expected listener to be a function.');
+    }
+
+    var isSubscribed = true;
+
+    ensureCanMutateNextListeners();
+    nextListeners.push(listener);
+
+    return function unsubscribe() {
+      if (!isSubscribed) {
+        return;
+      }
+
+      isSubscribed = false;
+
+      ensureCanMutateNextListeners();
+      var index = nextListeners.indexOf(listener);
+      nextListeners.splice(index, 1);
+    };
+  }
+
+  /**
+   * Dispatches an action. It is the only way to trigger a state change.
+   *
+   * The `reducer` function, used to create the store, will be called with the
+   * current state tree and the given `action`. Its return value will
+   * be considered the **next** state of the tree, and the change listeners
+   * will be notified.
+   *
+   * The base implementation only supports plain object actions. If you want to
+   * dispatch a Promise, an Observable, a thunk, or something else, you need to
+   * wrap your store creating function into the corresponding middleware. For
+   * example, see the documentation for the `redux-thunk` package. Even the
+   * middleware will eventually dispatch plain object actions using this method.
+   *
+   * @param {Object} action A plain object representing “what changed”. It is
+   * a good idea to keep actions serializable so you can record and replay user
+   * sessions, or use the time travelling `redux-devtools`. An action must have
+   * a `type` property which may not be `undefined`. It is a good idea to use
+   * string constants for action types.
+   *
+   * @returns {Object} For convenience, the same action object you dispatched.
+   *
+   * Note that, if you use a custom middleware, it may wrap `dispatch()` to
+   * return something else (for example, a Promise you can await).
+   */
+  function dispatch(action) {
+    if (!__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__["a" /* default */])(action)) {
+      throw new Error('Actions must be plain objects. ' + 'Use custom middleware for async actions.');
+    }
+
+    if (typeof action.type === 'undefined') {
+      throw new Error('Actions may not have an undefined "type" property. ' + 'Have you misspelled a constant?');
+    }
+
+    if (isDispatching) {
+      throw new Error('Reducers may not dispatch actions.');
+    }
+
+    try {
+      isDispatching = true;
+      currentState = currentReducer(currentState, action);
+    } finally {
+      isDispatching = false;
+    }
+
+    var listeners = currentListeners = nextListeners;
+    for (var i = 0; i < listeners.length; i++) {
+      listeners[i]();
+    }
+
+    return action;
+  }
+
+  /**
+   * Replaces the reducer currently used by the store to calculate the state.
+   *
+   * You might need this if your app implements code splitting and you want to
+   * load some of the reducers dynamically. You might also need this if you
+   * implement a hot reloading mechanism for Redux.
+   *
+   * @param {Function} nextReducer The reducer for the store to use instead.
+   * @returns {void}
+   */
+  function replaceReducer(nextReducer) {
+    if (typeof nextReducer !== 'function') {
+      throw new Error('Expected the nextReducer to be a function.');
+    }
+
+    currentReducer = nextReducer;
+    dispatch({ type: ActionTypes.INIT });
+  }
+
+  /**
+   * Interoperability point for observable/reactive libraries.
+   * @returns {observable} A minimal observable of state changes.
+   * For more information, see the observable proposal:
+   * https://github.com/zenparsing/es-observable
+   */
+  function observable() {
+    var _ref;
+
+    var outerSubscribe = subscribe;
+    return _ref = {
+      /**
+       * The minimal observable subscription method.
+       * @param {Object} observer Any object that can be used as an observer.
+       * The observer object should have a `next` method.
+       * @returns {subscription} An object with an `unsubscribe` method that can
+       * be used to unsubscribe the observable from the store, and prevent further
+       * emission of values from the observable.
+       */
+      subscribe: function subscribe(observer) {
+        if (typeof observer !== 'object') {
+          throw new TypeError('Expected the observer to be an object.');
+        }
+
+        function observeState() {
+          if (observer.next) {
+            observer.next(getState());
+          }
+        }
+
+        observeState();
+        var unsubscribe = outerSubscribe(observeState);
+        return { unsubscribe: unsubscribe };
+      }
+    }, _ref[__WEBPACK_IMPORTED_MODULE_1_symbol_observable___default.a] = function () {
+      return this;
+    }, _ref;
+  }
+
+  // When a store is created, an "INIT" action is dispatched so that every
+  // reducer returns their initial state. This effectively populates
+  // the initial state tree.
+  dispatch({ type: ActionTypes.INIT });
+
+  return _ref2 = {
+    dispatch: dispatch,
+    subscribe: subscribe,
+    getState: getState,
+    replaceReducer: replaceReducer
+  }, _ref2[__WEBPACK_IMPORTED_MODULE_1_symbol_observable___default.a] = observable, _ref2;
+}
+
+/***/ }),
+/* 26 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__combineReducers__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__compose__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_warning__ = __webpack_require__(27);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createStore", function() { return __WEBPACK_IMPORTED_MODULE_0__createStore__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "combineReducers", function() { return __WEBPACK_IMPORTED_MODULE_1__combineReducers__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "bindActionCreators", function() { return __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "applyMiddleware", function() { return __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "compose", function() { return __WEBPACK_IMPORTED_MODULE_4__compose__["a"]; });
+
+
+
+
+
+
+
+/*
+* This is a dummy function to check if the function name has been altered by minification.
+* If the function has been minified and NODE_ENV !== 'production', warn the user.
+*/
+function isCrushed() {}
+
+if (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed') {
+  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__utils_warning__["a" /* default */])('You are currently using minified code outside of NODE_ENV === \'production\'. ' + 'This means that you are running a slower development build of Redux. ' + 'You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify ' + 'or DefinePlugin for webpack (http://stackoverflow.com/questions/30030031) ' + 'to ensure you have the correct code for your production build.');
+}
+
+
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
+
+/***/ }),
+/* 27 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = warning;
+/**
+ * Prints a warning in the console if it exists.
+ *
+ * @param {String} message The warning message.
+ * @returns {void}
+ */
+function warning(message) {
+  /* eslint-disable no-console */
+  if (typeof console !== 'undefined' && typeof console.error === 'function') {
+    console.error(message);
+  }
+  /* eslint-enable no-console */
+  try {
+    // This error was thrown as a convenience so that if you enable
+    // "break on all exceptions" in your console,
+    // it would pause the execution at this line.
+    throw new Error(message);
+    /* eslint-disable no-empty */
+  } catch (e) {}
+  /* eslint-enable no-empty */
+}
+
+/***/ }),
+/* 28 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__root_js__ = __webpack_require__(87);
 
 
 /** Built-in value references. */
@@ -5481,18 +3680,18 @@ var Symbol = __WEBPACK_IMPORTED_MODULE_0__root_js__["a" /* default */].Symbol;
 
 
 /***/ }),
-/* 75 */
+/* 29 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics__ = __webpack_require__(92);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(131);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_Subscription__ = __webpack_require__(185);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_PropTypes__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_Subscription__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_PropTypes__ = __webpack_require__(31);
 /* harmony export (immutable) */ __webpack_exports__["a"] = connectAdvanced;
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -5766,14 +3965,14 @@ selectorFactory) {
     return __WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics___default()(Connect, WrappedComponent);
   };
 }
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 76 */
+/* 30 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(78);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(32);
 /* harmony export (immutable) */ __webpack_exports__["b"] = wrapMapToPropsConstant;
 /* unused harmony export getDependsOnOwnProps */
 /* harmony export (immutable) */ __webpack_exports__["a"] = wrapMapToPropsFunc;
@@ -5844,14 +4043,14 @@ function wrapMapToPropsFunc(mapToProps, methodName) {
     return proxy;
   };
 }
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 77 */
+/* 31 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return subscriptionShape; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return storeShape; });
@@ -5871,12 +4070,12 @@ var storeShape = __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].shape({
 });
 
 /***/ }),
-/* 78 */
+/* 32 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(177);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__warning__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__warning__ = __webpack_require__(10);
 /* harmony export (immutable) */ __webpack_exports__["a"] = verifyPlainObject;
 
 
@@ -5888,1047 +4087,764 @@ function verifyPlainObject(value, displayName, methodName) {
 }
 
 /***/ }),
-/* 79 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(135), __esModule: true };
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("F:\\react-app\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var My = _react2.default.createClass({
+	displayName: 'My',
+	render: function render() {
+		return _react2.default.createElement(
+			'div',
+			null,
+			'\u8D2D\u7269\u8F66'
+		);
+	}
+});
+
+exports.default = My;
+
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "car.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 80 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("F:\\react-app\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
+'use strict';
 
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
 
-exports.default = function (obj, keys) {
-  var target = {};
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-  for (var i in obj) {
-    if (keys.indexOf(i) >= 0) continue;
-    if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;
-    target[i] = obj[i];
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _src = __webpack_require__(49);
+
+var _src2 = _interopRequireDefault(_src);
+
+var _src3 = __webpack_require__(14);
+
+var _src4 = _interopRequireDefault(_src3);
+
+var _src5 = __webpack_require__(52);
+
+var _jquery = __webpack_require__(98);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+//loading.show();
+/*
+constructor (props) {
+    super(props)
+    this.state = {
+      title: '榜单 « 电影 « 豆瓣'
+    }
   }
-
-  return target;
-};
-
-/***/ }),
-/* 81 */
-/***/ (function(module, exports) {
-
-module.exports = window.Redux;
-
-/***/ }),
-/* 82 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _classCallCheck2 = __webpack_require__(1);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(2);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = __webpack_require__(4);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(3);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Cart = function (_React$Component) {
-	(0, _inherits3.default)(Cart, _React$Component);
-
-	function Cart() {
-		(0, _classCallCheck3.default)(this, Cart);
-		return (0, _possibleConstructorReturn3.default)(this, (Cart.__proto__ || Object.getPrototypeOf(Cart)).apply(this, arguments));
-	}
-
-	(0, _createClass3.default)(Cart, [{
-		key: "render",
-		value: function render() {
-			return _react2.default.createElement(
-				"div",
-				null,
-				"cart"
-			);
-		}
-	}]);
-	return Cart;
-}(_react2.default.Component);
-
-exports.default = Cart;
-
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "cart.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ }),
-/* 83 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _classCallCheck2 = __webpack_require__(1);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(2);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = __webpack_require__(4);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(3);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _homeHeader = __webpack_require__(54);
-
-var _homeHeader2 = _interopRequireDefault(_homeHeader);
-
-var _src = __webpack_require__(95);
-
-var _src2 = _interopRequireDefault(_src);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Home = function (_React$Component) {
-	(0, _inherits3.default)(Home, _React$Component);
-
-	function Home() {
-		(0, _classCallCheck3.default)(this, Home);
-		return (0, _possibleConstructorReturn3.default)(this, (Home.__proto__ || Object.getPrototypeOf(Home)).apply(this, arguments));
-	}
-
-	(0, _createClass3.default)(Home, [{
-		key: "render",
-		value: function render() {
-			return _react2.default.createElement(
-				"div",
-				null,
-				_react2.default.createElement(_homeHeader2.default, null),
-				_react2.default.createElement(
-					"div",
-					{ className: "download" },
-					_react2.default.createElement(
-						"span",
-						{ className: "loadDele" },
-						"x"
-					),
-					_react2.default.createElement("img", { src: "images/ll-tag.png" }),
-					_react2.default.createElement(
-						"span",
-						{ className: "dwname" },
-						"\u8054\u8FDELife\u5BA2\u6237\u7AEF\uFF0C\u597D\u793C\u4E0D\u65AD\uFF01"
-					),
-					_react2.default.createElement(
-						"a",
-						{ className: "dwbutton", href: "#" },
-						"\u7ACB\u5373\u4E0B\u8F7D"
-					)
-				),
-				_react2.default.createElement(
-					"div",
-					{ className: "banner" },
-					_react2.default.createElement(
-						_src2.default,
-						{ speed: 1 },
-						_react2.default.createElement(
-							"li",
-							null,
-							_react2.default.createElement("img", { src: "http://images.lianlian-resources.com/LianLian/EventAds/2017/03/13/636250114798336518_750_250.jpg" })
-						),
-						_react2.default.createElement(
-							"li",
-							null,
-							_react2.default.createElement("img", { src: "http://images.lianlian-resources.com/LianLian/EventAds/2017/03/10/636247582300091943_750_250.jpg" })
-						),
-						_react2.default.createElement(
-							"li",
-							null,
-							_react2.default.createElement("img", { src: "http://images.lianlian-resources.com/LianLian/EventAds/2017/03/23/636258824019039203_750_250.jpg" })
-						)
-					)
-				)
-			);
-		}
-	}]);
-	return Home;
-}(_react2.default.Component);
-
-exports.default = Home;
-
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "home.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ }),
-/* 84 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _classCallCheck2 = __webpack_require__(1);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(2);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = __webpack_require__(4);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(3);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouter = __webpack_require__(26);
-
-var _reactRedux = __webpack_require__(50);
-
-var _store = __webpack_require__(49);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Index = function (_React$Component) {
-	(0, _inherits3.default)(Index, _React$Component);
-
-	function Index(props) {
-		(0, _classCallCheck3.default)(this, Index);
-		return (0, _possibleConstructorReturn3.default)(this, (Index.__proto__ || Object.getPrototypeOf(Index)).call(this, props));
-	}
-
-	(0, _createClass3.default)(Index, [{
-		key: "render",
-		value: function render() {
-			return _react2.default.createElement(
-				"div",
-				{ className: "app" },
-				_react2.default.createElement(
-					"div",
-					{ className: "section" },
-					this.props.children
-				),
-				_react2.default.createElement(
-					"footer",
-					{ className: "footer" },
-					_react2.default.createElement(
-						"ul",
-						null,
-						_react2.default.createElement(
-							"li",
-							{ className: "active" },
-							_react2.default.createElement(
-								_reactRouter.Link,
-								{ to: "home", activeClassName: "active" },
-								_react2.default.createElement(
-									"i",
-									{ className: "yo-ico" },
-									"\uE630"
-								),
-								_react2.default.createElement(
-									"b",
-									null,
-									"\u9996\u9875"
-								)
-							)
-						),
-						_react2.default.createElement(
-							"li",
-							null,
-							_react2.default.createElement(
-								_reactRouter.Link,
-								{ to: "kind", activeClassName: "active" },
-								_react2.default.createElement(
-									"i",
-									{ className: "yo-ico" },
-									"\uE76F"
-								),
-								_react2.default.createElement(
-									"b",
-									null,
-									"\u5206\u7C7B"
-								)
-							)
-						),
-						_react2.default.createElement(
-							"li",
-							null,
-							_react2.default.createElement(
-								_reactRouter.Link,
-								{ to: "liandou", activeClassName: "active" },
-								_react2.default.createElement(
-									"i",
-									{ className: "yo-ico" },
-									"\uE9E9"
-								),
-								_react2.default.createElement(
-									"b",
-									null,
-									"\u8054\u8C46\u5546\u57CE"
-								)
-							)
-						),
-						_react2.default.createElement(
-							"li",
-							null,
-							_react2.default.createElement(
-								_reactRouter.Link,
-								{ to: "cart", activeClassName: "active" },
-								_react2.default.createElement(
-									"i",
-									{ className: "yo-ico" },
-									"\uE603"
-								),
-								_react2.default.createElement(
-									"b",
-									null,
-									"\u8D2D\u7269\u8F66"
-								)
-							)
-						),
-						_react2.default.createElement(
-							"li",
-							null,
-							_react2.default.createElement(
-								_reactRouter.Link,
-								{ to: "my", activeClassName: "active" },
-								_react2.default.createElement(
-									"i",
-									{ className: "yo-ico" },
-									"\uE62C"
-								),
-								_react2.default.createElement(
-									"b",
-									null,
-									"\u6211\u7684"
-								)
-							)
-						)
-					)
-				)
-			);
-		}
-	}]);
-	return Index;
-}(_react2.default.Component);
-
-exports.default = (0, _reactRedux.connect)(_store.mapStateToProps, _store.mapDidpathToProps)(Index);
-
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ }),
-/* 85 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _classCallCheck2 = __webpack_require__(1);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(2);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = __webpack_require__(4);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(3);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _kindHeader = __webpack_require__(110);
-
-var _kindHeader2 = _interopRequireDefault(_kindHeader);
-
-var _src = __webpack_require__(103);
-
-var _src2 = _interopRequireDefault(_src);
-
-var _kindList = __webpack_require__(111);
-
-var _kindList2 = _interopRequireDefault(_kindList);
-
-var _src3 = __webpack_require__(33);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var multiData = {
-    subItemType: 'ProductMenu',
-    defaultValue: 1,
-    subList: [{
-        subList: 5296,
-        "name": "美妆个护",
-        value: 1,
-        "parentId": 0
-    }, {
-        subList: 5301,
-        "name": "食品饮料",
-        value: 2,
-        "parentId": 0
-    }, {
-        subList: 5295,
-        "name": "母婴用品",
-        value: 3,
-        "parentId": 0
-    }, {
-        subList: 5575,
-        "name": "厨卫清洁",
-        value: 4,
-        "parentId": 0
-    }, {
-        subList: 5297,
-        "name": "生活家居",
-        value: 5,
-        "parentId": 0
-    }, {
-        subList: 5136,
-        "name": "手机数码",
-        value: 6,
-        "parentId": 0
-    }, {
-        subList: 670536,
-        "name": "电脑办公",
-        value: 7,
-        "parentId": 0
-    }, {
-        subList: 5183,
-        "name": "大小家电",
-        value: 8,
-        "parentId": 0
-    }, {
-        subList: 5751,
-        "name": "运动户外汽车",
-        value: 9,
-        "parentId": 0
-    }, {
-        subList: 5298,
-        "name": "手表珠宝箱包",
-        value: 10,
-        "parentId": 0
-    }, {
-        subList: 5299,
-        "name": "生鲜果蔬",
-        value: 11,
-        "parentId": 0
-    }, {
-        subList: 5300,
-        "name": "鲜花礼券",
-        value: 12,
-        "parentId": 0
-    }, {
-        subList: 1085398,
-        "name": "虚拟商品",
-        value: 13,
-        "parentId": 0,
-        "iconUrl": "http://ecimages.lianlian-resources.com/Mall/2016/04/21/635968341174306850_240_240.png"
-    }, {
-        subList: 528636,
-        "name": "营养保健",
-        value: 14,
-        "parentId": 0
-    }, {
-        subList: 78948,
-        "name": "优惠组合套装",
-        value: 15,
-        "parentId": 0,
-        "keywords": "限时抢购",
-        "description": "活动商品分类"
-    }, {
-        subList: 79036,
-        value: 16,
-        "name": "9联豆起",
-        "parentId": 0
-    }]
-};
-
-var Kind = function (_React$Component) {
-    (0, _inherits3.default)(Kind, _React$Component);
-
-    function Kind(props) {
-        (0, _classCallCheck3.default)(this, Kind);
-
-        var _this = (0, _possibleConstructorReturn3.default)(this, (Kind.__proto__ || Object.getPrototypeOf(Kind)).call(this, props));
-
-        _this.state = {
-            dataSource: multiData,
-            caseList: [],
-            value: [1]
-        };
-
-        return _this;
+this.setState({
+      title: type
     }
 
-    (0, _createClass3.default)(Kind, [{
-        key: "updateValue",
-        value: function updateValue(value) {
-            this.setState({
-                value: value
-            });
-        }
-    }, {
-        key: "componentWillMount",
-        value: function componentWillMount() {
-            _src3.loading.show({
-                extraClass: 'yo-loading-b',
-                text: 'loading'
-            });
-        }
-    }, {
-        key: "render",
-        value: function render() {
-            var _this2 = this;
+    <h2 className="title">{this.state.title}</h2>
 
-            // console.log(this.state.caseList)
-            return _react2.default.createElement(
-                "div",
-                null,
-                _react2.default.createElement(_kindHeader2.default, null),
-                _react2.default.createElement(
-                    "ul",
-                    { className: "nav" },
-                    _react2.default.createElement(_src2.default, {
-                        dataSource: this.state.dataSource,
-                        value: this.state.value,
-                        onChange: function onChange(_ref) {
-                            var newValue = _ref.newValue;
-
-                            _this2.updateValue(newValue);
-                        },
-                        onItemTap: function onItemTap(_ref2) {
-                            var item = _ref2.item;
-
-                            return [item.value];
-                        },
-                        renderItem: function renderItem(_ref3) {
-                            var itemType = _ref3.itemType,
-                                data = _ref3.data,
-                                isSpread = _ref3.isSpread,
-                                index = _ref3.index;
-
-                            switch (itemType) {
-                                case 'ProductMenu':
-                                    return _react2.default.createElement(
-                                        "h1",
-                                        { data: data, isSpread: isSpread, index: index },
-                                        data.name
-                                    );
-
-                            }
-                        },
-                        renderContent: function renderContent(_ref4) {
-                            var type = _ref4.type;
-
-                            switch (type) {
-                                case 5296:
-                                    return _react2.default.createElement(_kindList2.default, { url: type });
-                                case 5301:
-                                    return _react2.default.createElement(_kindList2.default, { url: type });
-                                case 5295:
-                                    return _react2.default.createElement(_kindList2.default, { url: type });
-                                case 5575:
-                                    return _react2.default.createElement(_kindList2.default, { url: type });
-                                case 5297:
-                                    return _react2.default.createElement(_kindList2.default, { url: type });
-                                case 5136:
-                                    return _react2.default.createElement(_kindList2.default, { url: type });
-                                case 670536:
-                                    return _react2.default.createElement(_kindList2.default, { url: type });
-                                case 5183:
-                                    return _react2.default.createElement(_kindList2.default, { url: type });
-                                case 5751:
-                                    return _react2.default.createElement(_kindList2.default, { url: type });
-                                case 5298:
-                                    return _react2.default.createElement(_kindList2.default, { url: type });
-                                case 5299:
-                                    return _react2.default.createElement(_kindList2.default, { url: type });
-                                case 5300:
-                                    return _react2.default.createElement(_kindList2.default, { url: type });
-                                case 1085398:
-                                    return _react2.default.createElement(_kindList2.default, { url: type });
-                                case 528636:
-                                    return _react2.default.createElement(_kindList2.default, { url: type });
-                                case 78948:
-                                    return _react2.default.createElement(_kindList2.default, { url: type });
-
-                                case 79036:
-                                    return _react2.default.createElement(_kindList2.default, { url: type });
-                            }
-                        }
-                    })
-                )
-            );
-        }
-    }, {
-        key: "componentDidMount",
-        value: function componentDidMount() {
-            setInterval(function () {
-                _src3.loading.hide();
-            }, 2000);
-        }
-    }]);
-    return Kind;
-}(_react2.default.Component);
-
-exports.default = Kind;
-//<h1 data={data} isSpread={isSpread} index={index}>{data.name}</h1>
-// <h1  >{data.id}</h1>
-
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "kind.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ }),
-/* 86 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _classCallCheck2 = __webpack_require__(1);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(2);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = __webpack_require__(4);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(3);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Liandou = function (_React$Component) {
-	(0, _inherits3.default)(Liandou, _React$Component);
-
-	function Liandou() {
-		(0, _classCallCheck3.default)(this, Liandou);
-		return (0, _possibleConstructorReturn3.default)(this, (Liandou.__proto__ || Object.getPrototypeOf(Liandou)).apply(this, arguments));
-	}
-
-	(0, _createClass3.default)(Liandou, [{
-		key: "render",
-		value: function render() {
-			return _react2.default.createElement(
-				"div",
-				null,
-				"liandou"
-			);
-		}
-	}]);
-	return Liandou;
-}(_react2.default.Component);
-
-exports.default = Liandou;
-
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "liandou.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ }),
-/* 87 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _classCallCheck2 = __webpack_require__(1);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(2);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = __webpack_require__(4);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(3);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
+    // JSON.parse(jsonstr); //可以将json字符串转换成json对象 
+//JSON.stringify(jsonobj); //可以将json对象转换成json对符串 
+ */
+// let url = '/api'
+// $.ajax({
+// 	url:url,
+// 	success:function(data){
+// 		console.log(data)
+// 	}
+// })																													
+// fetch("/api").then((res)=>res.json()).then((res)=>{console.log(res)})
 var My = function (_React$Component) {
-	(0, _inherits3.default)(My, _React$Component);
+	_inherits(My, _React$Component);
 
-	function My() {
-		(0, _classCallCheck3.default)(this, My);
-		return (0, _possibleConstructorReturn3.default)(this, (My.__proto__ || Object.getPrototypeOf(My)).apply(this, arguments));
+	function My(props) {
+		_classCallCheck(this, My);
+
+		var _this = _possibleConstructorReturn(this, (My.__proto__ || Object.getPrototypeOf(My)).call(this, props));
+
+		_this.state = {
+			"lunbo": [],
+			"nav_bar": [],
+			"many_qian": [],
+			"bikan": [],
+			"miaosha": [],
+			"miaosha_list": [],
+			"jnqingm": [],
+			"fantuan": [],
+			"fantuan_list": [],
+			"haoli": [],
+			"haoli_html": [],
+			"tejia": [],
+			"tejia_list": [],
+			"tejia_dong": [],
+			"lipin": [],
+			"remen": [],
+			"more": []
+
+		};
+		return _this;
 	}
 
-	(0, _createClass3.default)(My, [{
-		key: "render",
+	_createClass(My, [{
+		key: 'componentDidMount',
+		value: function componentDidMount() {
+			var that = this;
+			_jquery2.default.ajax({
+				url: "http://lianlianlife.duapp.com/base.php",
+				success: function success(res) {
+					var data = JSON.parse(res);
+					var lunboData = data.lunbo;
+					var nav_bar = data.nav_bar;
+					var many_qian = data.many_qian;
+					var bikan = data.bikan;
+					var miaosha = data.miaosha;
+					var miaosha_list = data.miaosha_list;
+					var jnqingm = data.jnqingm;
+					var fantuan = data.fantuan;
+					var fantuan_list = data.fantuan_list;
+					that.setState({
+						"lunbo": lunboData,
+						"nav_bar": nav_bar,
+						"many_qian": many_qian,
+						"bikan": bikan,
+						"miaosha": miaosha,
+						"miaosha_list": miaosha_list,
+						"jnqingm": jnqingm,
+						"fantuan": fantuan,
+						"fantuan_list": fantuan_list
+
+					});
+
+					_src5.loading.hide();
+				}
+			});
+			// fetch("http://lianlianlife.duapp.com/base.php").then((res) => {
+			// 	console.log(res)
+			// 	return res
+			// })
+		}
+	}, {
+		key: 'render',
 		value: function render() {
+			var _this2 = this;
+
 			return _react2.default.createElement(
-				"div",
-				null,
-				"my"
+				_src4.default,
+				{ ref: 'scroller', usePullRefresh: true, onRefresh: function onRefresh() {
+						var that = _this2;
+						setTimeout(function () {
+							that.refs.scroller.stopRefreshing(true);
+						}, 2000);
+					}, useLoadMore: true, onLoad: function onLoad() {
+						var that = _this2;
+						_jquery2.default.ajax({
+							url: "http://lianlianlife.duapp.com/homemore.php",
+							success: function success(res) {
+								var data = JSON.parse(res);
+								// var haoli = data.haoli;
+								// var tejia =data.tejia;
+								// var tejia_list = data.tejia_list;
+								// var tejia_dong =data.tejia_dong;
+								// var lipin = data.lipin;
+								// var remen =data.remen;
+								var more = data.more;
+
+								var more_html = more.map(function (value) {
+									return _react2.default.createElement('img', { src: value });
+								});
+
+								setTimeout(function () {
+									that.setState({
+										"more": more_html
+									});
+									that.refs.scroller.stopLoading(true);
+								}, 2000);
+							}
+						});
+					} },
+				_react2.default.createElement(
+					'div',
+					{ className: 'home_page_box' },
+					_react2.default.createElement(
+						_src2.default,
+						{ delay: 4 },
+						_react2.default.createElement(
+							'li',
+							{ className: 'item' },
+							_react2.default.createElement('img', { className: 'img lunbo-img', src: this.state.lunbo[0] })
+						),
+						_react2.default.createElement(
+							'li',
+							{ className: 'item' },
+							_react2.default.createElement('img', { className: 'img lunbo-img', src: this.state.lunbo[1] })
+						),
+						_react2.default.createElement(
+							'li',
+							{ className: 'item' },
+							_react2.default.createElement('img', { className: 'img lunbo-img', src: this.state.lunbo[2] })
+						),
+						_react2.default.createElement(
+							'li',
+							{ className: 'item' },
+							_react2.default.createElement('img', { className: 'img lunbo-img', src: this.state.lunbo[3] })
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'list-widge-top' },
+						_react2.default.createElement(
+							'a',
+							{ href: '#' },
+							_react2.default.createElement('img', { src: this.state.nav_bar[0] })
+						),
+						_react2.default.createElement(
+							'a',
+							{ href: '#' },
+							_react2.default.createElement('img', { src: this.state.nav_bar[1] })
+						),
+						_react2.default.createElement(
+							'a',
+							{ href: '#' },
+							_react2.default.createElement('img', { src: this.state.nav_bar[2] })
+						),
+						_react2.default.createElement(
+							'a',
+							{ href: '#' },
+							_react2.default.createElement('img', { src: this.state.nav_bar[3] })
+						),
+						_react2.default.createElement(
+							'a',
+							{ href: '#' },
+							_react2.default.createElement('img', { src: this.state.nav_bar[4] })
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'list-widge-top' },
+						_react2.default.createElement(
+							'a',
+							{ href: '' },
+							_react2.default.createElement('img', { src: this.state.nav_bar[5] })
+						),
+						_react2.default.createElement(
+							'a',
+							{ href: '' },
+							_react2.default.createElement('img', { src: this.state.nav_bar[6] })
+						),
+						_react2.default.createElement(
+							'a',
+							{ href: '' },
+							_react2.default.createElement('img', { src: this.state.nav_bar[7] })
+						),
+						_react2.default.createElement(
+							'a',
+							{ href: '' },
+							_react2.default.createElement('img', { src: this.state.nav_bar[8] })
+						),
+						_react2.default.createElement(
+							'a',
+							{ href: '' },
+							_react2.default.createElement('img', { src: this.state.nav_bar[9] })
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'many-qian' },
+						_react2.default.createElement(
+							'a',
+							{ href: '' },
+							_react2.default.createElement('img', { src: this.state.many_qian[0] })
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'scroll-loop' },
+						_react2.default.createElement('img', { src: this.state.bikan[0] })
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'tody-miaosha' },
+						_react2.default.createElement(
+							'a',
+							{ href: '' },
+							_react2.default.createElement('img', { src: this.state.miaosha[0] })
+						)
+					),
+					_react2.default.createElement(
+						_src4.default,
+						{ scrollX: true, scrollY: false },
+						_react2.default.createElement(
+							'div',
+							{ className: 'x-scroll-box' },
+							_react2.default.createElement(
+								'a',
+								{ href: '' },
+								_react2.default.createElement('img', { src: this.state.miaosha_list[0] })
+							),
+							_react2.default.createElement(
+								'a',
+								{ href: '' },
+								_react2.default.createElement('img', { src: this.state.miaosha_list[1] })
+							),
+							_react2.default.createElement(
+								'a',
+								{ href: '' },
+								_react2.default.createElement('img', { src: this.state.miaosha_list[2] })
+							),
+							_react2.default.createElement(
+								'a',
+								{ href: '' },
+								_react2.default.createElement('img', { src: this.state.miaosha_list[3] })
+							),
+							_react2.default.createElement(
+								'a',
+								{ href: '' },
+								_react2.default.createElement('img', { src: this.state.miaosha_list[4] })
+							),
+							_react2.default.createElement(
+								'a',
+								{ href: '' },
+								_react2.default.createElement('img', { src: this.state.miaosha_list[5] })
+							),
+							_react2.default.createElement(
+								'a',
+								{ href: '' },
+								_react2.default.createElement('img', { src: this.state.miaosha_list[6] })
+							)
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'jnqingm' },
+						_react2.default.createElement(_src4.default.LazyImage, { src: this.state.jnqingm[0] })
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'fantuan' },
+						_react2.default.createElement(
+							'a',
+							{ href: '' },
+							_react2.default.createElement(_src4.default.LazyImage, { src: this.state.fantuan[0] })
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'list-img-many' },
+						_react2.default.createElement(
+							'a',
+							{ className: 'big-img', href: '' },
+							_react2.default.createElement(_src4.default.LazyImage, { src: this.state.fantuan_list[0] })
+						),
+						_react2.default.createElement(
+							'a',
+							{ className: 'small-img', href: '' },
+							_react2.default.createElement(_src4.default.LazyImage, { src: this.state.fantuan_list[1] })
+						),
+						_react2.default.createElement(
+							'a',
+							{ className: 'big-img', href: '' },
+							_react2.default.createElement(_src4.default.LazyImage, { src: this.state.fantuan_list[2] })
+						),
+						_react2.default.createElement(
+							'a',
+							{ className: 'small-img', href: '' },
+							_react2.default.createElement(_src4.default.LazyImage, { src: this.state.fantuan_list[3] })
+						),
+						_react2.default.createElement(
+							'a',
+							{ className: 'big-img', href: '' },
+							_react2.default.createElement(_src4.default.LazyImage, { src: this.state.fantuan_list[4] })
+						),
+						_react2.default.createElement(
+							'a',
+							{ className: 'small-img', href: '' },
+							_react2.default.createElement(_src4.default.LazyImage, { src: this.state.fantuan_list[5] })
+						),
+						_react2.default.createElement(
+							'a',
+							{ className: 'big-img', href: '' },
+							_react2.default.createElement(_src4.default.LazyImage, { src: this.state.fantuan_list[6] })
+						),
+						_react2.default.createElement(
+							'a',
+							{ className: 'small-img', href: '' },
+							_react2.default.createElement(_src4.default.LazyImage, { src: this.state.fantuan_list[7] })
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'haoli' },
+						this.state.more
+					)
+				)
 			);
 		}
 	}]);
+
 	return My;
 }(_react2.default.Component);
 
 exports.default = My;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "my.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "home.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 88 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("F:\\react-app\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
-"use strict";
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouter = __webpack_require__(11);
+
+var _src = __webpack_require__(14);
+
+var _src2 = _interopRequireDefault(_src);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+//es6的写法
+
+var Index = function (_React$Component) {
+    _inherits(Index, _React$Component);
+
+    function Index(props) {
+        _classCallCheck(this, Index);
+
+        return _possibleConstructorReturn(this, (Index.__proto__ || Object.getPrototypeOf(Index)).call(this, props));
+    }
+
+    _createClass(Index, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: 'box' },
+                _react2.default.createElement(
+                    'header',
+                    null,
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'yo-header' },
+                        _react2.default.createElement(
+                            'h2',
+                            { className: 'title' },
+                            'idhweh'
+                        ),
+                        _react2.default.createElement('span', { className: 'regret' }),
+                        _react2.default.createElement(
+                            'span',
+                            { className: 'affirm' },
+                            '\u786E\u5B9A'
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    'section',
+                    null,
+                    this.props.children
+                ),
+                _react2.default.createElement(
+                    'footer',
+                    null,
+                    _react2.default.createElement(
+                        'ul',
+                        null,
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            _react2.default.createElement(
+                                _reactRouter.Link,
+                                { to: '/home', activeClassName: 'active' },
+                                _react2.default.createElement(
+                                    'i',
+                                    { className: 'yo-ico' },
+                                    '\uE608'
+                                ),
+                                _react2.default.createElement(
+                                    'span',
+                                    null,
+                                    '\u9996\u9875'
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            _react2.default.createElement(
+                                _reactRouter.Link,
+                                { to: '/list', activeClassName: 'active' },
+                                _react2.default.createElement(
+                                    'i',
+                                    { className: 'yo-ico' },
+                                    '\uE63C'
+                                ),
+                                _react2.default.createElement(
+                                    'span',
+                                    null,
+                                    '\u5206\u7C7B'
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            _react2.default.createElement(
+                                _reactRouter.Link,
+                                { to: '/car', activeClassName: 'active' },
+                                _react2.default.createElement(
+                                    'i',
+                                    { className: 'yo-ico' },
+                                    '\uE6F0'
+                                ),
+                                _react2.default.createElement(
+                                    'span',
+                                    null,
+                                    '\u8D2D\u7269\u8F66'
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            _react2.default.createElement(
+                                _reactRouter.Link,
+                                { to: '/my', activeClassName: 'active' },
+                                _react2.default.createElement(
+                                    'i',
+                                    { className: 'yo-ico' },
+                                    '\uE63E'
+                                ),
+                                _react2.default.createElement(
+                                    'span',
+                                    null,
+                                    '\u6211\u7684'
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Index;
+}(_react2.default.Component);
+
+exports.default = Index;
+
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("F:\\react-app\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _classCallCheck2 = __webpack_require__(1);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(2);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = __webpack_require__(4);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(3);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _react = __webpack_require__(0);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _src = __webpack_require__(52);
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _src2 = _interopRequireDefault(_src);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var _homeHeader = __webpack_require__(54);
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-var _homeHeader2 = _interopRequireDefault(_homeHeader);
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var _src3 = __webpack_require__(33);
+var List = function (_React$Component) {
+	_inherits(List, _React$Component);
 
-var _index = __webpack_require__(32);
+	function List() {
+		_classCallCheck(this, List);
 
-var _index2 = _interopRequireDefault(_index);
+		return _possibleConstructorReturn(this, (List.__proto__ || Object.getPrototypeOf(List)).apply(this, arguments));
+	}
+
+	_createClass(List, [{
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				null,
+				'\u5206\u7C7B\u9875\u9762'
+			);
+		}
+	}]);
+
+	return List;
+}(_react2.default.Component);
+
+exports.default = List;
+
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "list.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("F:\\react-app\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Productlist = function (_React$Component) {
-	(0, _inherits3.default)(Productlist, _React$Component);
-
-	function Productlist(props) {
-		(0, _classCallCheck3.default)(this, Productlist);
-
-		var _this = (0, _possibleConstructorReturn3.default)(this, (Productlist.__proto__ || Object.getPrototypeOf(Productlist)).call(this, props));
-
-		_this.state = {
-			prolist: ["", ""]
-		};
-		return _this;
+var My = _react2.default.createClass({
+	displayName: 'My',
+	render: function render() {
+		return _react2.default.createElement(
+			'div',
+			null,
+			'\u6211\u7684'
+		);
 	}
+});
 
-	(0, _createClass3.default)(Productlist, [{
-		key: "componentWillMount",
-		value: function componentWillMount() {
-			_src3.loading.show({
-				extraClass: 'yo-loading-b',
-				text: '正在加载...',
-				maskOffset: [200, 100],
-				modalExtraClass: "yo-loading-p"
-			});
-		}
-		// 	// sortList(e){//通过e事件对象获取DOM节点
-		// 	// 	e.target.style.color="red"
-		// 	// 	// console.log(e.target);
-		// 	// 	// console.log(this.state.prolist);
-		// 	// }
+exports.default = My;
 
-	}, {
-		key: "render",
-		value: function render() {
-			var _this2 = this;
-
-			// console.log(this.state.prolist)
-			return _react2.default.createElement(
-				"div",
-				null,
-				_react2.default.createElement(_homeHeader2.default, null),
-				_react2.default.createElement(
-					"ul",
-					{ className: "prolistOrd" },
-					_react2.default.createElement(
-						"li",
-						null,
-						"\u7EFC\u5408\u6392\u5E8F"
-					),
-					_react2.default.createElement(
-						"span",
-						null,
-						"|"
-					),
-					_react2.default.createElement(
-						"li",
-						{ className: "newSort" },
-						"\u4E0A\u65B0\u6392\u5E8F"
-					),
-					_react2.default.createElement(
-						"span",
-						null,
-						"|"
-					),
-					_react2.default.createElement(
-						"li",
-						null,
-						"\u4EF7\u683C\u6392\u5E8F",
-						_react2.default.createElement(
-							"i",
-							{ className: "yo-ico" },
-							"\uF07B"
-						)
-					),
-					_react2.default.createElement(
-						"span",
-						null,
-						"|"
-					),
-					_react2.default.createElement(
-						"li",
-						null,
-						"\u7B5B\u9009"
-					)
-				),
-				_react2.default.createElement(_src2.default, {
-					ref: "scroller",
-
-					extraClass: 'yo-list-fullscreen',
-					onItemTap: function onItemTap(item, index, target) {
-						console.log(target);
-						console.log(item);
-						console.log(index);
-					}
-					// infinite = {true}
-					, usePullRefresh: true,
-					onRefresh: function onRefresh() {
-						var that = _this2;
-						fetch("http://localhost:3000/prolist2.php").then(function (res) {
-							return res.json();
-						}).then(function (res) {
-							var Productlist = res.data.items.map(function (val) {
-								val.key = val.id;
-								// console.log(val.key)
-								return val;
-							});
-							that.setState({
-								prolist: Productlist.concat(that.state.prolist)
-							});
-							// console.log(2222,this.state.prolist)
-							that.refs.scroller.stopRefreshing(false); // 这个调用也可以放在异步操作的回调里之后
-						});
-					},
-					useLoadMore: true,
-					onLoad: function onLoad() {
-						fetch("http://localhost:3000/prolist2.php").then(function (res) {
-							return res.json();
-						}).then(function (res) {
-							var Productlist = res.data.items.map(function (val) {
-								val.key = val.id;
-								// console.log(val.key)
-								return val;
-							});
-							_this2.setState({
-								prolist: _this2.state.prolist.concat(Productlist)
-							});
-							// console.log(2222,this.state.prolist)
-							_this2.refs.scroller.stopLoading(false); // 这个调用也可以放在异步操作的回调里之后
-						});
-					},
-					dataSource: this.state.prolist,
-					renderItem: function renderItem(item, i) {
-						// console.log(item)
-						if (item) {
-							return _react2.default.createElement(
-								"div",
-								null,
-								_react2.default.createElement(
-									"li",
-									{ className: "prolist" },
-									_react2.default.createElement(
-										"div",
-										{ className: "lazyimage" },
-										_react2.default.createElement(_src2.default.LazyImage, { height: "100", src: item.image })
-									),
-									_react2.default.createElement(
-										"div",
-										null,
-										_react2.default.createElement(
-											"h2",
-											null,
-											item.title
-										),
-										_react2.default.createElement(
-											"span",
-											{ className: "proname" },
-											item.name
-										),
-										_react2.default.createElement(
-											"span",
-											{ className: "keyWords" },
-											item.keyWords
-										),
-										_react2.default.createElement(
-											"span",
-											{ className: "proprice" },
-											"\uFFE5",
-											item.sellingPrice
-										)
-									)
-								)
-							);
-						}
-					},
-					itemHeight: 100
-				})
-			);
-		}
-	}, {
-		key: "componentDidMount",
-		value: function componentDidMount() {
-			var _this3 = this;
-
-			console.log(this.props.query);
-			var params1 = this.props.params.type.split("&");
-			if (params1.length == 2) {
-				fetch("http://m.lianlianlife.com/Api/Products?categoryId=" + params1[0] + "&keywords=" + params1[1] + "&fromp=-1&categoryName=&brandName=&supplierName=&isDesc=true&sortItem=topCarriageAt&pageSize=10&pageNumber=1&imageFormatter=200_200")
-				//fetch("http://localhost:3000/prolist1.php")
-				.then(function (res) {
-					return res.json();
-				}).then(function (res) {
-					var Productlist = res.data.items.map(function (val) {
-						val.key = val.id;
-						// console.log(val.key)
-						return val;
-					});
-					// console.log(Productlist)动态添加key值
-					_this3.setState({
-						prolist: Productlist
-					});
-					_src3.loading.hide();
-				});
-			} else if (params1.length == 3) {
-				fetch("http://m.lianlianlife.com/Api/Products?categoryId=" + params1[0] + "&brandId=" + params1[1] + "&keywords=" + params1[2] + "&fromp=-1&categoryName=&brandName=&supplierName=&isDesc=true&sortItem=topCarriageAt&pageSize=10&pageNumber=1&imageFormatter=200_200")
-				//fetch("http://localhost:3000/prolist1.php")
-				.then(function (res) {
-					return res.json();
-				}).then(function (res) {
-					var Productlist = res.data.items.map(function (val) {
-						val.key = val.id;
-						// console.log(val.key)
-						return val;
-					});
-					// console.log(Productlist)动态添加key值
-					_this3.setState({
-						prolist: Productlist
-					});
-					_src3.loading.hide();
-				});
-			}
-		}
-	}]);
-	return Productlist;
-}(_react2.default.Component);
-
-exports.default = Productlist;
-
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "productList.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "my.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 89 */
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("F:\\react-app\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.store = exports.mapDispatchToProps = exports.mapStateToProps = undefined;
+
+var _redux = __webpack_require__(26);
+
+function changer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : { title: '榜单 « 电影 « 豆瓣' };
+  var action = arguments[1];
+
+  switch (action.type) {
+    case 'SETTITLE':
+      return { title: action.title };
+    default:
+      return state;
+  }
+}
+
+// 将 Redux state 转化成 组件的 props
+function mapStateToProps(state) {
+  return {
+    value: state.title
+  };
+}
+
+// 将 Redux actions 转化成 组件的 props
+function mapDispatchToProps(dispatch) {
+  return {
+    onChange: function onChange(action) {
+      return dispatch(action);
+    }
+  };
+}
+
+var store = (0, _redux.createStore)(changer);
+
+exports.mapStateToProps = mapStateToProps;
+exports.mapDispatchToProps = mapDispatchToProps;
+exports.store = store;
+
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "store.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ }),
+/* 39 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 90 */
+/* 40 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Provider__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__connect_connect__ = __webpack_require__(90);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Provider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connectAdvanced", function() { return __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connect", function() { return __WEBPACK_IMPORTED_MODULE_2__connect_connect__["a"]; });
+
+
+
+
+
+
+/***/ }),
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6968,7 +4884,7 @@ var keyOf = function keyOf(oneKeyObj) {
 module.exports = keyOf;
 
 /***/ }),
-/* 91 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7041,7 +4957,79 @@ function shallowEqual(objA, objB) {
 module.exports = shallowEqual;
 
 /***/ }),
-/* 92 */
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(44);
+
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global, module) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _ponyfill = __webpack_require__(45);
+
+var _ponyfill2 = _interopRequireDefault(_ponyfill);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var root; /* global window */
+
+
+if (typeof self !== 'undefined') {
+  root = self;
+} else if (typeof window !== 'undefined') {
+  root = window;
+} else if (typeof global !== 'undefined') {
+  root = global;
+} else if (true) {
+  root = module;
+} else {
+  root = Function('return this')();
+}
+
+var result = (0, _ponyfill2['default'])(root);
+exports['default'] = result;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23), __webpack_require__(76)(module)))
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports['default'] = symbolObservablePonyfill;
+function symbolObservablePonyfill(root) {
+	var result;
+	var _Symbol = root.Symbol;
+
+	if (typeof _Symbol === 'function') {
+		if (_Symbol.observable) {
+			result = _Symbol.observable;
+		} else {
+			result = _Symbol('observable');
+			_Symbol.observable = result;
+		}
+	} else {
+		result = '@@observable';
+	}
+
+	return result;
+};
+
+/***/ }),
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7098,10 +5086,10 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 
 
 /***/ }),
-/* 93 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("F:\\react-app\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -7109,15 +5097,13 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _objectWithoutProperties2 = __webpack_require__(80);
-
-var _objectWithoutProperties3 = _interopRequireDefault(_objectWithoutProperties2);
-
-var _react = __webpack_require__(0);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 exports.default = function () {
     var ALLOWANCEAngle = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0.57;
@@ -7268,7 +5254,7 @@ exports.default = function () {
                 _ref3$translateX = _ref3.translateX,
                 translateX = _ref3$translateX === undefined ? 0 : _ref3$translateX,
                 reset = _ref3.reset,
-                ani = (0, _objectWithoutProperties3.default)(_ref3, ['dom', 'translateX', 'reset']);
+                ani = _objectWithoutProperties(_ref3, ['dom', 'translateX', 'reset']);
 
             // 此处为Dom操作
             if (reset) {
@@ -7284,13 +5270,13 @@ exports.default = function () {
     };
 };
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "aniScrollx.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "aniScrollx.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 94 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("F:\\react-app\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -7298,60 +5284,52 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _classCallCheck2 = __webpack_require__(1);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+__webpack_require__(20);
 
-var _createClass2 = __webpack_require__(2);
+__webpack_require__(13);
 
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = __webpack_require__(4);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(3);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-__webpack_require__(60);
-
-__webpack_require__(31);
-
-var _react = __webpack_require__(0);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _classnames = __webpack_require__(6);
+var _classnames = __webpack_require__(5);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _reactAddonsShallowCompare = __webpack_require__(113);
+var _reactAddonsShallowCompare = __webpack_require__(59);
 
 var _reactAddonsShallowCompare2 = _interopRequireDefault(_reactAddonsShallowCompare);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var ALLOWANCE = 1; /**
-                    * @component Carousel.CarouselItem
-                    * @description Carousel组件内部的Item组件，和普通的dom节点相比增加了懒加载图片功能。也可以使用`onTap`给Item绑定tap事件回调。
-                    *
-                    * 你可以通过Carousel.CarouselItem来使用这个组件，或者引用`yo3/component/carousel/src/carouselItem`的js模块来使用。
-                    *
-                    * ** 注意：`CarouselItem`不能和`Touchable`一起使用，请使用它的`onTap`属性来绑定事件回调。 **
-                    */
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @component Carousel.CarouselItem
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @description Carousel组件内部的Item组件，和普通的dom节点相比增加了懒加载图片功能。也可以使用`onTap`给Item绑定tap事件回调。
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 你可以通过Carousel.CarouselItem来使用这个组件，或者引用`yo3/component/carousel/src/carouselItem`的js模块来使用。
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ** 注意：`CarouselItem`不能和`Touchable`一起使用，请使用它的`onTap`属性来绑定事件回调。 **
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+var ALLOWANCE = 1;
 var LOADED = 1;
 var UNLOAD = 0;
 var FAIL = 2;
 
 var CarouselItem = function (_Component) {
-    (0, _inherits3.default)(CarouselItem, _Component);
+    _inherits(CarouselItem, _Component);
 
     function CarouselItem(props) {
-        (0, _classCallCheck3.default)(this, CarouselItem);
+        _classCallCheck(this, CarouselItem);
 
-        var _this = (0, _possibleConstructorReturn3.default)(this, (CarouselItem.__proto__ || Object.getPrototypeOf(CarouselItem)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (CarouselItem.__proto__ || Object.getPrototypeOf(CarouselItem)).call(this, props));
 
         if (props.img) {
             _this.state = {
@@ -7363,7 +5341,7 @@ var CarouselItem = function (_Component) {
         return _this;
     }
 
-    (0, _createClass3.default)(CarouselItem, [{
+    _createClass(CarouselItem, [{
         key: 'componentWillMount',
         value: function componentWillMount() {
             this.lazyload(this.props);
@@ -7466,6 +5444,7 @@ var CarouselItem = function (_Component) {
             );
         }
     }]);
+
     return CarouselItem;
 }(_react.Component);
 
@@ -7537,13 +5516,13 @@ CarouselItem.contextTypes = {
 };
 exports.default = CarouselItem;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "carouselItem.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "carouselItem.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 95 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("F:\\react-app\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -7551,41 +5530,58 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _classCallCheck2 = __webpack_require__(1);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+__webpack_require__(20);
 
-var _createClass2 = __webpack_require__(2);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = __webpack_require__(4);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(3);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-__webpack_require__(60);
-
-var _react = __webpack_require__(0);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _aniScrollx = __webpack_require__(93);
+var _aniScrollx = __webpack_require__(47);
 
 var _aniScrollx2 = _interopRequireDefault(_aniScrollx);
 
-var _reactAddonsPureRenderMixin = __webpack_require__(112);
+var _reactAddonsPureRenderMixin = __webpack_require__(58);
 
 var _reactAddonsPureRenderMixin2 = _interopRequireDefault(_reactAddonsPureRenderMixin);
 
-var _carouselItem = __webpack_require__(94);
+var _carouselItem = __webpack_require__(48);
 
 var _carouselItem2 = _interopRequireDefault(_carouselItem);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @component Carousel
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @version 3.0.0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @description 走马灯组件
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 支持用户自定义动画对象，支持用户自定义css动画
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 支持用户自定义子节点
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 默认动画：
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * + 横向滚动动画
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * + 为当前页加上on的类名，因此可以附加css动画效果。
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 默认走马灯子节点：
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * + 支持图片懒加载
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * + 图片加载失败的替换图模板
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 查看Demo获得实例：
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 使用自定义动画实现图片查看器
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 内置动画配合css动画效果
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 使用注意：
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * - `Carousel`组件的父节点需要有宽度，`Carousel`组件默认宽度为‘100%’，如果父节点没有宽度会导致默认滚动动画失效。
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * - `Carousel`组件不能直接嵌套在`Touchable`组件中，请使用`CarouselItem`的`onTap`来给它的Item绑定tap事件回调，
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 或者用`Touchable`组件包裹Item。
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @author eva.li
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @instructions {instruInfo: ./carousel.md}{instruUrl: carousel/index.html?hideIcon}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 
 var Dots = function Dots(props) {
     var liNodes = [];
@@ -7597,33 +5593,7 @@ var Dots = function Dots(props) {
         { className: 'index' },
         liNodes
     );
-}; /**
-    * @component Carousel
-    * @version 3.0.0
-    * @description 走马灯组件
-    * 支持用户自定义动画对象，支持用户自定义css动画
-    * 支持用户自定义子节点
-    *
-    * 默认动画：
-    * + 横向滚动动画
-    * + 为当前页加上on的类名，因此可以附加css动画效果。
-    *
-    * 默认走马灯子节点：
-    * + 支持图片懒加载
-    * + 图片加载失败的替换图模板
-    *
-    * 查看Demo获得实例：
-    * 使用自定义动画实现图片查看器
-    * 内置动画配合css动画效果
-    *
-    * 使用注意：
-    * - `Carousel`组件的父节点需要有宽度，`Carousel`组件默认宽度为‘100%’，如果父节点没有宽度会导致默认滚动动画失效。
-    * - `Carousel`组件不能直接嵌套在`Touchable`组件中，请使用`CarouselItem`的`onTap`来给它的Item绑定tap事件回调，
-    * 或者用`Touchable`组件包裹Item。
-    * @author eva.li
-    * @instructions {instruInfo: ./carousel.md}{instruUrl: carousel/index.html?hideIcon}
-    */
-
+};
 Dots.propTypes = {
     num: _react.PropTypes.number,
     page: _react.PropTypes.number
@@ -7632,12 +5602,12 @@ Dots.propTypes = {
 var DEFAULTANI = (0, _aniScrollx2.default)();
 
 var Carousel = function (_Component) {
-    (0, _inherits3.default)(Carousel, _Component);
+    _inherits(Carousel, _Component);
 
     function Carousel(props) {
-        (0, _classCallCheck3.default)(this, Carousel);
+        _classCallCheck(this, Carousel);
 
-        var _this = (0, _possibleConstructorReturn3.default)(this, (Carousel.__proto__ || Object.getPrototypeOf(Carousel)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (Carousel.__proto__ || Object.getPrototypeOf(Carousel)).call(this, props));
 
         _this.state = {
             page: 1
@@ -7648,7 +5618,7 @@ var Carousel = function (_Component) {
         return _this;
     }
 
-    (0, _createClass3.default)(Carousel, [{
+    _createClass(Carousel, [{
         key: 'getChildContext',
         value: function getChildContext() {
             return {
@@ -7937,6 +5907,7 @@ var Carousel = function (_Component) {
             );
         }
     }]);
+
     return Carousel;
 }(_react.Component);
 
@@ -8083,472 +6054,17 @@ Carousel.Item = _carouselItem2.default;
 
 exports.default = Carousel;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 96 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+var __WEBPACK_AMD_DEFINE_RESULT__;/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("F:\\react-app\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _defineProperty2 = __webpack_require__(192);
-
-var _defineProperty3 = _interopRequireDefault(_defineProperty2);
-
-var _classCallCheck2 = __webpack_require__(1);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(2);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = __webpack_require__(4);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(3);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _EventEmitter2 = __webpack_require__(97);
-
-var _EventEmitter3 = _interopRequireDefault(_EventEmitter2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var ComponentCore = function (_EventEmitter) {
-    (0, _inherits3.default)(ComponentCore, _EventEmitter);
-
-    function ComponentCore(namespace) {
-        (0, _classCallCheck3.default)(this, ComponentCore);
-
-        var _this = (0, _possibleConstructorReturn3.default)(this, (ComponentCore.__proto__ || Object.getPrototypeOf(ComponentCore)).call(this));
-
-        _this.instanceId = ++ComponentCore.instanceId;
-        _this.namespace = namespace;
-        return _this;
-    }
-
-    (0, _createClass3.default)(ComponentCore, [{
-        key: '_getEventName',
-        value: function _getEventName(eventName) {
-            return 'yo/component/' + this.namespace + '/' + eventName + '/' + this.instanceId;
-        }
-    }, {
-        key: 'emitEvent',
-        value: function emitEvent(eventName) {
-            for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-                args[_key - 1] = arguments[_key];
-            }
-
-            this.emit.apply(this, [this._getEventName(eventName)].concat(args));
-            return this;
-        }
-    }, {
-        key: 'registerEventHandler',
-        value: function registerEventHandler(eventName, handler) {
-            this.on(this._getEventName(eventName), handler.bind(this));
-            return this;
-        }
-    }, {
-        key: 'getAttr',
-        value: function getAttr(item, attrKey) {
-            return typeof item.get === 'function' ? item.get(attrKey) : item[attrKey];
-        }
-    }, {
-        key: 'setAttr',
-        value: function setAttr(item, attrKey, value) {
-            var ret = null;
-            if (typeof item.set === 'function') {
-                ret = item.set(attrKey, value);
-            } else {
-                ret = Object.assign({}, item, (0, _defineProperty3.default)({}, attrKey, value));
-            }
-            return ret;
-        }
-    }]);
-    return ComponentCore;
-}(_EventEmitter3.default); /**
-                            * 大型组件使用的抽象Model类，用于集中管理组件内部的逻辑和状态。
-                            */
-
-
-ComponentCore.instanceId = -1;
-exports.default = ComponentCore;
-
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "ComponentCore.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ }),
-/* 97 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _classCallCheck2 = __webpack_require__(1);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(2);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Apply = Function.prototype.apply;
-var privateMap = new WeakMap();
-
-// For making private properties.
-function internal(obj) {
-  if (!privateMap.has(obj)) {
-    privateMap.set(obj, {});
-  }
-
-  return privateMap.get(obj);
-}
-
-/** Class EventEmitter for event-driven architecture. */
-
-var EventEmitter = function () {
-  /**
-   * Constructor.
-   *
-   * @constructor
-   * @param {number|null} maxListeners.
-   * @param {object} localConsole.
-   *
-   * Set private initial parameters:
-   *   _events, _callbacks, _maxListeners, _console.
-   *
-   * @return {this}
-   */
-  function EventEmitter() {
-    var maxListeners = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-    var localConsole = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : console;
-    (0, _classCallCheck3.default)(this, EventEmitter);
-
-    var self = internal(this);
-
-    self._events = new Set();
-    self._callbacks = {};
-    self._console = localConsole;
-    self._maxListeners = maxListeners === null ? null : parseInt(maxListeners, 10);
-
-    return this;
-  }
-
-  /**
-   * Add callback to the event.
-   *
-   * @param {string} eventName.
-   * @param {function} callback
-   * @param {object|null} context - In than context will be called callback.
-   * @param {number} weight - Using for sorting callbacks calls.
-   *
-   * @return {this}
-   */
-
-
-  (0, _createClass3.default)(EventEmitter, [{
-    key: '_addCallback',
-    value: function _addCallback(eventName, callback, context, weight) {
-      this._getCallbacks(eventName).push({
-        callback: callback,
-        context: context,
-        weight: weight
-      });
-
-      // Sort the array of callbacks in
-      // the order of their call by "weight".
-      this._getCallbacks(eventName).sort(function (a, b) {
-        return a.weight > b.weight;
-      });
-
-      return this;
-    }
-
-    /**
-     * Get all callback for the event.
-     *
-     * @param {string} eventName
-     *
-     * @return {object|undefined}
-     */
-
-  }, {
-    key: '_getCallbacks',
-    value: function _getCallbacks(eventName) {
-      return internal(this)._callbacks[eventName];
-    }
-
-    /**
-     * Get callback's index for the event.
-     *
-     * @param {string} eventName
-     * @param {callback} callback
-     *
-     * @return {number|null}
-     */
-
-  }, {
-    key: '_getCallbackIndex',
-    value: function _getCallbackIndex(eventName, callback) {
-      return this._has(eventName) ? this._getCallbacks(eventName).findIndex(function (element) {
-        return element.callback === callback;
-      }) : null;
-    }
-
-    /**
-     * Check if we achive maximum of listeners for the event.
-     *
-     * @param {string} eventName
-     *
-     * @return {bool}
-     */
-
-  }, {
-    key: '_achieveMaxListener',
-    value: function _achieveMaxListener(eventName) {
-      return internal(this)._maxListeners !== null && internal(this)._maxListeners <= this.listenersNumber(eventName);
-    }
-
-    /**
-     * Check if callback is already exists for the event.
-     *
-     * @param {string} eventName
-     * @param {function} callback
-     * @param {object|null} context - In than context will be called callback.
-     *
-     * @return {bool}
-     */
-
-  }, {
-    key: '_callbackIsExists',
-    value: function _callbackIsExists(eventName, callback, context) {
-      var callbackInd = this._getCallbackIndex(eventName, callback);
-      var activeCallback = callbackInd !== -1 ? this._getCallbacks(eventName)[callbackInd] : void 0;
-
-      return callbackInd !== -1 && activeCallback && activeCallback.context === context;
-    }
-
-    /**
-     * Check is the event was already added.
-     *
-     * @param {string} eventName
-     *
-     * @return {bool}
-     */
-
-  }, {
-    key: '_has',
-    value: function _has(eventName) {
-      return internal(this)._events.has(eventName);
-    }
-
-    /**
-     * Add the listener.
-     *
-     * @param {string} eventName
-     * @param {function} callback
-     * @param {object|null} context - In than context will be called callback.
-     * @param {number} weight - Using for sorting callbacks calls.
-     *
-     * @return {this}
-     */
-
-  }, {
-    key: 'on',
-    value: function on(eventName, callback) {
-      var context = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
-      var weight = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 1;
-
-      /* eslint no-unused-vars: 0 */
-      var self = internal(this);
-
-      if (typeof callback !== 'function') {
-        throw new TypeError(callback + ' is not a function');
-      }
-
-      // If event wasn't added before - just add it
-      // and define callbacks as an empty object.
-      if (!this._has(eventName)) {
-        self._events.add(eventName);
-        self._callbacks[eventName] = [];
-      } else {
-        // Check if we reached maximum number of listeners.
-        if (this._achieveMaxListener(eventName)) {
-          self._console.warn('Max listeners (' + self._maxListeners + ')' + (' for event "' + eventName + '" is reached!'));
-        }
-
-        // Check if the same callback has already added.
-        if (this._callbackIsExists.apply(this, arguments)) {
-          self._console.warn('Event "' + eventName + '"' + (' already has the callback ' + callback + '.'));
-        }
-      }
-
-      this._addCallback.apply(this, arguments);
-
-      return this;
-    }
-
-    /**
-     * Add the listener which will be executed only once.
-     *
-     * @param {string} eventName
-     * @param {function} callback
-     * @param {object|null} context - In than context will be called callback.
-     * @param {number} weight - Using for sorting callbacks calls.
-     *
-     * @return {this}
-     */
-
-  }, {
-    key: 'once',
-    value: function once(eventName, callback) {
-      var _this = this;
-
-      var context = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
-      var weight = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 1;
-
-      var onceCallback = function onceCallback() {
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-          args[_key] = arguments[_key];
-        }
-
-        _this.off(eventName, onceCallback);
-        return Apply.call(callback, context, args);
-      };
-
-      return this.on(eventName, onceCallback, context, weight);
-    }
-
-    /**
-     * Remove an event at all or just remove selected callback from the event.
-     *
-     * @param {string} eventName
-     * @param {function} callback
-     *
-     * @return {this}
-     */
-
-  }, {
-    key: 'off',
-    value: function off(eventName) {
-      var callback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-
-      var self = internal(this);
-      var callbackInd = void 0;
-
-      if (this._has(eventName)) {
-        if (callback === null) {
-          // Remove the event.
-          self._events.delete(eventName);
-          // Remove all listeners.
-          self._callbacks[eventName] = null;
-        } else {
-          callbackInd = this._getCallbackIndex(eventName, callback);
-
-          if (callbackInd !== -1) {
-            self._callbacks[eventName].splice(callbackInd, 1);
-            // Remove all equal callbacks.
-            this.off.apply(this, arguments);
-          }
-        }
-      }
-
-      return this;
-    }
-
-    /**
-     * Trigger the event.
-     *
-     * @param {string} eventName
-     * @param {...args} args - All arguments which should be passed into callbacks.
-     *
-     * @return {this}
-     */
-
-  }, {
-    key: 'emit',
-    value: function emit(eventName) {
-      for (var _len2 = arguments.length, args = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
-        args[_key2 - 1] = arguments[_key2];
-      }
-
-      if (this._has(eventName)) {
-        // All callbacks will be triggered sorter by "weight" parameter.
-        this._getCallbacks(eventName).forEach(function (element) {
-          return Apply.call(element.callback, element.context, args);
-        });
-      }
-
-      return this;
-    }
-
-    /**
-     * Clear all events and callback links.
-     *
-     * @return {this}
-     */
-
-  }, {
-    key: 'clear',
-    value: function clear() {
-      var self = internal(this);
-
-      self._events.clear();
-      self._callbacks = {};
-
-      return this;
-    }
-
-    /**
-     * Returns number of listeners for the event.
-     *
-     * @param {string} eventName
-     *
-     * @return {number|null} - Number of listeners for event
-     *                         or null if event isn't exists.
-     */
-
-  }, {
-    key: 'listenersNumber',
-    value: function listenersNumber(eventName) {
-      return this._has(eventName) ? this._getCallbacks(eventName).length : null;
-    }
-  }]);
-  return EventEmitter;
-}();
-
-exports.default = EventEmitter;
-
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "EventEmitter.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ }),
-/* 98 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_RESULT__;/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-'use strict';
-
-var _typeof2 = __webpack_require__(17);
-
-var _typeof3 = _interopRequireDefault(_typeof2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 ;(function () {
     'use strict';
@@ -9374,7 +6890,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
         return new FastClick(layer, options);
     };
 
-    if ("function" === 'function' && (0, _typeof3.default)(__webpack_require__(62)) === 'object' && __webpack_require__(62)) {
+    if ("function" === 'function' && _typeof(__webpack_require__(22)) === 'object' && __webpack_require__(22)) {
 
         // AMD. Register as an anonymous module.
         !(__WEBPACK_AMD_DEFINE_RESULT__ = function () {
@@ -9389,13 +6905,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     }
 })();
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "fastclick.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "fastclick.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 99 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(process) {/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("F:\\react-app\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -9403,846 +6919,437 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _extends2 = __webpack_require__(25);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _extends3 = _interopRequireDefault(_extends2);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _classCallCheck2 = __webpack_require__(1);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(2);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = __webpack_require__(4);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(3);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _ComponentCore2 = __webpack_require__(96);
-
-var _ComponentCore3 = _interopRequireDefault(_ComponentCore2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var ListCore = function (_ComponentCore) {
-    (0, _inherits3.default)(ListCore, _ComponentCore);
-
-    /**
-     * @param dataSource 数据源
-     * @param offsetY 列表的初始Y偏移
-     * @param infinite 是否是无穷列表
-     * @param itemHeight 列表项高度
-     * @param visibleSize 保留在列表容器中列表项的数组
-     * @description 构造函数,会通过调用refresh方法进行初始化
-     */
-    function ListCore(_ref) {
-        var dataSource = _ref.dataSource,
-            _ref$offsetY = _ref.offsetY,
-            offsetY = _ref$offsetY === undefined ? 0 : _ref$offsetY,
-            _ref$infinite = _ref.infinite,
-            infinite = _ref$infinite === undefined ? true : _ref$infinite,
-            itemHeight = _ref.itemHeight,
-            _ref$infiniteSize = _ref.infiniteSize,
-            infiniteSize = _ref$infiniteSize === undefined ? 12 : _ref$infiniteSize,
-            _ref$staticSectionHei = _ref.staticSectionHeight,
-            staticSectionHeight = _ref$staticSectionHei === undefined ? 0 : _ref$staticSectionHei;
-        (0, _classCallCheck3.default)(this, ListCore);
-
-        // 静态属性
-        // 这些属性不会随着父组件render改变
-        var _this = (0, _possibleConstructorReturn3.default)(this, (ListCore.__proto__ || Object.getPrototypeOf(ListCore)).call(this, 'list'));
-
-        _this.itemHeight = itemHeight;
-        // 保存列表项定位信息的表,List组件不定高模式的核心数据结构
-        _this.positionMap = {};
-        // 在refresh中设置的属性可以通过父组件的render改变
-        _this.refresh({
-            dataSource: dataSource,
-            refreshAll: false,
-            infiniteSize: infiniteSize,
-            staticSectionHeight: staticSectionHeight,
-            offsetY: offsetY,
-            infinite: infinite
-        });
-        return _this;
-    }
-
-    /**
-     * @param ds
-     * @param refreshAll
-     * @param visibleSize
-     * @param offsetY
-     * @param infinite
-     * @param startIndex
-     * @returns {ListCore}
-     * @description 设置实例属性, 在构造函数中被调用,也会在组件的componentWillReceiveProps回调中调用
-     * 可以根据props初始化/重置组件的状态
-     */
-
-
-    (0, _createClass3.default)(ListCore, [{
-        key: 'refresh',
-        value: function refresh(_ref2) {
-            var _ref2$dataSource = _ref2.dataSource,
-                dataSource = _ref2$dataSource === undefined ? this.dataSource : _ref2$dataSource,
-                _ref2$refreshAll = _ref2.refreshAll,
-                refreshAll = _ref2$refreshAll === undefined ? false : _ref2$refreshAll,
-                _ref2$infiniteSize = _ref2.infiniteSize,
-                infiniteSize = _ref2$infiniteSize === undefined ? this.visibleSize : _ref2$infiniteSize,
-                _ref2$staticSectionHe = _ref2.staticSectionHeight,
-                staticSectionHeight = _ref2$staticSectionHe === undefined ? this.staticSectionHeight : _ref2$staticSectionHe,
-                _ref2$offsetY = _ref2.offsetY,
-                offsetY = _ref2$offsetY === undefined ? this.offsetY : _ref2$offsetY,
-                _ref2$infinite = _ref2.infinite,
-                infinite = _ref2$infinite === undefined ? this.infinite : _ref2$infinite;
-
-            if (!Array.isArray(dataSource)) {
-                if (typeof dataSource.toArray === 'function') {
-                    dataSource = dataSource.toArray();
-                } else {
-                    throw new Error('yo-list: dataSource必须为数组或者Immutable List!');
-                }
-            }
-
-            if (!dataSource.length) {
-                throw new Error('yo-list: dataSource不能为空数组!');
-            }
-
-            this.WINDOW_HEIGHT = window.screen.height;
-            this.infinite = infinite;
-            this.VISIBLE_SIZE = infiniteSize;
-            this.dataSource = this.renderDataSource(dataSource, refreshAll);
-            this.isHeightFixed = this.ifHeightFixed();
-            this.direction = this.getDirection(offsetY);
-            this.offsetY = offsetY;
-            this.startIndex = this.refreshStartIndexByOffsetY(offsetY);
-            this.visibleList = this.getVisibleList(offsetY);
-            this.staticSectionHeight = staticSectionHeight;
-            this.totalHeight = this.getTotalHeight();
-
-            this.emitChange();
-
-            return this;
-        }
-
-        /**
-         * @param dataSource
-         * @returns {boolean}
-         * 判断数据源中的元素是否都被计算出(设置了)高度
-         */
-
-    }, {
-        key: 'ifHeightFixed',
-        value: function ifHeightFixed() {
-            var _this2 = this;
-
-            var dataSource = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.dataSource;
-
-            return dataSource.every(function (item) {
-                return !!_this2.getAttr(item.srcData, 'height');
-            }) || !!this.itemHeight || !this.infinite;
-        }
-
-        /**
-         * @returns {number}
-         * 返回一个guid
-         */
-
-    }, {
-        key: 'getGuid',
-        value: function getGuid() {
-            return ++ListCore.guid;
-        }
-
-        /**
-         * @param offsetY
-         * @returns {string}
-         * 根据传入的offsetY计算出组件滚动的方向
-         */
-
-    }, {
-        key: 'getDirection',
-        value: function getDirection(offsetY) {
-            return offsetY - this.offsetY >= 0 ? 'down' : 'up';
-        }
-
-        /**
-         * @param offsetY
-         * @returns {number}
-         * 根据传入的offsetY计算startIndex,startIndex被用来计算visibleList(无穷模式中保留在容器中的列表项的数组)
-         */
-
-    }, {
-        key: 'refreshStartIndexByOffsetY',
-        value: function refreshStartIndexByOffsetY(y) {
-            var offsetY = y - window.screen.height / 5;
-
-            if (this.infinite && this.isHeightFixed) {
-                for (var i = 0; i < this.dataSource.length; i++) {
-                    var item = this.dataSource[i];
-                    var itemPosData = this.getItemPositionData(item);
-                    if (i === 0 && itemPosData.height > offsetY) {
-                        return i;
-                    } else if (i > 0) {
-                        var prev = this.dataSource[i - 1];
-                        var prevPosData = this.getItemPositionData(prev);
-                        if (prevPosData._translateY < offsetY && prevPosData._translateY >= offsetY) {
-                            return i;
-                        }
-                    }
-                }
-            } else if (this.infinite) {
-                return this.startIndex ? this.startIndex : 0;
-            }
-
-            return 0;
-        }
-
-        /**
-         * @param offsetY
-         * @returns {ListCore}
-         * 在列表滚动时,根据offsetY更新visibleList
-         */
-
-    }, {
-        key: 'onScrollTo',
-        value: function onScrollTo(offsetY, manually) {
-            this.direction = this.getDirection(offsetY);
-            this.offsetY = offsetY;
-            if (manually) {
-                this.startIndex = 0;
-            }
-            var cachedIndex = this.startIndex;
-            if (this.infinite) {
-                this.visibleList = this.getVisibleList(offsetY);
-                // 只有当visibleList里面的内容真正发生变化的时候才触发onchange
-                // 这样可以确保setState调用次数最少
-                if (this.startIndex !== cachedIndex || this.startIndex === 0 && this.offsetY === 0 || manually) {
-                    this.emitChange();
-                }
-            }
-
-            return this;
-        }
-    }, {
-        key: 'getItemPositionData',
-        value: function getItemPositionData(item) {
-            var key = this.getAttr(item, 'key');
-            return item._type === 'groupTitle' ? item : this.positionMap[key];
-        }
-    }, {
-        key: 'setItemPositionData',
-        value: function setItemPositionData(item, attr) {
-            // grouptitle做特殊处理,因为grouptitle是grouplist组件内部的数据对象,所以不会修改到源数据
-            // 与此同时，grouplist需要获取到_translateY这些信息，因此也只能在原来的数据对象上修改
-            if (item._type === 'groupTitle') {
-                Object.assign(item, attr);
-            } else if (this.positionMap[item.key]) {
-                Object.assign(this.positionMap[item.key], attr);
-            }
-        }
-
-        /**
-         * @param ds
-         * @param refreshAll
-         * @returns {Array}
-         * 处理数据源
-         * 为每个元素的在pos表中的项添加_order(无穷模式下该列表项对应的槽的index),_resolved(是否已经计算出位置),_index(在数据源中的位置)
-         * _translateY(无穷列表中元素的translateY)和_bottom(列表项的bottom)
-         */
-
-    }, {
-        key: 'renderDataSource',
-        value: function renderDataSource(ds) {
-            var _this3 = this;
-
-            var refreshAll = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-
-            return ds.map(function (ditem, i) {
-                var key = _this3.getAttr(ditem, 'key');
-                var renderedItem = {};
-
-                if (key == null) {
-                    if (_this3.infinite) {
-                        throw new Error('infinite模式的列表数据源的每一项必须有key属性。');
-                    } else {
-                        key = _this3.getGuid();
-                        if (process.env.NODE_ENV === 'dev') {
-                            console.warn('Yo-List:列表项没有key属性,将自动添加自增的key。这会使得列表在更新时出现大量的不必要的dom操作，请为每一个列表项指定一个唯一的key。');
-                        }
-                    }
-                }
-
-                // 区分groupTitle和item，因为groupTitle是组件添加的，不会影响到源数据，所以可以直接在上面增加属性
-                renderedItem = ditem._type !== 'groupTitle' ? {
-                    // srcData指向源数据
-                    srcData: ditem,
-                    key: key,
-                    _index: i,
-                    _type: 'item'
-                } : Object.assign(ditem, { srcData: ditem, _index: i }); // 这里给title增加了一个指向自己的指针srcData，这是为了兼容其他普通item的数据格式，而不是在使用它的地方做各种判断
-
-                if (refreshAll) {
-                    _this3.setItemPositionData(renderedItem, { _bottom: null, _translateY: null, _order: null });
-                }
-
-                var itemPosData = _this3.getItemPositionData(renderedItem);
-                if (!itemPosData) {
-                    itemPosData = _this3.positionMap[renderedItem.key] = {};
-                }
-
-                var itemHeight = _this3.getAttr(ditem, 'height');
-                var noHeightIdentified = _this3.itemHeight == null && itemHeight == null && itemPosData.height == null;
-                if (_this3.infinite) {
-                    // 设置height,_order,_resolved和_index
-                    // 如果这个item具有高度,则直接设为resolved
-                    _this3.setItemPositionData(renderedItem, {
-                        height: itemHeight || itemPosData.height || _this3.itemHeight,
-                        _order: i % _this3.VISIBLE_SIZE,
-                        _resolved: _this3.infinite && !noHeightIdentified,
-                        _index: i
-                    });
-                    // 即使这个元素高度确定,之前一个高度为null,也无法算出translateY和bottom
-                    // 此处再次验证之前一个元素是否为resolve
-                    if (i > 0) {
-                        var prevItemPosData = _this3.getItemPositionData(ds[i - 1]);
-                        if (!prevItemPosData._resolved) {
-                            _this3.setItemPositionData(renderedItem, { _resolved: false });
-                        }
-                    }
-                    // 第一个item,直接设置_translateY为0
-                    if (i === 0) {
-                        _this3.setItemPositionData(renderedItem, { _translateY: 0 });
-                    }
-                    // 之后的所有item,如果有height,设置它们的_translateY为前一个元素的bottom
-                    // 设置它们的bottom为_translateY+height
-                    if (itemPosData._resolved && !itemPosData._bottom) {
-                        var _translateY = i === 0 ? 0 : _this3.getItemPositionData(ds[i - 1])._bottom;
-                        var _bottom = _translateY + itemPosData.height;
-                        _this3.setItemPositionData(renderedItem, {
-                            _translateY: _translateY,
-                            _bottom: _bottom
-                        });
-                    } else if (!itemPosData._resolved) {
-                        // 不定高的情况
-                        if (i > 0) {
-                            var _prevItemPosData = _this3.getItemPositionData(ds[i - 1]);
-                            if (_prevItemPosData._bottom) {
-                                _this3.setItemPositionData(renderedItem, { _translateY: _prevItemPosData._bottom });
-                            }
-                        }
-                    }
-                }
-
-                return renderedItem;
-            });
-        }
-
-        /**
-         * @param i
-         * @param borderY
-         * @param dataSource
-         * @returns {boolean}
-         * 根据offsetY计算出刚好跨过offsetY的元素(top在y之上,bottom在y之下),或者是一个没有完成定位的元素
-         */
-
-    }, {
-        key: 'isBorderItem',
-        value: function isBorderItem(i, borderY) {
-            var dataSource = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : this.dataSource;
-
-            var itemPosData = this.getItemPositionData(dataSource[i]);
-            return itemPosData._resolved && itemPosData._bottom >= borderY && itemPosData._translateY <= borderY || !itemPosData._resolved;
-        }
-
-        /**
-         * @param startY
-         * @param startIndex
-         * @param direction
-         * @param dataSource
-         * @param VISIBLE_SIZE
-         * @returns {Number}
-         * 根据当前滚动的方向和y计算出startIndex
-         * 缓存了当前的startIndex,这样可以将查找的开销从O(n)降低到O(1),在处理大列表的时候可以提升性能
-         */
-
-    }, {
-        key: 'getStartItemIndex',
-        value: function getStartItemIndex(startY) {
-            var sIndex = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.startIndex;
-            var direction = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : this.direction;
-            var dataSource = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : this.dataSource;
-            var VISIBLE_SIZE = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : this.VISIBLE_SIZE;
-
-            var len = dataSource.length;
-            var startIndex = sIndex;
-            // 从保存的startIndex开始循环,根据当前滚动的方向的不同,i相应增加/减少
-            // 这样可以将查找的时间复杂度从线性降低到常量
-            if (direction === 'down' || startIndex === 0) {
-                for (var i = startIndex; i < len; i++) {
-                    if (this.isBorderItem(i, startY)) {
-                        startIndex = i;
-                        break;
-                    }
-                }
-            } else {
-                for (var _i = startIndex; _i >= 0; _i--) {
-                    if (this.isBorderItem(_i, startY)) {
-                        startIndex = _i;
-                        break;
-                    }
-                }
-            }
-
-            if (startIndex > dataSource.length - VISIBLE_SIZE) {
-                startIndex = dataSource.length - VISIBLE_SIZE > 0 ? dataSource.length - VISIBLE_SIZE : 0;
-            }
-
-            return startIndex;
-        }
-
-        /**
-         * @param startIndex
-         * @param dataSource
-         * @param VISIBLE_SIZE
-         * @returns {Number}
-         * 根据startIndex算出endIndex
-         */
-
-    }, {
-        key: 'getEndItemIndex',
-        value: function getEndItemIndex(startIndex) {
-            var dataSource = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.dataSource;
-            var VISIBLE_SIZE = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : this.VISIBLE_SIZE;
-
-            return startIndex + VISIBLE_SIZE > dataSource.length ? dataSource.length : startIndex + VISIBLE_SIZE;
-        }
-
-        /**
-         * @param offsetY
-         * @param sIndex
-         * @param dataSource
-         * @param VISIBLE_SIZE
-         * @returns {Array}
-         * 根据offsetY算出visibleList
-         */
-
-    }, {
-        key: 'getVisibleList',
-        value: function getVisibleList() {
-            var offsetY = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.offsetY;
-            var sIndex = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-            var dataSource = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : this.dataSource;
-
-            offsetY = offsetY - this.staticSectionHeight;
-            var ret = null;
-
-            if (this.infinite) {
-                var startY = offsetY - this.WINDOW_HEIGHT / 5;
-                startY = startY > 0 ? startY : 0;
-                var startIndex = sIndex === null ? this.getStartItemIndex(startY) : sIndex,
-                    endIndex = this.getEndItemIndex(startIndex);
-
-                ret = [];
-                for (var i = startIndex; i < endIndex; i++) {
-                    var item = this.dataSource[i];
-                    ret.push((0, _extends3.default)({}, item, this.getItemPositionData(item)));
-                }
-                this.startIndex = startIndex;
-            } else {
-                ret = dataSource.slice();
-            }
-
-            return ret;
-        }
-
-        /**
-         * @param dataSource
-         * @returns {Object}
-         * 获取数据源中第一个还没有resolve的元素
-         */
-
-    }, {
-        key: 'getFirstNotResolvedItemIndex',
-        value: function getFirstNotResolvedItemIndex() {
-            var _this4 = this;
-
-            var dataSource = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.dataSource;
-
-            return dataSource.findIndex(function (ditem, i) {
-                if (i > 0) {
-                    var itemPosData = _this4.getItemPositionData(ditem);
-                    var prevItemPosData = _this4.getItemPositionData(dataSource[i - 1]);
-                    return !itemPosData._resolved && prevItemPosData._resolved;
-                }
-                return false;
-            });
-        }
-
-        /**
-         * @param key
-         * @param dataSource
-         * @returns {Number}
-         * 根据key返回一个数据源中的元素
-         */
-
-    }, {
-        key: 'getItemIndexByKey',
-        value: function getItemIndexByKey(key) {
-            var dataSource = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.dataSource;
-
-            return dataSource.findIndex(function (item) {
-                return item.key === key;
-            });
-        }
-
-        /**
-         * @param notResolvedItemIndex
-         * @param dataSource
-         * 更新一个未定位元素的_translateY,它是前一个元素的_bottom
-         */
-
-    }, {
-        key: 'updateTranslateY',
-        value: function updateTranslateY(notResolvedItemIndex) {
-            var dataSource = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.dataSource;
-
-            var notResolvedItem = dataSource[notResolvedItemIndex];
-
-            if (notResolvedItem) {
-                var prevItemIndex = notResolvedItemIndex - 1;
-                var prevItem = dataSource[prevItemIndex];
-                var prevItemPosData = this.getItemPositionData(prevItem);
-
-                if (prevItemPosData && prevItemPosData._resolved) {
-                    this.setItemPositionData(notResolvedItem, { _translateY: prevItemPosData._bottom });
-                    // 同时也需要更新visibleList里面对应item的定位信息
-                    var visibleListItemToBeUpdated = this.visibleList.find(function (item) {
-                        return item.key === notResolvedItem.key;
-                    });
-                    if (visibleListItemToBeUpdated) {
-                        Object.assign(visibleListItemToBeUpdated, this.getItemPositionData(notResolvedItem));
-                    }
-                }
-            }
-        }
-
-        /**
-         * @param key
-         * @param height
-         * @param dataSource
-         * @returns {ListCore}
-         * 不定高模式的核心逻辑,定位一个尚未定位的列表项
-         * 在列表项的componentDidUpdate和Mount中被调用,传入已经渲染好的列表项的dom高度,然后更新数据源中对应元素的高度并计算它的定位
-         * 在该元素完成定位后,渲染下一个未被定位的列表项,并重复以上逻辑,直到visibleList中所有的项都完成定位
-         */
-
-    }, {
-        key: 'resolveItem',
-        value: function resolveItem(key, height) {
-            var dataSource = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : this.dataSource;
-
-            var targetIndex = this.getItemIndexByKey(key);
-            var targetItem = this.dataSource[targetIndex];
-            var _translateY = void 0;
-
-            if (targetIndex > 0) {
-                var prevItemPosData = this.getItemPositionData(dataSource[targetIndex - 1]);
-                _translateY = prevItemPosData._bottom;
-            } else {
-                _translateY = 0;
-            }
-
-            if (_translateY != null) {
-                var _bottom = _translateY + height;
-                var _resolved = true;
-                this.setItemPositionData(targetItem, { _translateY: _translateY, _bottom: _bottom, _resolved: _resolved, height: height });
-                this.visibleList = this.getVisibleList();
-                this.totalHeight += height;
-                this.updateTranslateY(this.getFirstNotResolvedItemIndex());
-                this.emitChange();
-            }
-
-            return this;
-        }
-
-        /**
-         * @param dataSource
-         * @returns {Array}
-         * 计算列表中所有项的高度,用来refresh Scroller
-         */
-
-    }, {
-        key: 'getTotalHeight',
-        value: function getTotalHeight() {
-            var _this5 = this;
-
-            var dataSource = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.dataSource;
-
-            return dataSource.reduce(function (acc, item) {
-                var ret = acc;
-                var itemPosData = _this5.getItemPositionData(item);
-                ret += itemPosData._resolved ? itemPosData.height : 0;
-                return ret;
-            }, 0) + this.staticSectionHeight;
-        }
-
-        /**
-         * @returns {ListCore}
-         * 触发组件change事件,组件收到change事件后会执行setState
-         */
-
-    }, {
-        key: 'emitChange',
-        value: function emitChange() {
-            this.emitEvent('change', this.visibleList, this.totalHeight);
-            return this;
-        }
-    }]);
-    return ListCore;
-}(_ComponentCore3.default); /**
-                             * List核心逻辑,负责管理List组件的内部状态
-                             */
-
-
-ListCore.guid = -1;
-exports.default = ListCore;
-
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "ListCore.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
-
-/***/ }),
-/* 100 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _classCallCheck2 = __webpack_require__(1);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(2);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = __webpack_require__(4);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(3);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _react = __webpack_require__(0);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _util = __webpack_require__(19);
-
-var _classnames = __webpack_require__(6);
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
-var _src = __webpack_require__(108);
-
-var _src2 = _interopRequireDefault(_src);
+var _util = __webpack_require__(7);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * 列表项组件
- */
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @component LazyImage
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @author jiao.shen
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @description 懒加载图片组件，只能在 `Scroller` 和 `List` 中使用。
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 使用这个组件代替img标签后，会延迟加载这个图片，直到List组件的滚动使得该图片位于可视区域之内。
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @instructions {instruInfo: ./lazyimage.md}{instruUrl: scroller/lazyimage.html?hideIcon}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @version  3.0.2
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+var TO_BE_LOADED = 0;
+var LOADING = 1;
+var LOADED = 2;
+
 var _class = function (_Component) {
-    (0, _inherits3.default)(_class, _Component);
+    _inherits(_class, _Component);
 
-    /**
-     * key和translateY在shouldComponentUpdate中会被使用
-     * 将会根据nextProps.item中对应的值,来决定是否render
-     * @param props
-     */
     function _class(props) {
-        (0, _classCallCheck3.default)(this, _class);
+        _classCallCheck(this, _class);
 
-        var _this = (0, _possibleConstructorReturn3.default)(this, (_class.__proto__ || Object.getPrototypeOf(_class)).call(this, props));
+        // 0->等待load,1->loading,2->loaded
+        var _this = _possibleConstructorReturn(this, (_class.__proto__ || Object.getPrototypeOf(_class)).call(this, props));
 
-        _this.key = props.item.key;
-        _this.translateY = props.item._translateY;
+        _this.loading = TO_BE_LOADED;
+        _this.state = {
+            src: _this.props.defaultImage
+        };
         return _this;
     }
 
-    (0, _createClass3.default)(_class, [{
-        key: 'getChildContext',
-        value: function getChildContext() {
-            return { offsetY: this.props.item._translateY, itemRef: this };
-        }
-
-        /**
-         * 不定高的核心逻辑,在dom rendered以后更新对应列表项的定位信息,并渲染出下一个未经定位的列表项,直到填满visibleList的size
-         */
-
-    }, {
+    _createClass(_class, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
+            this.refresh(this.context);
+            var scroller = this.context.list || this.context.scroller;
+            if (scroller) {
+                scroller.childLazyImages.push(this);
+            }
+        }
+
+        // 父组件render时,需要重置这个组件的loaded状态和context
+
+    }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(nextProps, nextContext) {
+            this.refresh(nextContext);
+
+            if (this.state.src !== nextProps.src) {
+                this.loading = TO_BE_LOADED;
+                this.setState({ src: this.props.defaultImage });
+            }
+        }
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            var scroller = this.context.list || this.context.scroller;
+            if (scroller) {
+                scroller.childLazyImages.splice(scroller.childLazyImages.indexOf(this), 1);
+            }
+            this.canLoadImage = false;
+        }
+    }, {
+        key: 'refresh',
+        value: function refresh(context) {
+            this.canLoadImage = true;
+            this.offsetY = context.offsetY;
+            this.itemRef = context.itemRef;
+            this.infinite = context.infinite;
+            // 如果不是infinite的列表，那么应该获取offsetTop(这个开销还挺大的，不过没得优化了)，反之，则使用translateY
+            if (!this.infinite) {
+                this.offsetTop = (0, _util.getElementOffsetY)(this.img);
+                this.height = this.img.offsetHeight;
+            }
+        }
+    }, {
+        key: 'load',
+        value: function load(callback) {
             var _this2 = this;
 
-            var isHeightFixed = this.props.listModel.isHeightFixed;
-            // 不定高无穷列表的容器是flex-box的话, 浏览器会先渲染dom然后调整高度, 这时候取到的高度不准
-            // setTimeout是无奈之举，确实没有想到更好的办法，因为这个调整高度的时机用js根本无法准确获取
+            if (this.loading === TO_BE_LOADED) {
+                var src = this.props.src,
+                    tmpImg = new Image();
 
-            if (isHeightFixed) {
-                this.updateItemHeightWhenDomRendered();
-            } else {
-                this.domNode.style.visibility = 'hidden';
-                setTimeout(function () {
-                    _this2.updateItemHeightWhenDomRendered();
-                    _this2.domNode.style.visibility = 'visible';
-                }, _util.DELAY_TIME_FOR_INFINITE_WITHOUT_HEIGHT);
+                this.loading = LOADING;
+                tmpImg.onload = function () {
+                    // 在lazyimage正在加载时组件unmount(主要是在SPA模式下有可能发生关闭view的情况)会报错
+                    // 因此这里需要简单判断一下组件的实例是否还存在
+                    if (_this2 && _this2.canLoadImage) {
+                        _this2.loading = LOADED;
+                        _this2.setState({ src: src, loaded: true });
+                        if (callback) {
+                            callback();
+                        }
+                    }
+                };
+                tmpImg.src = src;
             }
-        }
-
-        /**
-         * 根据之前的key和_translateY和接收到的props.item中的对应值,决定是否render
-         * 使用者定义的shouldItemUpdate可以接收到shouldComponentUpdate的结果,并返回一个新的结果
-         * @param nextProps
-         * @returns {Bool}
-         */
-
-    }, {
-        key: 'shouldComponentUpdate',
-        value: function shouldComponentUpdate(nextProps) {
-            var listModel = nextProps.listModel,
-                shouldItemUpdate = nextProps.shouldItemUpdate;
-
-            var ret = true;
-            // 当容器内部item的key和translateY发生变化时重新render
-            if (listModel.infinite && this.key === nextProps.item.key && this.translateY === nextProps.item._translateY) {
-                ret = false;
-            }
-
-            this.key = nextProps.item.key;
-            this.translateY = nextProps.item._translateY;
-
-            if (shouldItemUpdate && !ret) {
-                return shouldItemUpdate(nextProps.item.srcData, this.props.item.srcData);
-            }
-            return ret;
-        }
-    }, {
-        key: 'componentDidUpdate',
-        value: function componentDidUpdate() {
-            this.updateItemHeightWhenDomRendered();
-        }
-
-        /**
-         * 不定高模式的无穷列表需要在列表项渲染后更新它的位置信息
-         */
-
-    }, {
-        key: 'updateItemHeightWhenDomRendered',
-        value: function updateItemHeightWhenDomRendered() {
-            var _props = this.props,
-                item = _props.item,
-                listModel = _props.listModel,
-                onListItemUpdate = _props.onListItemUpdate;
-
-
-            if (!item._resolved && item._translateY !== undefined && listModel.infinite && !listModel.isHeightFixed) {
-                listModel.resolveItem(item.key, this.domNode.offsetHeight);
-            }
-
-            onListItemUpdate(item.srcData, this.domNode);
         }
     }, {
         key: 'render',
         value: function render() {
             var _this3 = this;
 
-            var _props2 = this.props,
-                renderItem = _props2.renderItem,
-                item = _props2.item,
-                onItemTap = _props2.onItemTap,
-                listModel = _props2.listModel,
-                itemTouchClass = _props2.itemTouchClass,
-                itemExtraClass = _props2.itemExtraClass,
-                onItemTouchStart = _props2.onItemTouchStart;
+            var _props = this.props,
+                height = _props.height,
+                style = _props.style,
+                customAttr = _props.customAttr;
+            // 解决和touchable组件结合使用的问题，必须能够接收这四个属性
 
-            var transform = 'translate(0,' + item._translateY + 'px) translateZ(0px)';
-            var infiniteStyle = {
-                WebkitTransform: transform,
-                transform: transform,
-                height: item.height,
-                position: 'absolute',
-                top: 0
-            };
-            var basicProps = {
-                ref: function ref(dom) {
-                    _this3.domNode = dom;
-                },
-                style: listModel.infinite ? infiniteStyle : null
-            };
-            var additionalProps = {
-                className: (0, _classnames2.default)(itemExtraClass(item.srcData, item._index), item._type !== 'groupTitle' ? 'item' : 'group-title label')
-            };
+            if (this.context.list) {
+                if (height == null && style.height == null) {
+                    throw Error('yo-lazyimage: 在List组件中使用LazyImage必须指定图片的高度。');
+                }
+            }
 
-            return _react2.default.createElement(
-                _src2.default,
-                {
-                    internalUse: true,
-                    onTap: onItemTap,
-                    touchClass: itemTouchClass(item.srcData, item._index),
-                    onTouchStart: function onTouchStart(evt) {
-                        onItemTouchStart(item.srcData, item._index, evt);
-                    }
+            return _react2.default.createElement('img', _extends({}, (0, _util.inheritProps)(this.props, ['onTouchStart', 'onTouchMove', 'onTouchEnd', 'onTouchCancel', 'width', 'height', 'className', 'title', 'style']), {
+                alt: this.props.alt,
+                ref: function ref(img) {
+                    if (img) _this3.img = img;
                 },
-                _react2.default.createElement(
-                    'li',
-                    Object.assign({}, basicProps, additionalProps),
-                    renderItem(item.srcData, item._index)
-                )
-            );
+                src: this.state.src
+            }, customAttr));
         }
     }]);
+
     return _class;
 }(_react.Component);
 
-_class.propTypes = {
-    item: _react.PropTypes.object,
-    listModel: _react.PropTypes.object,
-    itemTouchClass: _react.PropTypes.func,
-    itemExtraClass: _react.PropTypes.func,
+_class.contextTypes = {
+    // 从父组件context接收的属性
+    // list/scroller组件实例的引用
+    list: _react.PropTypes.object,
     scroller: _react.PropTypes.object,
-    onItemTouchStart: _react.PropTypes.func,
-    renderItem: _react.PropTypes.func,
-    onItemTap: _react.PropTypes.func,
-    onListItemUpdate: _react.PropTypes.func
-};
-_class.childContextTypes = {
+    // listitem的offsetY(infinite模式下)
     offsetY: _react.PropTypes.number,
-    itemRef: _react.PropTypes.object
+    // listitem实例的引用
+    itemRef: _react.PropTypes.object,
+    // 是否是Scroller下面的Lazyload,而不是List下面的
+    isScroller: _react.PropTypes.bool,
+    // 是否是infinite列表
+    infinite: _react.PropTypes.bool
+};
+_class.propTypes = {
+    /**
+     * @property defaultImage
+     * @type String
+     * @default null
+     * @description 默认图片，在原图片还没有完成加载时展示。
+     */
+    defaultImage: _react.PropTypes.string,
+    /**
+     * @property src
+     * @type String
+     * @default null
+     * @description 图片src，必需。
+     */
+    src: _react.PropTypes.string.isRequired,
+    /**
+     * @property className
+     * @type String
+     * @default null
+     * @description 给img标签加的类名。
+     */
+    className: _react.PropTypes.string,
+    /**
+     * @property width
+     * @type Number
+     * @default null
+     * @description 图片宽度。
+     */
+    width: _react.PropTypes.oneOfType([_react.PropTypes.number, _react.PropTypes.string]),
+    /**
+     * @property height
+     * @type Number
+     * @default null
+     * @description 图片高度。
+     */
+    height: _react.PropTypes.oneOfType([_react.PropTypes.number, _react.PropTypes.string]),
+    /**
+     * @property customAttr
+     * @type Object
+     * @default null
+     * @description 附加给img dom节点的自定义属性，属性名需要以data-开头。
+     */
+    customAttr: _react.PropTypes.object,
+    /**
+     * @property style
+     * @type Object
+     * @default null
+     * @description 附加给img dom节点的style。
+     */
+    style: _react.PropTypes.object,
+    /**
+     * @property alt
+     * @type String
+     * @default null
+     * @description 和img标签的alt属性相同。
+     */
+    alt: _react.PropTypes.string,
+    /**
+     * @property title
+     * @type String
+     * @default null
+     * @description 和img标签的title属性相同。
+     */
+    title: _react.PropTypes.string,
+    onTouchStart: _react.PropTypes.func,
+    onTouchMove: _react.PropTypes.func,
+    onTouchEnd: _react.PropTypes.func,
+    onTouchCancel: _react.PropTypes.func
 };
 _class.defaultProps = {
-    onListItemUpdate: function onListItemUpdate() {}
+    defaultImage: null,
+    src: null,
+    className: null,
+    width: null,
+    height: null,
+    customAttr: {},
+    style: null
 };
 exports.default = _class;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "ListItem.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 101 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("F:\\react-app\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.loading = undefined;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(4);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _modal = __webpack_require__(54);
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _loading = __webpack_require__(53);
+
+var _loading2 = _interopRequireDefault(_loading);
+
+__webpack_require__(21);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 加载动画api
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @component loading
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @type {Object}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @version 3.0.0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @description Loading API，调用后弹出一个居中的Loading Icon。
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @instructions {instruInfo: ./loading.md}{instruUrl: loading.html?hideIcon}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @author zongze.li
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+var container = document.createElement('div');
+document.body.appendChild(container);
+
+var that = null;
+
+var loadingApiPropTypes = {
+    /**
+     * @property text
+     * @type String
+     * @default ''
+     * @description loading伴随动画图标的文字。
+     */
+    text: _react.PropTypes.string,
+    /**
+     * @property extraClass
+     * @type String
+     * @default ''
+     * @description 附加给loading组件内层的div的额外class。
+     */
+    extraClass: _react.PropTypes.string,
+    /**
+     * @property modalExtraClass
+     * @type String
+     * @default ''
+     * @description 附加给外层modal组件的额外class。
+     */
+    modalExtraClass: _react.PropTypes.string,
+    /**
+     * @property show
+     * @type Bool
+     * @default false
+     * @description 是否显示loading，true为显示loading动画，false为隐藏。
+     */
+    show: _react.PropTypes.bool,
+    /**
+     * @property contentOffset
+     * @type Array
+     * @default [0,0]
+     * @description 内容区在水平/垂直方向上的偏移,例如[0,-100]可以使模态框内容区向上偏移100个像素。
+     */
+    contentOffset: _react.PropTypes.arrayOf(_react.PropTypes.number),
+    /**
+     * @property maskOffset
+     * @type Array
+     * @default [0,0]
+     * @description 蒙层遮盖的范围。如果不需要蒙层遮盖住整个屏幕,可以设置这个属性。
+     *
+     * 数组的第一个元素代表蒙层上边缘距离屏幕顶部的距离,第二个元素代表下边缘距离底部的距离。
+     */
+    maskOffset: _react.PropTypes.arrayOf(_react.PropTypes.number)
+};
+
+var loadingApiDefaultProps = {
+    text: '',
+    extraClass: '',
+    show: false,
+    contentOffset: [0, 0],
+    maskOffset: [0, 0]
+};
+
+var LoadingApi = function (_Component) {
+    _inherits(LoadingApi, _Component);
+
+    function LoadingApi(props) {
+        _classCallCheck(this, LoadingApi);
+
+        var _this = _possibleConstructorReturn(this, (LoadingApi.__proto__ || Object.getPrototypeOf(LoadingApi)).call(this, props));
+
+        _this.state = _extends({}, props);
+        that = _this;
+        return _this;
+    }
+
+    _createClass(LoadingApi, [{
+        key: 'render',
+        value: function render() {
+            var _state = this.state,
+                text = _state.text,
+                modalExtraClass = _state.modalExtraClass,
+                extraClass = _state.extraClass,
+                restProps = _objectWithoutProperties(_state, ['text', 'modalExtraClass', 'extraClass']);
+
+            return _react2.default.createElement(
+                _modal2.default,
+                _extends({
+                    align: 'center',
+                    extraClass: modalExtraClass
+                }, restProps),
+                _react2.default.createElement(_loading2.default, {
+                    extraClass: extraClass,
+                    text: text
+                })
+            );
+        }
+    }]);
+
+    return LoadingApi;
+}(_react.Component);
+
+LoadingApi.propTypes = loadingApiPropTypes;
+LoadingApi.defaultProps = loadingApiDefaultProps;
+
+_reactDom2.default.render(_react2.default.createElement(LoadingApi, null), container);
+exports.default = _loading2.default;
+var loading = exports.loading = {
+    /**
+     * show展示
+     * @method show
+     * @category loading
+     * @version 3.0.0
+     * @param {Object} options 需要设置的组件属性，如预留顶部高度，额外样式之类的，具体见上面的属性文档描述。
+     * @description api方法：显示Loding层，并设置传入的options参数中的属性。
+     */
+    show: function show(options) {
+        that.setState(Object.assign({}, options, { show: true }));
+    },
+    /**
+     * hide隐藏
+     * @method hide
+     * @category loading
+     * @version 3.0.0
+     * @description api方法：隐藏Loding层。
+     */
+    hide: function hide() {
+        that.setState({ show: false });
+    }
+};
+
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ }),
+/* 53 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("F:\\react-app\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -10250,46 +7357,38 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _classCallCheck2 = __webpack_require__(1);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(2);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = __webpack_require__(4);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(3);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _react = __webpack_require__(0);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _classnames = __webpack_require__(6);
+var _classnames = __webpack_require__(5);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-__webpack_require__(61);
+__webpack_require__(21);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 加载动画组件
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @component Loading
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @example
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * <Loading text="text" />
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @description 加载动画组件
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @author zongze.li
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
 
 var propTypes = {
     text: _react.PropTypes.string,
     extraClass: _react.PropTypes.string
-}; /**
-    * 加载动画组件
-    * @component Loading
-    * @example
-    * <Loading text="text" />
-    * @description 加载动画组件
-    * @author zongze.li
-    */
-
+};
 var LoadingDefaultProps = {
     /**
      * @property text
@@ -10308,14 +7407,15 @@ var LoadingDefaultProps = {
 };
 
 var Loading = function (_Component) {
-    (0, _inherits3.default)(Loading, _Component);
+    _inherits(Loading, _Component);
 
     function Loading() {
-        (0, _classCallCheck3.default)(this, Loading);
-        return (0, _possibleConstructorReturn3.default)(this, (Loading.__proto__ || Object.getPrototypeOf(Loading)).apply(this, arguments));
+        _classCallCheck(this, Loading);
+
+        return _possibleConstructorReturn(this, (Loading.__proto__ || Object.getPrototypeOf(Loading)).apply(this, arguments));
     }
 
-    (0, _createClass3.default)(Loading, [{
+    _createClass(Loading, [{
         key: 'render',
         value: function render() {
             var props = this.props;
@@ -10333,6 +7433,7 @@ var Loading = function (_Component) {
             );
         }
     }]);
+
     return Loading;
 }(_react.Component);
 
@@ -10342,13 +7443,13 @@ exports.default = Loading;
 Loading.propTypes = propTypes;
 Loading.defaultProps = LoadingDefaultProps;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "loading.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "loading.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 102 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("F:\\react-app\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -10356,48 +7457,38 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _typeof2 = __webpack_require__(17);
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-var _typeof3 = _interopRequireDefault(_typeof2);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _classCallCheck2 = __webpack_require__(1);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(2);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = __webpack_require__(4);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(3);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _react = __webpack_require__(0);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _classnames = __webpack_require__(6);
+var _classnames = __webpack_require__(5);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-__webpack_require__(128);
+__webpack_require__(73);
 
-__webpack_require__(31);
+__webpack_require__(13);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * @component Modal
- * @description 带遮罩层的模态弹层组件。支持多种位置和动画效果。
- *
- * @instructions {instruInfo: ./modal.md}{instruUrl: modal.html?hideIcon}
- * @author jiao.shen
- * @version 3.0.2
- */
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @component Modal
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @description 带遮罩层的模态弹层组件。支持多种位置和动画效果。
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @instructions {instruInfo: ./modal.md}{instruUrl: modal.html?hideIcon}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @author jiao.shen
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @version 3.0.2
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
 var defaultProps = {
     show: false,
     extraClass: '',
@@ -10535,12 +7626,12 @@ var ANIMATION_MAP = {
 };
 
 var RealModal = function (_Component) {
-    (0, _inherits3.default)(RealModal, _Component);
+    _inherits(RealModal, _Component);
 
     function RealModal(props) {
-        (0, _classCallCheck3.default)(this, RealModal);
+        _classCallCheck(this, RealModal);
 
-        var _this = (0, _possibleConstructorReturn3.default)(this, (RealModal.__proto__ || Object.getPrototypeOf(RealModal)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (RealModal.__proto__ || Object.getPrototypeOf(RealModal)).call(this, props));
 
         _this.state = {
             show: props.show,
@@ -10549,7 +7640,7 @@ var RealModal = function (_Component) {
         return _this;
     }
 
-    (0, _createClass3.default)(RealModal, [{
+    _createClass(RealModal, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
             if (this.props.show) {
@@ -10581,7 +7672,7 @@ var RealModal = function (_Component) {
             var contentAnimation = '',
                 duration = 0;
             if (name) {
-                var targetMap = (0, _typeof3.default)(this.props.animation) === 'object' ? this.props.animation : ANIMATION_MAP[name];
+                var targetMap = _typeof(this.props.animation) === 'object' ? this.props.animation : ANIMATION_MAP[name];
                 if (targetMap) {
                     contentAnimation = [targetMap.animation[isShow ? 0 : 1], 'ani'].join(' ');
                     duration = targetMap.duration;
@@ -10697,6 +7788,7 @@ var RealModal = function (_Component) {
             );
         }
     }]);
+
     return RealModal;
 }(_react.Component);
 
@@ -10706,13 +7798,13 @@ exports.default = RealModal;
 RealModal.defaultProps = defaultProps;
 RealModal.propTypes = propTypes;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "modal.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "modal.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 103 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("F:\\react-app\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -10720,698 +7812,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _extends2 = __webpack_require__(25);
-
-var _extends3 = _interopRequireDefault(_extends2);
-
-var _classCallCheck2 = __webpack_require__(1);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(2);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = __webpack_require__(4);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(3);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-__webpack_require__(129);
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _classnames = __webpack_require__(6);
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
-var _src = __webpack_require__(52);
-
-var _src2 = _interopRequireDefault(_src);
-
-var _multilistitem = __webpack_require__(104);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var MultiList = function (_Component) {
-    (0, _inherits3.default)(MultiList, _Component);
-
-    function MultiList(props) {
-        (0, _classCallCheck3.default)(this, MultiList);
-
-        var _this = (0, _possibleConstructorReturn3.default)(this, (MultiList.__proto__ || Object.getPrototypeOf(MultiList)).call(this, props));
-
-        _this.state = {
-            route: [],
-            dataSource: _this._handleDataSource(Object.assign({}, _this.props.dataSource), []),
-            valueItems: ''
-        };
-        _this.path = [];
-        _this.newItems = [];
-        return _this;
-    }
-
-    (0, _createClass3.default)(MultiList, [{
-        key: 'componentWillMount',
-        value: function componentWillMount() {
-            this.calcPath();
-            this.newItems = this._getItemsByValue(this.props.value);
-            var lastItem = this._getItemsByRoute(this.pathIndex).pop();
-            if (lastItem.subList === 'ASYNC') this.props.onUpdateData(lastItem);
-        }
-    }, {
-        key: 'componentWillReceiveProps',
-        value: function componentWillReceiveProps(nextProps) {
-            if (nextProps.dataSource !== this.props.dataSource) {
-                this.setState({
-                    dataSource: this._handleDataSource(Object.assign({}, nextProps.dataSource), [])
-                });
-            }
-            this.calcPath();
-            this.newItems = this._getItemsByValue(nextProps.value);
-            // 调用方保证 指定value时的 路径不存在 async
-        }
-        // shouldComponentUpdate(nextProps, nextState) {
-        //     const shouldItemUpdate = nextProps.dataSource !== this.props.dataSource
-        //     || this.state.route.join('-') !== nextState.route.join('-')
-        //     || this.props.value !== nextProps.value;
-        //     return shouldItemUpdate;
-        // }
-
-    }, {
-        key: 'componentWillUpdate',
-        value: function componentWillUpdate() {
-            this.prevValue = this.props.value.slice(0);
-        }
-    }, {
-        key: 'calcPath',
-        value: function calcPath() {
-            this.path = [];
-            this.pathIndex = [];
-            this._recursionDataSourceForPath(this.props.dataSource, 0);
-        }
-    }, {
-        key: '_handleDataSource',
-        value: function _handleDataSource(dataSource, prev) {
-            var _this2 = this;
-
-            if (Array.isArray(dataSource.subList)) {
-                dataSource.subList.forEach(function (item) {
-                    var key = prev.concat(item.value);
-                    if (!item.key) {
-                        item.key = key.join('-');
-                    }
-                    if (item.subList) {
-                        _this2._handleDataSource(item, key);
-                    }
-                });
-            }
-            return dataSource;
-        }
-    }, {
-        key: '_recursionDataSourceForPath',
-        value: function _recursionDataSourceForPath(data, level) {
-            var _this3 = this;
-
-            if (!Array.isArray(data.subList) || data.subList.length === 0) {
-                return;
-            }
-            var len = this.props.value.length;
-            var effectValue = void 0;
-            if (new RegExp('^' + this.state.route.slice(0, len - 1).join('_')).test(this.props.value.slice(0, len - 1).join('_'))) {
-                effectValue = this.props.value.slice(0)[level];
-                effectValue = Array.isArray(effectValue) ? effectValue[0] : effectValue;
-            }
-            var value = this.state.route[level] || effectValue || data.defaultValue || data.subList[0].value;
-            data.subList.some(function (item, index) {
-                if (item.value === value) {
-                    _this3.pathIndex[level] = index;
-                    _this3.path[level] = value;
-                    if (item.subList) {
-                        _this3._recursionDataSourceForPath(item, level + 1);
-                    }
-                    return true;
-                }
-                return false;
-            });
-        }
-    }, {
-        key: '_handleItemChecked',
-        value: function _handleItemChecked(_ref) {
-            var item = _ref.item,
-                level = _ref.level,
-                data = _ref.data;
-
-            if (this.path.slice(0, level).join('-') !== this.props.value.slice(0, level).join('-')) {
-                if (!item.subList && item.value === data.defaultValue) {
-                    return true;
-                }
-                return false;
-            }
-            if (Array.isArray(this.props.value[level])) {
-                return !!~this.props.value[level].indexOf(item.value);
-            }
-            if (item.value === this.props.value[level]) return true;
-            if (this.props.value[level] == null && !item.subList && item.value === data.defaultValue) {
-                return true;
-            }
-            return false;
-        }
-    }, {
-        key: '_handleItemRender',
-        value: function _handleItemRender(data, level, item, i) {
-            var isChecked = this._handleItemChecked({ item: item, level: level, data: data, index: i });
-            var type = item.itemType || data.subItemType;
-            var itemState = {
-                level: level,
-                index: this.path.slice(0, level).concat(item.value).join('-'),
-                route: this.pathIndex.slice(0, level).concat(i).join('>'),
-                isLeaf: !item.subList,
-                isSpread: item.value === this.path[level] && !!item.subList,
-                isChecked: isChecked,
-                data: item
-            };
-            switch (type) {
-                case 'MENU':
-                    return _react2.default.createElement(_multilistitem.MenuItem, itemState);
-                case 'RADIO':
-                    return _react2.default.createElement(_multilistitem.RadioItem, itemState);
-                case 'CHECKBOX':
-                    return _react2.default.createElement(_multilistitem.CheckboxItem, itemState);
-                default:
-                    return this.props.renderItem((0, _extends3.default)({ itemType: type }, itemState));
-            }
-        }
-    }, {
-        key: '_handleShouldItemUpdate',
-        value: function _handleShouldItemUpdate(level, isLastLevel, ret, nextItem, nowItem) {
-            var isUpdate = false;
-            if (isLastLevel) {
-                return true;
-            }
-            if (nextItem.value !== nowItem.value) {
-                isUpdate = true;
-            }
-            if (!isUpdate && this.prevValue[level] !== this.props.value[level] && (nowItem.value === this.prevValue[level] || nowItem.value === this.props.value[level])) {
-                isUpdate = true;
-            }
-            // 路径的更改
-            if (!isUpdate && this.prevPath[level] !== this.path[level]) {
-                isUpdate = nowItem.value === this.prevPath[level] || nowItem.value === this.path[level];
-            }
-            return isUpdate;
-        }
-    }, {
-        key: '_handleItemExtraClass',
-        value: function _handleItemExtraClass(data, level, item) {
-            return item.value === this.path[level] && item.subList ? 'spread' : '';
-        }
-    }, {
-        key: '_handleItemTap',
-        value: function _handleItemTap(data, level, item, index, target) {
-            var type = item.itemType || data.subItemType;
-            var upLevel = level;
-            var newItems = this.newItems;
-            var newValue = void 0;
-            this.calcPath();
-            this.setState({
-                route: item.subList ? this.path.slice(0, level).concat(item.value) : this.path.slice(0, level)
-            });
-            switch (type) {
-                case 'MENU':
-                    {
-                        var constDataSource = this.props.dataSource.subList;
-                        var syncItem = this.pathIndex.some(function (i) {
-                            if (constDataSource[i].subList === 'ASYNC') {
-                                constDataSource = constDataSource[i];
-                                return true;
-                            }
-                            constDataSource = constDataSource[i].subList;
-                            return false;
-                        });
-                        if (syncItem) {
-                            this.props.onUpdateData(constDataSource);
-                        }
-                        return;
-                    }
-                case 'RADIO':
-                    newValue = this.path.slice(0, upLevel).concat(item.value);
-                    newItems = this._getItemsByRoute(this.pathIndex.slice(0, upLevel)).concat(item);
-                    break;
-                case 'CHECKBOX':
-                    if (this.path.slice(0, upLevel).join('-') === this.props.value.slice(0, upLevel).join('-')) {
-                        newValue = this.props.value.slice(0);
-                        var tmpValue = newValue[level];
-                        if (Array.isArray(tmpValue) && tmpValue.length > 0) {
-                            var valueIndex = tmpValue.indexOf(item.value);
-                            if (valueIndex !== -1) {
-                                tmpValue.splice(valueIndex, 1);
-                                newItems[level].splice(valueIndex, 1);
-                            } else {
-                                tmpValue.push(item.value);
-                                newItems[level].push(item);
-                            }
-                        } else {
-                            tmpValue = [item.value];
-                            newItems[level] = [item];
-                        }
-                        // handle final value
-                        if (tmpValue.length > 0) {
-                            newValue[level] = tmpValue;
-                        } else {
-                            newValue = [];
-                            newItems = [];
-                        }
-                    } else {
-                        newValue = this.path.slice(0, upLevel);
-                        newValue.push([item.value]);
-                        newItems = this._getItemsByRoute(this.pathIndex.slice(0, upLevel));
-                        newItems.push([item]);
-                    }
-                    break;
-                default:
-                    newValue = this.props.onItemTap({ data: data, level: level, item: item, index: index, target: target });
-            }
-            // if (newValue[newValue.length - 1] == null) {
-            // newValue = [];
-            // }
-            this.newItems = newItems;
-            this.props.onChange({ newValue: newValue, oldValue: this.props.value, level: level, newItems: newItems });
-        }
-    }, {
-        key: '_getItemsByRoute',
-        value: function _getItemsByRoute(route, dataSource) {
-            var _this4 = this;
-
-            var constDataSource = dataSource || this.props.dataSource;
-            return route.map(function (item) {
-                if (Array.isArray(item)) {
-                    return _this4._getItemsByRoute(item, constDataSource);
-                } else {
-                    constDataSource = constDataSource.subList[item];
-                    return constDataSource;
-                }
-            });
-        }
-    }, {
-        key: '_getItemsByValue',
-        value: function _getItemsByValue(value) {
-            var constDataSource = this.props.dataSource;
-            return value.map(function (item) {
-                var valueR = void 0;
-                if (Array.isArray(item)) {
-                    return constDataSource.subList.filter(function (i) {
-                        return ~item.indexOf(i.value);
-                    });
-                }
-                constDataSource.subList.some(function (i) {
-                    if (item === i.value) {
-                        valueR = i;
-                        constDataSource = i;
-                        return true;
-                    }
-                    return false;
-                });
-                return valueR;
-            });
-        }
-    }, {
-        key: '_recursionRender',
-        value: function _recursionRender(data, level) {
-            if (!data.subList) {
-                return;
-            }
-            if (Array.isArray(data.subList) && data.subList.length > 0) {
-                this.children.push(_react2.default.createElement(
-                    'div',
-                    { className: (0, _classnames2.default)('item', 'item-' + level), key: this.path.slice(0, level).join('_') },
-                    _react2.default.createElement(_src2.default, {
-                        dataSource: data.subList,
-                        infinite: false,
-                        extraClass: (0, _classnames2.default)(['yo-scroller-fullscreen', 'item', 'item-' + level]),
-                        onItemTap: this._handleItemTap.bind(this, data, level),
-                        renderItem: this._handleItemRender.bind(this, data, level),
-                        itemExtraClass: this._handleItemExtraClass.bind(this, data, level),
-                        shouldItemUpdate: this._handleShouldItemUpdate.bind(this, level, !data.subList[this.pathIndex[level]].subList)
-                    })
-                ));
-                this._recursionRender(data.subList[this.pathIndex[level]], level + 1);
-                return;
-            }
-            switch (data.subList) {
-                case 'EMPTY':
-                    this.children.push(_react2.default.createElement(
-                        'div',
-                        { className: (0, _classnames2.default)('item', 'item-' + level), key: this.path.slice(0, level).join('_') },
-                        _react2.default.createElement(_multilistitem.EmptyList, null)
-                    ));
-                    break;
-                case 'FAULT':
-                    this.children.push(_react2.default.createElement(
-                        'div',
-                        { className: (0, _classnames2.default)('item', 'item-' + level), key: this.path.slice(0, level).join('_') },
-                        _react2.default.createElement(_multilistitem.FaultList, null)
-                    ));
-                    break;
-                case 'ASYNC':
-                    this.children.push(_react2.default.createElement(
-                        'div',
-                        { className: (0, _classnames2.default)('item', 'item-' + level), key: this.path.slice(0, level).join('_') },
-                        _react2.default.createElement(_multilistitem.LoadingList, null)
-                    ));
-                    break;
-                default:
-                    this.children.push(_react2.default.createElement(
-                        'div',
-                        { className: (0, _classnames2.default)('item', 'item-' + level), key: this.path.slice(0, level).join('_') },
-                        this.props.renderContent({ type: data.subList, data: data, level: level })
-                    ));
-            }
-        }
-        /**
-         * @skip
-         * @description 渲染多级列表的调用函数
-         * @return {Array} 列表的虚拟dom树
-         */
-
-    }, {
-        key: 'renderList',
-        value: function renderList() {
-            this.children = [];
-            this.prevPath = this.path.slice(0);
-            this.calcPath();
-            this._recursionRender(this.state.dataSource, 0);
-            return this.children;
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            var extraClass = this.props.extraClass;
-
-            return _react2.default.createElement(
-                'div',
-                { className: (0, _classnames2.default)(['yo-multilist'], extraClass) },
-                this.renderList()
-            );
-        }
-    }]);
-    return MultiList;
-}(_react.Component); /**
-                      * @component MultiList
-                      * @version 3.0.4
-                      * @description 多级选择列表组件，该组件基于list组件封装，支持列表展示，支持自定义模板展示，内容异步加载等功能。
-                      * @instructions {instruInfo: ./multilist/product.md}{instruUrl: multilist/transport.html?hideIcon}
-                      * @instructions {instruInfo: ./multilist/async.md}{instruUrl: multilist/async.html?hideIcon}
-                      * @instructions {instruInfo: ./multilist/personal.md}{instruUrl: multilist/product.html?hideIcon}
-                      */
-
-
-MultiList.propTypes = {
-    /**
-     * 原始数据用于生成列表
-     * @property dataSource
-     * @type Array
-     * @description
-     * dataSource 是一个树形的结构，每一个层级会有defaultValue，表示默认展开该哪个item或者默认选中项（非必填），subList为下级层级的内容，subList的每个字项设置内容如下。
-     *
-     * - name 为文字描述
-     * - value 该项value
-     * - subItemType 用于设置下一层级的list item使用的组件，内置 `MENU`,`RADIO`,`CHECKBOX`。如果传入的字符不在默认序列中会触发组件的renderItem方法，由用户自行渲染。
-     * - itemType 用于定义当前item 使用的组件，优先级高于父层级的 `subItemType`。
-     * - subList支持数组和String类型，当传入array类型渲染为列表，
-     * 内置String为`FAULT`，`ASYNC`，`EMPTY`对应内置模板分别用于展示加载错误，加载中，加载内容为空三种情况，
-     * 其中加载`ASYNC`会触发onUpdateData事件，通知用户更新数据。用户可以通过自定义字符串，触发renderContent方法，
-     * 返回ReactElement作为内容并进行其他操作。
-     * - defaultValue 表示该层级的默认值，若下一级为最后一层级表示，默认值[注意：默认值不会作为value]。
-     *
-     * @example
-     * const dataSource = {
-     *   defaultValue: 1,
-     *   subItemType: 'MENU',
-     *   subList: [{
-     *       name: '同步',
-     *      value: 1,
-     *      defaultValue: '1-1',
-     *      subItemType: 'RADIO',
-     *      subList: [{
-     *          name: '1-1  默认选项',
-     *          value: '1-1'
-     *      }, {
-     *          name: '1-2',
-     *          value: '1-2'
-     *      }, {
-     *          name: '1-3',
-     *          value: '1-3'
-     *      }, {
-     *          name: '1-4',
-     *          value: '1-4'
-     *      }]
-     *  }, {
-     *      name: '异步',
-     *      value: 2,
-     *      subItemType: 'RADIO',
-     *      defaultValue: '2-2',
-     *      subList: 'ASYNC',
-     *      asyncType: '2-2'
-     *   }]
-     *  };
-     */
-    dataSource: _react2.default.PropTypes.shape({
-        subItemType: _react2.default.PropTypes.string.isRequired,
-        onItemTapType: _react2.default.PropTypes.string,
-        subList: _react2.default.PropTypes.array.isRequired,
-        defaultValue: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.array, _react2.default.PropTypes.string, _react2.default.PropTypes.number])
-    }).isRequired,
-    /**
-     * @property value
-     * @type  Array
-     * @description mutliList的值，该值为点选的value
-     */
-    value: _react2.default.PropTypes.array,
-    /**
-     * @property onChange
-     * @type Function
-     * @description
-     * 用于更新结果的回调函数
-     * @example
-     *  function({level, listValue, newValue, newItems}){
-     *  	level 表示当前菜单层级
-     *  	oldValue 表示当前multiList的value
-     *  	newValue 表示更新后的multiList的value
-     *      newItems 表示更新后的value对应的item
-     * 	}
-     */
-    onChange: _react.PropTypes.func.isRequired,
-    /**
-     * @property extraClass
-     * @type String
-     * @description 给组件根节点附加的额外样式类
-     * @default null
-     */
-    extraClass: _react.PropTypes.string,
-    /**
-     * @property onItemTap
-     * @type Function
-     * @description 当Item的类型不是'MENU'、'CHECKBOX'、'RADIO'，该事件将会被触发。事件处理函数需要有返回值，该值将会作为`newValue`触发组件的`onChange`事件。
-     * @param {data, level, item, index, target} 父层数据，层级，改节点数据，该节点索引，
-     */
-    onItemTap: _react.PropTypes.oneOfType([_react.PropTypes.func, _react.PropTypes.String]),
-    /**
-     * @property renderItem
-     * @type Function
-     * @description 当Item的类型不是'MENU'、'CHECKBOX'、'RADIO'，该事件将会被触发。事件处理函数需要有返回值，返回值是`PropsTypes.element`类型作为`List`的 `item`。
-     * @param {itemType, data, level, item, index, target}  父层数据，节点所在层级，节点数据，该节点在父节点`subList`中的索引，
-     * @example
-     * renderItem={(item)=>{
-     *      const {itemType, data, isSpread, index} = item;
-     *      JSON.stringify(item);
-     *      // {  "itemType":"ProductMenu", 节点的Type类型（此时的`itemType`是组件根据父节点`subItemType`和该节点`itemType`按照优先级处理过的值。）
-     *      //    "level":0, item所在层级
-     *      //    "index":"2", item所在父节点subList
-     *      //    "route": "1>2>1", item在dataSource中的索引值
-     *      //    "isLeaf":false, 该节点是否为叶子节点
-     *      //    "isSpread":false, 如果该节点为父节点时该值表示该节点是否是展开的
-     *      //    "isChecked":false, 该节点是否是有效值
-     *      //    "data":{"name":"产品2","value":2,"subList":"product2","key":1,"_index":1} 原数据内容`key`值为组建计算由于优化List性能，如原数据中有设置则使用原数据，单请调用者保证key值在该层级中的唯一性。
-     *      // }
-     *      switch (itemType){
-     *          case 'ProductMenu':
-     *              return <ProductMenu data={data} isSpread={isSpread} index={index}/>
-     *      }
-     * }}
-     */
-    renderItem: _react.PropTypes.oneOfType([_react.PropTypes.func, _react.PropTypes.String]),
-    /**
-     * @property renderContent
-     * @type Function
-     * @description 当subList的类型不是array，该事件将会被触发，事件处理函数需要有返回值，返回值是`PropsTypes.element`类型作为`List`的 `item`。
-     * @param {itemType, data, level} 节点的Type类型， 父层数据，层级，改节点数据，该节点索引，
-     * @example
-     * renderContent={(item) => {
-     *      const {type} = item;
-     *      console.log(JSON.stringify(item));
-     *      // {"type":"product1","data":{"name":"产品1","value":1,"subList":"product1","key":"1"},"level":1}
-     *      switch (type){
-     *          case 'product1':
-     *              return <Product tit="product1" />;
-     *          case 'product2':
-     *              return <Product tit="product2" />;
-     *      }
-     *  }}
-     */
-    renderContent: _react.PropTypes.func,
-    /**
-     * @property onUpdateData
-     * @type Function
-     * @description 当加载的层级为`ASYNC`时触发，用于用户更新dataSource，用户通过获取数据中的内容判断如何更新dataSource。
-     * @param data 父节点的数据
-     */
-    onUpdateData: _react.PropTypes.func
-};
-MultiList.defaultProps = {
-    extraClass: '',
-    value: []
-};
-exports.default = MultiList;
-
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ }),
-/* 104 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.LoadingList = exports.FaultList = exports.EmptyList = exports.MenuItem = exports.RadioItem = exports.CheckboxItem = undefined;
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _classnames = __webpack_require__(6);
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var ITEMPROPSCONFIG = {
-    data: _react.PropTypes.object,
-    level: _react.PropTypes.number,
-    isChecked: _react.PropTypes.bool,
-    isSpread: _react.PropTypes.bool,
-    isLeaf: _react.PropTypes.bool,
-    index: _react.PropTypes.string,
-    route: _react.PropTypes.string
-};
-
-var CheckboxItem = exports.CheckboxItem = function CheckboxItem(props) {
-    return _react2.default.createElement(
-        'div',
-        { className: 'select-checkbox', 'data-type': 'CHECKBOX', 'data-index': props.index || null, 'data-route': props.route || null },
-        _react2.default.createElement(
-            'div',
-            { className: 'yo-checked yo-checked-checkbox' },
-            _react2.default.createElement('input', { type: 'radio', checked: props.isChecked, readOnly: 'readOnly' }),
-            _react2.default.createElement('span', { className: 'type' })
-        ),
-        _react2.default.createElement(
-            'p',
-            { className: 'content' },
-            props.data.name
-        )
-    );
-};
-CheckboxItem.propTypes = ITEMPROPSCONFIG;
-
-var RadioItem = exports.RadioItem = function RadioItem(props) {
-    return _react2.default.createElement(
-        'div',
-        { className: (0, _classnames2.default)('select-checkbox', { checked: props.isChecked }), 'data-type': 'RADIO', 'data-index': props.index || null, 'data-route': props.route || null },
-        _react2.default.createElement(
-            'div',
-            { className: 'yo-checked yo-checked-radio' },
-            _react2.default.createElement('input', { type: 'radio', checked: props.isChecked, readOnly: 'readOnly' }),
-            _react2.default.createElement('span', { className: 'type' })
-        ),
-        _react2.default.createElement(
-            'span',
-            { className: 'content' },
-            props.data.name
-        )
-    );
-};
-RadioItem.propTypes = ITEMPROPSCONFIG;
-
-var MenuItem = exports.MenuItem = function MenuItem(props) {
-    return _react2.default.createElement(
-        'div',
-        { className: (0, _classnames2.default)('select-checkbox', 'multi-list-content', { spread: props.isSpread, effect: props.isChecked }), 'data-type': 'MENU', 'data-index': props.index || null, 'data-route': props.route || null },
-        _react2.default.createElement(
-            'div',
-            { className: 'yo-checked yo-checked-dot' },
-            _react2.default.createElement('input', { type: 'radio', checked: props.isChecked, readOnly: 'readOnly' }),
-            _react2.default.createElement('span', { className: 'type' })
-        ),
-        _react2.default.createElement(
-            'span',
-            { className: 'content' },
-            props.data.name
-        )
-    );
-};
-MenuItem.propTypes = ITEMPROPSCONFIG;
-
-var EmptyList = exports.EmptyList = function EmptyList() {
-    return _react2.default.createElement(
-        'p',
-        { className: 'multiList-container-tip' },
-        '\u6570\u636E\u4E3A\u7A7A'
-    );
-};
-var FaultList = exports.FaultList = function FaultList() {
-    return _react2.default.createElement(
-        'p',
-        { className: 'multiList-container-tip' },
-        '\u6570\u636E\u52A0\u8F7D\u5931\u8D25'
-    );
-};
-var LoadingList = exports.LoadingList = function LoadingList() {
-    return _react2.default.createElement(
-        'p',
-        { className: 'multiList-container-tip' },
-        '\u6570\u636E\u52A0\u8F7D\u4E2D......'
-    );
-};
-
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "multilistitem.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ }),
-/* 105 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _typeof2 = __webpack_require__(17);
-
-var _typeof3 = _interopRequireDefault(_typeof2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 var utils = function () {
     var me = {};
@@ -11525,7 +7926,7 @@ var utils = function () {
         // Android browser is not a chrome browser.
         if (/Android/.test(appVersion) && !/Chrome\/\d/.test(appVersion)) {
             var safariVersion = appVersion.match(/Safari\/(\d+.\d)/);
-            if (safariVersion && (typeof safariVersion === 'undefined' ? 'undefined' : (0, _typeof3.default)(safariVersion)) === 'object' && safariVersion.length >= 2) {
+            if (safariVersion && (typeof safariVersion === 'undefined' ? 'undefined' : _typeof(safariVersion)) === 'object' && safariVersion.length >= 2) {
                 _isBadAndroid = parseFloat(safariVersion[1]) < 535.19;
             } else {
                 _isBadAndroid = true;
@@ -11655,13 +8056,13 @@ var utils = function () {
 
 exports.default = utils;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "utils.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "utils.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 106 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("F:\\react-app\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -11669,41 +8070,43 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _classCallCheck2 = __webpack_require__(1);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(2);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = __webpack_require__(4);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(3);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _react = __webpack_require__(0);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(18);
+var _reactDom = __webpack_require__(4);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _util = __webpack_require__(19);
+var _util = __webpack_require__(7);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @component Sticky
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @description `Sticky` 组件，只能在 `Scroller` 内部或者列表系列组件的 `staticSection` 中使用，
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 它内部的子元素在 `Scroller` 滚动时将会获得吸顶效果。
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * `Sticky` 是一个虚拟组件，它只会给它的唯一子元素添加额外的逻辑，而不会改变原有的 `dom` 结构。
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @instructions {instruInfo: ./sticky.md}{instruUrl: scroller/sticky.html?hideIcon}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @author jiao.shen
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @version  3.0.2
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
 var Sticky = function (_Component) {
-    (0, _inherits3.default)(Sticky, _Component);
+    _inherits(Sticky, _Component);
 
     function Sticky() {
-        (0, _classCallCheck3.default)(this, Sticky);
+        _classCallCheck(this, Sticky);
 
-        var _this = (0, _possibleConstructorReturn3.default)(this, (Sticky.__proto__ || Object.getPrototypeOf(Sticky)).call(this));
+        var _this = _possibleConstructorReturn(this, (Sticky.__proto__ || Object.getPrototypeOf(Sticky)).call(this));
 
         _this.domNode = null;
         _this.height = null;
@@ -11712,7 +8115,7 @@ var Sticky = function (_Component) {
         return _this;
     }
 
-    (0, _createClass3.default)(Sticky, [{
+    _createClass(Sticky, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
             this.scroller = this.context.scroller;
@@ -11760,18 +8163,9 @@ var Sticky = function (_Component) {
             return _react2.default.Children.only(this.props.children);
         }
     }]);
-    return Sticky;
-}(_react.Component); /**
-                      * @component Sticky
-                      * @description `Sticky` 组件，只能在 `Scroller` 内部或者列表系列组件的 `staticSection` 中使用，
-                      * 它内部的子元素在 `Scroller` 滚动时将会获得吸顶效果。
-                      *
-                      * `Sticky` 是一个虚拟组件，它只会给它的唯一子元素添加额外的逻辑，而不会改变原有的 `dom` 结构。
-                      * @instructions {instruInfo: ./sticky.md}{instruUrl: scroller/sticky.html?hideIcon}
-                      * @author jiao.shen
-                      * @version  3.0.2
-                      */
 
+    return Sticky;
+}(_react.Component);
 
 Sticky.propTypes = {
     /**
@@ -11799,320 +8193,53 @@ Sticky.contextTypes = {
 };
 exports.default = Sticky;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 107 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("F:\\react-app\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = exports.TAP_DELAY = undefined;
-
-var _reactDom = __webpack_require__(18);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var TAP_SLOP = 5; /**
-                   * touchable手势处理,解决Scroller内部的手势冲突
-                   * 在滚动时不会触发active
-                   * 在active之后发生滚动会取消active状态
-                   */
-var TAP_DELAY = exports.TAP_DELAY = 50;
-/**
- * @param endPoint
- * @param startPoint
- * @returns {number}
- * 根据个点的坐标计算出位移
- */
-function getDistance(endPoint, startPoint) {
-    return Math.sqrt(Math.pow(endPoint.pageX - startPoint.pageX, 2) + Math.pow(endPoint.pageY - startPoint.pageY, 2));
-}
-
-/**
- * @param endPoint
- * @param startPoint
- * @returns {boolean}
- * 根据两个点的位移判断是否应该取消Tap事件的触发
- */
-function onTouchMoveShouldCancelTap(endPoint, startPoint) {
-    return getDistance(endPoint, startPoint) > TAP_SLOP;
-}
-
-/**
- * @param evt
- * @returns {touch/null}
- * 获取触点
- */
-function getTouchPoint(evt) {
-    return evt.touches.length ? { pageX: evt.touches[0].pageX, pageY: evt.touches[0].pageY } : null;
-}
-
-/**
- * @param domNode
- * @param activeClass
- * 移除item的activeClass
- */
-function removeActiveClass(domNode, activeClass) {
-    if (domNode && activeClass) {
-        domNode.className = domNode.className.replace(' ' + activeClass, '');
-    }
-}
-
-/**
- * @param scroller
- * @returns {boolean}
- * 判断组件是否在滚动
- */
-function isScrolling(scroller) {
-    return scroller ? scroller.isScrolling : false;
-}
-
-function isAnySwipeMenuOpen(swipeMenuList) {
-    return swipeMenuList ? swipeMenuList.openIndex !== -1 : false;
-}
-
-// touchStart的位置,是否需要放弃Tap触发,Tap周期(start,move,end)是否已经结束
-var startPoint = void 0,
-    shouldAbortTap = void 0;
-var captured = null;
-
-function _default(component, scroller, swipeMenuList, activeClass, onTap, _onTouchStart) {
-    var gestureObj = {
-        onTouchStart: function onTouchStart(evt) {
-            var domNode = _reactDom2.default.findDOMNode(component);
-            removeActiveClass(domNode, activeClass);
-            // 如果组件正在滚动,直接放弃Tap触发
-            shouldAbortTap = isScrolling(scroller) || isAnySwipeMenuOpen(swipeMenuList);
-            startPoint = getTouchPoint(evt);
-            _onTouchStart(evt);
-            if (!captured) {
-                captured = domNode;
-            }
-            // TAP_DELAY之后再次判断是否要触发Tap,如果这段时间内出现了大的位移,if后面的逻辑就不会执行
-            setTimeout(function () {
-                var className = activeClass;
-                if (!shouldAbortTap && className && captured === domNode) {
-                    domNode.className += ' ' + className;
-                }
-            }, TAP_DELAY);
-        },
-        onTouchMove: function onTouchMove(evt) {
-            var domNode = _reactDom2.default.findDOMNode(component);
-            var currentPoint = getTouchPoint(evt);
-            // 根据touchmove的距离判断是否要放弃tap
-            if (onTouchMoveShouldCancelTap(currentPoint, startPoint)) {
-                shouldAbortTap = true;
-                captured = null;
-                removeActiveClass(domNode, activeClass);
-            }
-        },
-        onTouchEnd: function onTouchEnd(evt) {
-            var target = evt.target;
-            var domNode = _reactDom2.default.findDOMNode(component);
-            // 如果需要触发tap,在TAP_DELAY之后触发onTap回调
-            if (!shouldAbortTap && captured === domNode) {
-                setTimeout(function () {
-                    onTap(target);
-                    removeActiveClass(domNode, activeClass);
-                    captured = null;
-                }, TAP_DELAY + 10);
-            } else if (shouldAbortTap) {
-                captured = null;
-            }
-        },
-        onTouchCancel: function onTouchCancel() {
-            var domNode = _reactDom2.default.findDOMNode(component);
-            removeActiveClass(domNode, activeClass);
-        }
-    };
-
-    return gestureObj;
-}
-exports.default = _default;
-
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "gesture.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ }),
-/* 108 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(process) {/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _classCallCheck2 = __webpack_require__(1);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(2);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = __webpack_require__(4);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(3);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _react = __webpack_require__(0);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _gesture = __webpack_require__(107);
-
-var _gesture2 = _interopRequireDefault(_gesture);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * @component Touchable
- * @version 3.0.0
- * @description `Touchable` 组件是一个"虚拟"组件，它不会真的在文档中创建一个 `dom` 节点作为根节点，而是返回它唯一的子组件的一个克隆，并给它绑定一些手势事件。
- * 除了能给 `dom` 绑定 `tap` 事件之外，它还解决了一些移动端的手势"顽疾"，例如触摸反馈和滚动/触摸的冲突问题。在需要绑定 `tap` 事件的情况下，应该优先使用 `Touchable`，
- * 而不是直接把 `tap` 事件回调绑定给 `dom`。
- *
- * @author jiao.shen
- * @instructions {instruInfo: ./touchable.md}{instruUrl: touchable.html?hideIcon}
- */
-var Touchable = function (_Component) {
-    (0, _inherits3.default)(Touchable, _Component);
-
-    function Touchable() {
-        (0, _classCallCheck3.default)(this, Touchable);
-        return (0, _possibleConstructorReturn3.default)(this, (Touchable.__proto__ || Object.getPrototypeOf(Touchable)).apply(this, arguments));
-    }
-
-    (0, _createClass3.default)(Touchable, [{
-        key: 'render',
-        value: function render() {
-            if (process.env.NODE_ENV !== 'production') {
-                if (this.props.touchClass == null && !this.props.internalUse) {
-                    console.error('yo-touchable: Touchable组件没有设置touchClass, 出于用户体验考虑, 应该尽量给触摸区域添加触摸反馈。');
-                }
-            }
-
-            var onlyChild = _react2.default.Children.only(this.props.children);
-            var gestureObj = (0, _gesture2.default)(this, this.context.scroller, this.context.swipeMenuList, this.props.touchClass, this.props.onTap, this.props.onTouchStart);
-            var onTouchStart = gestureObj.onTouchStart,
-                onTouchMove = gestureObj.onTouchMove,
-                onTouchEnd = gestureObj.onTouchEnd,
-                onTouchCancel = gestureObj.onTouchCancel;
-
-
-            return _react2.default.cloneElement(onlyChild, { onTouchStart: onTouchStart, onTouchMove: onTouchMove, onTouchEnd: onTouchEnd, onTouchCancel: onTouchCancel });
-        }
-    }]);
-    return Touchable;
-}(_react.Component);
-
-Touchable.propTypes = {
-    /**
-     * @property touchClass
-     * @type String
-     * @default null
-     * @description 触摸Touchable时附加的className，可以用来实现Native常见的触摸反馈功能(例如给触摸区域添加深色背景或者改变透明度等等)。
-     */
-    touchClass: _react.PropTypes.string,
-    /**
-     * @property onTap
-     * @type Function
-     * @default null
-     * @param {DOMElement} target tap事件的target
-     * @description 给Touchable绑定的onTap事件。
-     */
-    onTap: _react.PropTypes.func,
-    /**
-     * @skip 给List定制的属性
-     */
-    onTouchStart: _react.PropTypes.func,
-    /**
-     * @skip 内部使用标志
-     */
-    internalUse: _react.PropTypes.bool,
-    children: _react.PropTypes.object
-};
-Touchable.defaultProps = {
-    onTouchStart: function onTouchStart() {},
-    touchClass: null,
-    onTap: function onTap() {},
-    internalUse: false
-};
-Touchable.contextTypes = {
-    scroller: _react.PropTypes.object,
-    swipeMenuList: _react.PropTypes.object
-};
-exports.default = Touchable;
-
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
-
-/***/ }),
-/* 109 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-"use strict";
-
-__webpack_require__(89);
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(18);
+var _reactDom = __webpack_require__(4);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactRouter = __webpack_require__(26);
-
-var _reactRedux = __webpack_require__(50);
-
-var _store = __webpack_require__(49);
-
-var _index = __webpack_require__(84);
+var _index = __webpack_require__(35);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _home = __webpack_require__(83);
+var _home = __webpack_require__(34);
 
 var _home2 = _interopRequireDefault(_home);
 
-var _kind = __webpack_require__(85);
+var _list = __webpack_require__(36);
 
-var _kind2 = _interopRequireDefault(_kind);
+var _list2 = _interopRequireDefault(_list);
 
-var _liandou = __webpack_require__(86);
+var _car = __webpack_require__(33);
 
-var _liandou2 = _interopRequireDefault(_liandou);
+var _car2 = _interopRequireDefault(_car);
 
-var _cart = __webpack_require__(82);
-
-var _cart2 = _interopRequireDefault(_cart);
-
-var _my = __webpack_require__(87);
+var _my = __webpack_require__(37);
 
 var _my2 = _interopRequireDefault(_my);
 
-var _productList = __webpack_require__(88);
+var _reactRouter = __webpack_require__(11);
 
-var _productList2 = _interopRequireDefault(_productList);
+var _reactRedux = __webpack_require__(40);
+
+var _store = __webpack_require__(38);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+__webpack_require__(39);
 
 _reactDom2.default.render(_react2.default.createElement(
 	_reactRedux.Provider,
@@ -12120,297 +8247,34 @@ _reactDom2.default.render(_react2.default.createElement(
 	_react2.default.createElement(
 		_reactRouter.Router,
 		{ history: _reactRouter.hashHistory },
-		_react2.default.createElement(_reactRouter.Redirect, { from: "/", to: "/home" }),
 		_react2.default.createElement(
 			_reactRouter.Route,
-			{ path: "/", component: _index2.default },
-			_react2.default.createElement(_reactRouter.Route, { path: "home", component: _home2.default }),
-			_react2.default.createElement(_reactRouter.Route, { path: "kind", component: _kind2.default }),
-			_react2.default.createElement(_reactRouter.Route, { path: "liandou", component: _liandou2.default }),
-			_react2.default.createElement(_reactRouter.Route, { path: "cart", component: _cart2.default }),
-			_react2.default.createElement(_reactRouter.Route, { path: "my", component: _my2.default })
-		),
-		_react2.default.createElement(_reactRouter.Route, { path: "productList/:type", component: _productList2.default })
+			{ path: '/', component: _index2.default },
+			_react2.default.createElement(_reactRouter.IndexRoute, { component: _home2.default }),
+			_react2.default.createElement(_reactRouter.Route, { path: 'home', component: _home2.default }),
+			_react2.default.createElement(_reactRouter.Route, { path: 'list', component: _list2.default }),
+			_react2.default.createElement(_reactRouter.Route, { path: 'car', component: _car2.default }),
+			_react2.default.createElement(_reactRouter.Route, { path: 'my', component: _my2.default })
+		)
 	)
-), document.getElementById("root"));
+), document.getElementById('root'));
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "app.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("F:\\react-app\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "app.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 110 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _classCallCheck2 = __webpack_require__(1);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(2);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = __webpack_require__(4);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(3);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var HomeHeader = function (_React$Component) {
-	(0, _inherits3.default)(HomeHeader, _React$Component);
-
-	function HomeHeader() {
-		(0, _classCallCheck3.default)(this, HomeHeader);
-		return (0, _possibleConstructorReturn3.default)(this, (HomeHeader.__proto__ || Object.getPrototypeOf(HomeHeader)).apply(this, arguments));
-	}
-
-	(0, _createClass3.default)(HomeHeader, [{
-		key: "refresh",
-		value: function refresh() {
-			location.reload(true); //false从缓存中获得，true则从服务器获得
-		}
-	}, {
-		key: "render",
-		value: function render() {
-			return _react2.default.createElement(
-				"div",
-				null,
-				_react2.default.createElement(
-					"header",
-					{ className: "yo-header" },
-					_react2.default.createElement(
-						"form",
-						{ className: "yo-search" },
-						_react2.default.createElement(
-							"label",
-							{ className: "action" },
-							_react2.default.createElement(
-								"span",
-								{ className: "yo-ico" },
-								"\uE65E"
-							),
-							_react2.default.createElement("input", { className: "input", type: "text", placeholder: "\u8BF7\u8F93\u5165\u5173\u952E\u5B57" })
-						)
-					),
-					_react2.default.createElement(
-						"i",
-						{ className: "yo-ico affirm", onClick: this.refresh },
-						"\uE67A"
-					)
-				)
-			);
-		}
-	}]);
-	return HomeHeader;
-}(_react2.default.Component);
-
-exports.default = HomeHeader;
-
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "kindHeader.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+module.exports = __webpack_require__(68);
 
 /***/ }),
-/* 111 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _classCallCheck2 = __webpack_require__(1);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(2);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = __webpack_require__(4);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(3);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _src = __webpack_require__(53);
-
-var _src2 = _interopRequireDefault(_src);
-
-var _src3 = __webpack_require__(33);
-
-var _reactRouter = __webpack_require__(26);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var KindList = function (_React$Component) {
-	(0, _inherits3.default)(KindList, _React$Component);
-
-	function KindList(props) {
-		(0, _classCallCheck3.default)(this, KindList);
-
-		var _this = (0, _possibleConstructorReturn3.default)(this, (KindList.__proto__ || Object.getPrototypeOf(KindList)).call(this, props));
-
-		_this.state = {
-			categories: [],
-			brands: [],
-			style: 'block'
-		};
-		return _this;
-	}
-
-	(0, _createClass3.default)(KindList, [{
-		key: "componentWillMount",
-		value: function componentWillMount() {
-			_src3.loading.show({
-				extraClass: 'yo-loading-b',
-				text: 'loading'
-			});
-		}
-	}, {
-		key: "render",
-		value: function render() {
-			// console.log(222,this.state.categories)
-			return _react2.default.createElement(
-				_src2.default,
-				null,
-				_react2.default.createElement(
-					"h2",
-					{ className: "hotCate" },
-					"\u70ED\u95E8\u5206\u7C7B"
-				),
-				_react2.default.createElement(
-					"ul",
-					null,
-					this.state.categories
-				),
-				_react2.default.createElement(
-					"h3",
-					{ className: "hotBrands", ref: "data" },
-					"\u70ED\u95E8\u54C1\u724C"
-				),
-				_react2.default.createElement(
-					"ul",
-					null,
-					this.state.brands
-				)
-			);
-		}
-	}, {
-		key: "componentDidMount",
-		value: function componentDidMount() {
-			var _this2 = this;
-
-			fetch("http://m.lianlianlife.com/Api/Category?pid=" + this.props.url).then(function (res) {
-				return res.json();
-			}).then(function (res) {
-				// console.log(res.data.brands)
-				// console.log(res.data.categories)
-				console.log(_this2.props.url);
-				var categoriesList = res.data.categories.map(function (val) {
-					// console.log(val.id)
-					return _react2.default.createElement(
-						"li",
-						null,
-						" ",
-						_react2.default.createElement(
-							_reactRouter.Link,
-							{ to: "productList/" + val.id + "&" + val.name },
-							_react2.default.createElement(
-								"div",
-								{ className: "listImg" },
-								_react2.default.createElement("img", { src: val.iconUrl })
-							),
-							_react2.default.createElement(
-								"div",
-								null,
-								val.name
-							)
-						)
-					);
-				});
-				// console.log(res.data.categories)
-				// console.log(res.data.brands)
-				var brandsList = res.data.brands.map(function (val) {
-					// console.log(val.name.split("/").join("%2F"))
-					var newvname = val.name.split("/").join("%2F"); //字符串处理
-					return _react2.default.createElement(
-						"li",
-						null,
-						_react2.default.createElement(
-							_reactRouter.Link,
-							{ to: "productList/" + _this2.props.url + "&" + val.id + "&" + newvname },
-							_react2.default.createElement(
-								"div",
-								{ className: "listImg" },
-								_react2.default.createElement("img", { src: val.iconUrl })
-							),
-							_react2.default.createElement(
-								"div",
-								{ className: "listName" },
-								val.name
-							)
-						)
-					);
-				});
-				_this2.setState({
-					categories: categoriesList,
-					brands: brandsList
-				});
-				if (_this2.state.brands.length == 0) {
-					_this2.refs.data.style.display = "none";
-				}
-				_src3.loading.hide();
-				// setInterval(function () {
-
-				//      },2000)//定时器模拟loading
-			});
-		}
-	}]);
-	return KindList;
-}(_react2.default.Component);
-// import Productlist from "./productList.js"
-
-
-exports.default = KindList;
-
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "kindList.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+module.exports = __webpack_require__(19);
 
 /***/ }),
-/* 112 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(122);
-
-/***/ }),
-/* 113 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(59);
-
-/***/ }),
-/* 114 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12507,7 +8371,7 @@ var EventConstants = {
 module.exports = EventConstants;
 
 /***/ }),
-/* 115 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12524,9 +8388,9 @@ module.exports = EventConstants;
 
 
 
-var _prodInvariant = __webpack_require__(20);
+var _prodInvariant = __webpack_require__(3);
 
-var invariant = __webpack_require__(13);
+var invariant = __webpack_require__(2);
 
 /**
  * Injectable ordering of event plugins.
@@ -12765,10 +8629,10 @@ var EventPluginRegistry = {
 };
 
 module.exports = EventPluginRegistry;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 116 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12784,12 +8648,12 @@ module.exports = EventPluginRegistry;
 
 
 
-var EventPluginHub = __webpack_require__(55);
-var EventPluginUtils = __webpack_require__(34);
+var EventPluginHub = __webpack_require__(15);
+var EventPluginUtils = __webpack_require__(8);
 
-var accumulateInto = __webpack_require__(57);
-var forEachAccumulated = __webpack_require__(58);
-var warning = __webpack_require__(30);
+var accumulateInto = __webpack_require__(17);
+var forEachAccumulated = __webpack_require__(18);
+var warning = __webpack_require__(6);
 
 var getListener = EventPluginHub.getListener;
 
@@ -12905,10 +8769,10 @@ var EventPropagators = {
 };
 
 module.exports = EventPropagators;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 117 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12925,9 +8789,9 @@ module.exports = EventPropagators;
 
 
 
-var _prodInvariant = __webpack_require__(20);
+var _prodInvariant = __webpack_require__(3);
 
-var invariant = __webpack_require__(13);
+var invariant = __webpack_require__(2);
 
 /**
  * Static poolers. Several custom versions for each potential number of
@@ -13023,10 +8887,10 @@ var PooledClass = {
 };
 
 module.exports = PooledClass;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 118 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13042,12 +8906,12 @@ module.exports = PooledClass;
 
 
 
-var _assign = __webpack_require__(168);
+var _assign = __webpack_require__(80);
 
-var PooledClass = __webpack_require__(117);
+var PooledClass = __webpack_require__(63);
 
-var emptyFunction = __webpack_require__(51);
-var warning = __webpack_require__(30);
+var emptyFunction = __webpack_require__(12);
+var warning = __webpack_require__(6);
 
 var didWarnForAddedNewProperty = false;
 var isProxySupported = typeof Proxy === 'function';
@@ -13297,10 +9161,10 @@ function getPooledWarningPropertyDefinition(propName, getVal) {
     process.env.NODE_ENV !== 'production' ? warning(warningCondition, 'This synthetic event is reused for performance reasons. If you\'re seeing this, ' + 'you\'re %s `%s` on a released/nullified synthetic event. %s. ' + 'If you must keep the original synthetic event around, use event.persist(). ' + 'See https://fb.me/react-event-pooling for more information.', action, propName, result) : void 0;
   }
 }
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 119 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13316,9 +9180,9 @@ function getPooledWarningPropertyDefinition(propName, getVal) {
 
 
 
-var SyntheticEvent = __webpack_require__(118);
+var SyntheticEvent = __webpack_require__(64);
 
-var getEventTarget = __webpack_require__(121);
+var getEventTarget = __webpack_require__(67);
 
 /**
  * @interface UIEvent
@@ -13364,7 +9228,7 @@ SyntheticEvent.augmentClass(SyntheticUIEvent, UIEventInterface);
 module.exports = SyntheticUIEvent;
 
 /***/ }),
-/* 120 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13396,7 +9260,7 @@ var ViewportMetrics = {
 module.exports = ViewportMetrics;
 
 /***/ }),
-/* 121 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13436,7 +9300,7 @@ function getEventTarget(nativeEvent) {
 module.exports = getEventTarget;
 
 /***/ }),
-/* 122 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13452,7 +9316,7 @@ module.exports = getEventTarget;
 
 
 
-var shallowCompare = __webpack_require__(59);
+var shallowCompare = __webpack_require__(19);
 
 /**
  * If your React component's render function is "pure", e.g. it will render the
@@ -13489,7 +9353,7 @@ var ReactComponentWithPureRenderMixin = {
 module.exports = ReactComponentWithPureRenderMixin;
 
 /***/ }),
-/* 123 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13514,14 +9378,14 @@ module.exports = ReactComponentWithPureRenderMixin;
 
 
 
-var EventConstants = __webpack_require__(114);
-var EventPluginUtils = __webpack_require__(34);
-var EventPropagators = __webpack_require__(116);
-var SyntheticUIEvent = __webpack_require__(119);
-var TouchEventUtils = __webpack_require__(124);
-var ViewportMetrics = __webpack_require__(120);
+var EventConstants = __webpack_require__(60);
+var EventPluginUtils = __webpack_require__(8);
+var EventPropagators = __webpack_require__(62);
+var SyntheticUIEvent = __webpack_require__(65);
+var TouchEventUtils = __webpack_require__(70);
+var ViewportMetrics = __webpack_require__(66);
 
-var keyOf = __webpack_require__(90);
+var keyOf = __webpack_require__(41);
 var topLevelTypes = EventConstants.topLevelTypes;
 
 var isStartish = EventPluginUtils.isStartish;
@@ -13667,7 +9531,7 @@ module.exports = createTapEventPlugin;
 
 
 /***/ }),
-/* 124 */
+/* 70 */
 /***/ (function(module, exports) {
 
 /**
@@ -13715,7 +9579,7 @@ module.exports = TouchEventUtils;
 
 
 /***/ }),
-/* 125 */
+/* 71 */
 /***/ (function(module, exports) {
 
 module.exports = function(lastTouchEvent, clickTimestamp) {
@@ -13726,11 +9590,11 @@ module.exports = function(lastTouchEvent, clickTimestamp) {
 
 
 /***/ }),
-/* 126 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(process) {var invariant = __webpack_require__(13);
-var defaultClickRejectionStrategy = __webpack_require__(125);
+/* WEBPACK VAR INJECTION */(function(process) {var invariant = __webpack_require__(2);
+var defaultClickRejectionStrategy = __webpack_require__(71);
 
 var alreadyInjected = false;
 
@@ -13751,39 +9615,27 @@ should be injected by the application.'
 
   alreadyInjected = true;
 
-  __webpack_require__(55).injection.injectEventPluginsByName({
-    'TapEventPlugin':       __webpack_require__(123)(shouldRejectClick)
+  __webpack_require__(15).injection.injectEventPluginsByName({
+    'TapEventPlugin':       __webpack_require__(69)(shouldRejectClick)
   });
 };
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 127 */
+/* 73 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 128 */
+/* 74 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 129 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 130 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 131 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13839,814 +9691,288 @@ var invariant = function(condition, format, a, b, c, d, e, f) {
 
 module.exports = invariant;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 132 */
+/* 76 */
 /***/ (function(module, exports) {
 
-var g;
+module.exports = function(module) {
+	if(!module.webpackPolyfill) {
+		module.deprecate = function() {};
+		module.paths = [];
+		// module.parent = undefined by default
+		if(!module.children) module.children = [];
+		Object.defineProperty(module, "loaded", {
+			enumerable: true,
+			get: function() {
+				return module.l;
+			}
+		});
+		Object.defineProperty(module, "id", {
+			enumerable: true,
+			get: function() {
+				return module.i;
+			}
+		});
+		module.webpackPolyfill = 1;
+	}
+	return module;
+};
 
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
 
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1,eval)("this");
-} catch(e) {
-	// This works if the window reference is available
-	if(typeof window === "object")
-		g = window;
+/***/ }),
+/* 77 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__compose__ = __webpack_require__(24);
+/* harmony export (immutable) */ __webpack_exports__["a"] = applyMiddleware;
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+
+
+/**
+ * Creates a store enhancer that applies middleware to the dispatch method
+ * of the Redux store. This is handy for a variety of tasks, such as expressing
+ * asynchronous actions in a concise manner, or logging every action payload.
+ *
+ * See `redux-thunk` package as an example of the Redux middleware.
+ *
+ * Because middleware is potentially asynchronous, this should be the first
+ * store enhancer in the composition chain.
+ *
+ * Note that each middleware will be given the `dispatch` and `getState` functions
+ * as named arguments.
+ *
+ * @param {...Function} middlewares The middleware chain to be applied.
+ * @returns {Function} A store enhancer applying the middleware.
+ */
+function applyMiddleware() {
+  for (var _len = arguments.length, middlewares = Array(_len), _key = 0; _key < _len; _key++) {
+    middlewares[_key] = arguments[_key];
+  }
+
+  return function (createStore) {
+    return function (reducer, preloadedState, enhancer) {
+      var store = createStore(reducer, preloadedState, enhancer);
+      var _dispatch = store.dispatch;
+      var chain = [];
+
+      var middlewareAPI = {
+        getState: store.getState,
+        dispatch: function dispatch(action) {
+          return _dispatch(action);
+        }
+      };
+      chain = middlewares.map(function (middleware) {
+        return middleware(middlewareAPI);
+      });
+      _dispatch = __WEBPACK_IMPORTED_MODULE_0__compose__["a" /* default */].apply(undefined, chain)(store.dispatch);
+
+      return _extends({}, store, {
+        dispatch: _dispatch
+      });
+    };
+  };
 }
 
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
 /***/ }),
-/* 133 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 78 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-__webpack_require__(158);
-module.exports = __webpack_require__(8).Object.assign;
-
-/***/ }),
-/* 134 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(159);
-var $Object = __webpack_require__(8).Object;
-module.exports = function create(P, D){
-  return $Object.create(P, D);
-};
-
-/***/ }),
-/* 135 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(160);
-var $Object = __webpack_require__(8).Object;
-module.exports = function defineProperty(it, key, desc){
-  return $Object.defineProperty(it, key, desc);
-};
-
-/***/ }),
-/* 136 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(161);
-module.exports = __webpack_require__(8).Object.setPrototypeOf;
-
-/***/ }),
-/* 137 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(164);
-__webpack_require__(162);
-__webpack_require__(165);
-__webpack_require__(166);
-module.exports = __webpack_require__(8).Symbol;
-
-/***/ }),
-/* 138 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(163);
-__webpack_require__(167);
-module.exports = __webpack_require__(47).f('iterator');
-
-/***/ }),
-/* 139 */
-/***/ (function(module, exports) {
-
-module.exports = function(it){
-  if(typeof it != 'function')throw TypeError(it + ' is not a function!');
-  return it;
-};
-
-/***/ }),
-/* 140 */
-/***/ (function(module, exports) {
-
-module.exports = function(){ /* empty */ };
-
-/***/ }),
-/* 141 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// false -> Array#indexOf
-// true  -> Array#includes
-var toIObject = __webpack_require__(12)
-  , toLength  = __webpack_require__(156)
-  , toIndex   = __webpack_require__(155);
-module.exports = function(IS_INCLUDES){
-  return function($this, el, fromIndex){
-    var O      = toIObject($this)
-      , length = toLength(O.length)
-      , index  = toIndex(fromIndex, length)
-      , value;
-    // Array#includes uses SameValueZero equality algorithm
-    if(IS_INCLUDES && el != el)while(length > index){
-      value = O[index++];
-      if(value != value)return true;
-    // Array#toIndex ignores holes, Array#includes - not
-    } else for(;length > index; index++)if(IS_INCLUDES || index in O){
-      if(O[index] === el)return IS_INCLUDES || index || 0;
-    } return !IS_INCLUDES && -1;
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = bindActionCreators;
+function bindActionCreator(actionCreator, dispatch) {
+  return function () {
+    return dispatch(actionCreator.apply(undefined, arguments));
   };
-};
+}
 
-/***/ }),
-/* 142 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// all enumerable object keys, includes symbols
-var getKeys = __webpack_require__(24)
-  , gOPS    = __webpack_require__(40)
-  , pIE     = __webpack_require__(27);
-module.exports = function(it){
-  var result     = getKeys(it)
-    , getSymbols = gOPS.f;
-  if(getSymbols){
-    var symbols = getSymbols(it)
-      , isEnum  = pIE.f
-      , i       = 0
-      , key;
-    while(symbols.length > i)if(isEnum.call(it, key = symbols[i++]))result.push(key);
-  } return result;
-};
-
-/***/ }),
-/* 143 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(7).document && document.documentElement;
-
-/***/ }),
-/* 144 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 7.2.2 IsArray(argument)
-var cof = __webpack_require__(63);
-module.exports = Array.isArray || function isArray(arg){
-  return cof(arg) == 'Array';
-};
-
-/***/ }),
-/* 145 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var create         = __webpack_require__(39)
-  , descriptor     = __webpack_require__(28)
-  , setToStringTag = __webpack_require__(41)
-  , IteratorPrototype = {};
-
-// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
-__webpack_require__(15)(IteratorPrototype, __webpack_require__(16)('iterator'), function(){ return this; });
-
-module.exports = function(Constructor, NAME, next){
-  Constructor.prototype = create(IteratorPrototype, {next: descriptor(1, next)});
-  setToStringTag(Constructor, NAME + ' Iterator');
-};
-
-/***/ }),
-/* 146 */
-/***/ (function(module, exports) {
-
-module.exports = function(done, value){
-  return {value: value, done: !!done};
-};
-
-/***/ }),
-/* 147 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var getKeys   = __webpack_require__(24)
-  , toIObject = __webpack_require__(12);
-module.exports = function(object, el){
-  var O      = toIObject(object)
-    , keys   = getKeys(O)
-    , length = keys.length
-    , index  = 0
-    , key;
-  while(length > index)if(O[key = keys[index++]] === el)return key;
-};
-
-/***/ }),
-/* 148 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var META     = __webpack_require__(29)('meta')
-  , isObject = __webpack_require__(23)
-  , has      = __webpack_require__(10)
-  , setDesc  = __webpack_require__(11).f
-  , id       = 0;
-var isExtensible = Object.isExtensible || function(){
-  return true;
-};
-var FREEZE = !__webpack_require__(22)(function(){
-  return isExtensible(Object.preventExtensions({}));
-});
-var setMeta = function(it){
-  setDesc(it, META, {value: {
-    i: 'O' + ++id, // object ID
-    w: {}          // weak collections IDs
-  }});
-};
-var fastKey = function(it, create){
-  // return primitive with prefix
-  if(!isObject(it))return typeof it == 'symbol' ? it : (typeof it == 'string' ? 'S' : 'P') + it;
-  if(!has(it, META)){
-    // can't set metadata to uncaught frozen object
-    if(!isExtensible(it))return 'F';
-    // not necessary to add metadata
-    if(!create)return 'E';
-    // add missing metadata
-    setMeta(it);
-  // return object ID
-  } return it[META].i;
-};
-var getWeak = function(it, create){
-  if(!has(it, META)){
-    // can't set metadata to uncaught frozen object
-    if(!isExtensible(it))return true;
-    // not necessary to add metadata
-    if(!create)return false;
-    // add missing metadata
-    setMeta(it);
-  // return hash weak collections IDs
-  } return it[META].w;
-};
-// add metadata on freeze-family methods calling
-var onFreeze = function(it){
-  if(FREEZE && meta.NEED && isExtensible(it) && !has(it, META))setMeta(it);
-  return it;
-};
-var meta = module.exports = {
-  KEY:      META,
-  NEED:     false,
-  fastKey:  fastKey,
-  getWeak:  getWeak,
-  onFreeze: onFreeze
-};
-
-/***/ }),
-/* 149 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-// 19.1.2.1 Object.assign(target, source, ...)
-var getKeys  = __webpack_require__(24)
-  , gOPS     = __webpack_require__(40)
-  , pIE      = __webpack_require__(27)
-  , toObject = __webpack_require__(73)
-  , IObject  = __webpack_require__(67)
-  , $assign  = Object.assign;
-
-// should work with symbols and should have deterministic property order (V8 bug)
-module.exports = !$assign || __webpack_require__(22)(function(){
-  var A = {}
-    , B = {}
-    , S = Symbol()
-    , K = 'abcdefghijklmnopqrst';
-  A[S] = 7;
-  K.split('').forEach(function(k){ B[k] = k; });
-  return $assign({}, A)[S] != 7 || Object.keys($assign({}, B)).join('') != K;
-}) ? function assign(target, source){ // eslint-disable-line no-unused-vars
-  var T     = toObject(target)
-    , aLen  = arguments.length
-    , index = 1
-    , getSymbols = gOPS.f
-    , isEnum     = pIE.f;
-  while(aLen > index){
-    var S      = IObject(arguments[index++])
-      , keys   = getSymbols ? getKeys(S).concat(getSymbols(S)) : getKeys(S)
-      , length = keys.length
-      , j      = 0
-      , key;
-    while(length > j)if(isEnum.call(S, key = keys[j++]))T[key] = S[key];
-  } return T;
-} : $assign;
-
-/***/ }),
-/* 150 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var dP       = __webpack_require__(11)
-  , anObject = __webpack_require__(21)
-  , getKeys  = __webpack_require__(24);
-
-module.exports = __webpack_require__(9) ? Object.defineProperties : function defineProperties(O, Properties){
-  anObject(O);
-  var keys   = getKeys(Properties)
-    , length = keys.length
-    , i = 0
-    , P;
-  while(length > i)dP.f(O, P = keys[i++], Properties[P]);
-  return O;
-};
-
-/***/ }),
-/* 151 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
-var toIObject = __webpack_require__(12)
-  , gOPN      = __webpack_require__(70).f
-  , toString  = {}.toString;
-
-var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames
-  ? Object.getOwnPropertyNames(window) : [];
-
-var getWindowNames = function(it){
-  try {
-    return gOPN(it);
-  } catch(e){
-    return windowNames.slice();
+/**
+ * Turns an object whose values are action creators, into an object with the
+ * same keys, but with every function wrapped into a `dispatch` call so they
+ * may be invoked directly. This is just a convenience method, as you can call
+ * `store.dispatch(MyActionCreators.doSomething())` yourself just fine.
+ *
+ * For convenience, you can also pass a single function as the first argument,
+ * and get a function in return.
+ *
+ * @param {Function|Object} actionCreators An object whose values are action
+ * creator functions. One handy way to obtain it is to use ES6 `import * as`
+ * syntax. You may also pass a single function.
+ *
+ * @param {Function} dispatch The `dispatch` function available on your Redux
+ * store.
+ *
+ * @returns {Function|Object} The object mimicking the original object, but with
+ * every action creator wrapped into the `dispatch` call. If you passed a
+ * function as `actionCreators`, the return value will also be a single
+ * function.
+ */
+function bindActionCreators(actionCreators, dispatch) {
+  if (typeof actionCreators === 'function') {
+    return bindActionCreator(actionCreators, dispatch);
   }
-};
 
-module.exports.f = function getOwnPropertyNames(it){
-  return windowNames && toString.call(it) == '[object Window]' ? getWindowNames(it) : gOPN(toIObject(it));
-};
-
-
-/***/ }),
-/* 152 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
-var has         = __webpack_require__(10)
-  , toObject    = __webpack_require__(73)
-  , IE_PROTO    = __webpack_require__(42)('IE_PROTO')
-  , ObjectProto = Object.prototype;
-
-module.exports = Object.getPrototypeOf || function(O){
-  O = toObject(O);
-  if(has(O, IE_PROTO))return O[IE_PROTO];
-  if(typeof O.constructor == 'function' && O instanceof O.constructor){
-    return O.constructor.prototype;
-  } return O instanceof Object ? ObjectProto : null;
-};
-
-/***/ }),
-/* 153 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Works with __proto__ only. Old v8 can't work with null proto objects.
-/* eslint-disable no-proto */
-var isObject = __webpack_require__(23)
-  , anObject = __webpack_require__(21);
-var check = function(O, proto){
-  anObject(O);
-  if(!isObject(proto) && proto !== null)throw TypeError(proto + ": can't set as prototype!");
-};
-module.exports = {
-  set: Object.setPrototypeOf || ('__proto__' in {} ? // eslint-disable-line
-    function(test, buggy, set){
-      try {
-        set = __webpack_require__(64)(Function.call, __webpack_require__(69).f(Object.prototype, '__proto__').set, 2);
-        set(test, []);
-        buggy = !(test instanceof Array);
-      } catch(e){ buggy = true; }
-      return function setPrototypeOf(O, proto){
-        check(O, proto);
-        if(buggy)O.__proto__ = proto;
-        else set(O, proto);
-        return O;
-      };
-    }({}, false) : undefined),
-  check: check
-};
-
-/***/ }),
-/* 154 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var toInteger = __webpack_require__(44)
-  , defined   = __webpack_require__(35);
-// true  -> String#at
-// false -> String#codePointAt
-module.exports = function(TO_STRING){
-  return function(that, pos){
-    var s = String(defined(that))
-      , i = toInteger(pos)
-      , l = s.length
-      , a, b;
-    if(i < 0 || i >= l)return TO_STRING ? '' : undefined;
-    a = s.charCodeAt(i);
-    return a < 0xd800 || a > 0xdbff || i + 1 === l || (b = s.charCodeAt(i + 1)) < 0xdc00 || b > 0xdfff
-      ? TO_STRING ? s.charAt(i) : a
-      : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000;
-  };
-};
-
-/***/ }),
-/* 155 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var toInteger = __webpack_require__(44)
-  , max       = Math.max
-  , min       = Math.min;
-module.exports = function(index, length){
-  index = toInteger(index);
-  return index < 0 ? max(index + length, 0) : min(index, length);
-};
-
-/***/ }),
-/* 156 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 7.1.15 ToLength
-var toInteger = __webpack_require__(44)
-  , min       = Math.min;
-module.exports = function(it){
-  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
-};
-
-/***/ }),
-/* 157 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var addToUnscopables = __webpack_require__(140)
-  , step             = __webpack_require__(146)
-  , Iterators        = __webpack_require__(37)
-  , toIObject        = __webpack_require__(12);
-
-// 22.1.3.4 Array.prototype.entries()
-// 22.1.3.13 Array.prototype.keys()
-// 22.1.3.29 Array.prototype.values()
-// 22.1.3.30 Array.prototype[@@iterator]()
-module.exports = __webpack_require__(68)(Array, 'Array', function(iterated, kind){
-  this._t = toIObject(iterated); // target
-  this._i = 0;                   // next index
-  this._k = kind;                // kind
-// 22.1.5.2.1 %ArrayIteratorPrototype%.next()
-}, function(){
-  var O     = this._t
-    , kind  = this._k
-    , index = this._i++;
-  if(!O || index >= O.length){
-    this._t = undefined;
-    return step(1);
+  if (typeof actionCreators !== 'object' || actionCreators === null) {
+    throw new Error('bindActionCreators expected an object or a function, instead received ' + (actionCreators === null ? 'null' : typeof actionCreators) + '. ' + 'Did you write "import ActionCreators from" instead of "import * as ActionCreators from"?');
   }
-  if(kind == 'keys'  )return step(0, index);
-  if(kind == 'values')return step(0, O[index]);
-  return step(0, [index, O[index]]);
-}, 'values');
 
-// argumentsList[@@iterator] is %ArrayProto_values% (9.4.4.6, 9.4.4.7)
-Iterators.Arguments = Iterators.Array;
-
-addToUnscopables('keys');
-addToUnscopables('values');
-addToUnscopables('entries');
-
-/***/ }),
-/* 158 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 19.1.3.1 Object.assign(target, source)
-var $export = __webpack_require__(14);
-
-$export($export.S + $export.F, 'Object', {assign: __webpack_require__(149)});
+  var keys = Object.keys(actionCreators);
+  var boundActionCreators = {};
+  for (var i = 0; i < keys.length; i++) {
+    var key = keys[i];
+    var actionCreator = actionCreators[key];
+    if (typeof actionCreator === 'function') {
+      boundActionCreators[key] = bindActionCreator(actionCreator, dispatch);
+    }
+  }
+  return boundActionCreators;
+}
 
 /***/ }),
-/* 159 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var $export = __webpack_require__(14)
-// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-$export($export.S, 'Object', {create: __webpack_require__(39)});
-
-/***/ }),
-/* 160 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var $export = __webpack_require__(14);
-// 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
-$export($export.S + $export.F * !__webpack_require__(9), 'Object', {defineProperty: __webpack_require__(11).f});
-
-/***/ }),
-/* 161 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 19.1.3.19 Object.setPrototypeOf(O, proto)
-var $export = __webpack_require__(14);
-$export($export.S, 'Object', {setPrototypeOf: __webpack_require__(153).set});
-
-/***/ }),
-/* 162 */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-/* 163 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 79 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_es_isPlainObject__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_warning__ = __webpack_require__(27);
+/* harmony export (immutable) */ __webpack_exports__["a"] = combineReducers;
 
-var $at  = __webpack_require__(154)(true);
 
-// 21.1.3.27 String.prototype[@@iterator]()
-__webpack_require__(68)(String, 'String', function(iterated){
-  this._t = String(iterated); // target
-  this._i = 0;                // next index
-// 21.1.5.2.1 %StringIteratorPrototype%.next()
-}, function(){
-  var O     = this._t
-    , index = this._i
-    , point;
-  if(index >= O.length)return {value: undefined, done: true};
-  point = $at(O, index);
-  this._i += point.length;
-  return {value: point, done: false};
-});
 
-/***/ }),
-/* 164 */
-/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+function getUndefinedStateErrorMessage(key, action) {
+  var actionType = action && action.type;
+  var actionName = actionType && '"' + actionType.toString() + '"' || 'an action';
 
-// ECMAScript 6 symbols shim
-var global         = __webpack_require__(7)
-  , has            = __webpack_require__(10)
-  , DESCRIPTORS    = __webpack_require__(9)
-  , $export        = __webpack_require__(14)
-  , redefine       = __webpack_require__(72)
-  , META           = __webpack_require__(148).KEY
-  , $fails         = __webpack_require__(22)
-  , shared         = __webpack_require__(43)
-  , setToStringTag = __webpack_require__(41)
-  , uid            = __webpack_require__(29)
-  , wks            = __webpack_require__(16)
-  , wksExt         = __webpack_require__(47)
-  , wksDefine      = __webpack_require__(46)
-  , keyOf          = __webpack_require__(147)
-  , enumKeys       = __webpack_require__(142)
-  , isArray        = __webpack_require__(144)
-  , anObject       = __webpack_require__(21)
-  , toIObject      = __webpack_require__(12)
-  , toPrimitive    = __webpack_require__(45)
-  , createDesc     = __webpack_require__(28)
-  , _create        = __webpack_require__(39)
-  , gOPNExt        = __webpack_require__(151)
-  , $GOPD          = __webpack_require__(69)
-  , $DP            = __webpack_require__(11)
-  , $keys          = __webpack_require__(24)
-  , gOPD           = $GOPD.f
-  , dP             = $DP.f
-  , gOPN           = gOPNExt.f
-  , $Symbol        = global.Symbol
-  , $JSON          = global.JSON
-  , _stringify     = $JSON && $JSON.stringify
-  , PROTOTYPE      = 'prototype'
-  , HIDDEN         = wks('_hidden')
-  , TO_PRIMITIVE   = wks('toPrimitive')
-  , isEnum         = {}.propertyIsEnumerable
-  , SymbolRegistry = shared('symbol-registry')
-  , AllSymbols     = shared('symbols')
-  , OPSymbols      = shared('op-symbols')
-  , ObjectProto    = Object[PROTOTYPE]
-  , USE_NATIVE     = typeof $Symbol == 'function'
-  , QObject        = global.QObject;
-// Don't use setters in Qt Script, https://github.com/zloirock/core-js/issues/173
-var setter = !QObject || !QObject[PROTOTYPE] || !QObject[PROTOTYPE].findChild;
+  return 'Given action ' + actionName + ', reducer "' + key + '" returned undefined. ' + 'To ignore an action, you must explicitly return the previous state.';
+}
 
-// fallback for old Android, https://code.google.com/p/v8/issues/detail?id=687
-var setSymbolDesc = DESCRIPTORS && $fails(function(){
-  return _create(dP({}, 'a', {
-    get: function(){ return dP(this, 'a', {value: 7}).a; }
-  })).a != 7;
-}) ? function(it, key, D){
-  var protoDesc = gOPD(ObjectProto, key);
-  if(protoDesc)delete ObjectProto[key];
-  dP(it, key, D);
-  if(protoDesc && it !== ObjectProto)dP(ObjectProto, key, protoDesc);
-} : dP;
+function getUnexpectedStateShapeWarningMessage(inputState, reducers, action, unexpectedKeyCache) {
+  var reducerKeys = Object.keys(reducers);
+  var argumentName = action && action.type === __WEBPACK_IMPORTED_MODULE_0__createStore__["b" /* ActionTypes */].INIT ? 'preloadedState argument passed to createStore' : 'previous state received by the reducer';
 
-var wrap = function(tag){
-  var sym = AllSymbols[tag] = _create($Symbol[PROTOTYPE]);
-  sym._k = tag;
-  return sym;
-};
+  if (reducerKeys.length === 0) {
+    return 'Store does not have a valid reducer. Make sure the argument passed ' + 'to combineReducers is an object whose values are reducers.';
+  }
 
-var isSymbol = USE_NATIVE && typeof $Symbol.iterator == 'symbol' ? function(it){
-  return typeof it == 'symbol';
-} : function(it){
-  return it instanceof $Symbol;
-};
+  if (!__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_lodash_es_isPlainObject__["a" /* default */])(inputState)) {
+    return 'The ' + argumentName + ' has unexpected type of "' + {}.toString.call(inputState).match(/\s([a-z|A-Z]+)/)[1] + '". Expected argument to be an object with the following ' + ('keys: "' + reducerKeys.join('", "') + '"');
+  }
 
-var $defineProperty = function defineProperty(it, key, D){
-  if(it === ObjectProto)$defineProperty(OPSymbols, key, D);
-  anObject(it);
-  key = toPrimitive(key, true);
-  anObject(D);
-  if(has(AllSymbols, key)){
-    if(!D.enumerable){
-      if(!has(it, HIDDEN))dP(it, HIDDEN, createDesc(1, {}));
-      it[HIDDEN][key] = true;
-    } else {
-      if(has(it, HIDDEN) && it[HIDDEN][key])it[HIDDEN][key] = false;
-      D = _create(D, {enumerable: createDesc(0, false)});
-    } return setSymbolDesc(it, key, D);
-  } return dP(it, key, D);
-};
-var $defineProperties = function defineProperties(it, P){
-  anObject(it);
-  var keys = enumKeys(P = toIObject(P))
-    , i    = 0
-    , l = keys.length
-    , key;
-  while(l > i)$defineProperty(it, key = keys[i++], P[key]);
-  return it;
-};
-var $create = function create(it, P){
-  return P === undefined ? _create(it) : $defineProperties(_create(it), P);
-};
-var $propertyIsEnumerable = function propertyIsEnumerable(key){
-  var E = isEnum.call(this, key = toPrimitive(key, true));
-  if(this === ObjectProto && has(AllSymbols, key) && !has(OPSymbols, key))return false;
-  return E || !has(this, key) || !has(AllSymbols, key) || has(this, HIDDEN) && this[HIDDEN][key] ? E : true;
-};
-var $getOwnPropertyDescriptor = function getOwnPropertyDescriptor(it, key){
-  it  = toIObject(it);
-  key = toPrimitive(key, true);
-  if(it === ObjectProto && has(AllSymbols, key) && !has(OPSymbols, key))return;
-  var D = gOPD(it, key);
-  if(D && has(AllSymbols, key) && !(has(it, HIDDEN) && it[HIDDEN][key]))D.enumerable = true;
-  return D;
-};
-var $getOwnPropertyNames = function getOwnPropertyNames(it){
-  var names  = gOPN(toIObject(it))
-    , result = []
-    , i      = 0
-    , key;
-  while(names.length > i){
-    if(!has(AllSymbols, key = names[i++]) && key != HIDDEN && key != META)result.push(key);
-  } return result;
-};
-var $getOwnPropertySymbols = function getOwnPropertySymbols(it){
-  var IS_OP  = it === ObjectProto
-    , names  = gOPN(IS_OP ? OPSymbols : toIObject(it))
-    , result = []
-    , i      = 0
-    , key;
-  while(names.length > i){
-    if(has(AllSymbols, key = names[i++]) && (IS_OP ? has(ObjectProto, key) : true))result.push(AllSymbols[key]);
-  } return result;
-};
-
-// 19.4.1.1 Symbol([description])
-if(!USE_NATIVE){
-  $Symbol = function Symbol(){
-    if(this instanceof $Symbol)throw TypeError('Symbol is not a constructor!');
-    var tag = uid(arguments.length > 0 ? arguments[0] : undefined);
-    var $set = function(value){
-      if(this === ObjectProto)$set.call(OPSymbols, value);
-      if(has(this, HIDDEN) && has(this[HIDDEN], tag))this[HIDDEN][tag] = false;
-      setSymbolDesc(this, tag, createDesc(1, value));
-    };
-    if(DESCRIPTORS && setter)setSymbolDesc(ObjectProto, tag, {configurable: true, set: $set});
-    return wrap(tag);
-  };
-  redefine($Symbol[PROTOTYPE], 'toString', function toString(){
-    return this._k;
+  var unexpectedKeys = Object.keys(inputState).filter(function (key) {
+    return !reducers.hasOwnProperty(key) && !unexpectedKeyCache[key];
   });
 
-  $GOPD.f = $getOwnPropertyDescriptor;
-  $DP.f   = $defineProperty;
-  __webpack_require__(70).f = gOPNExt.f = $getOwnPropertyNames;
-  __webpack_require__(27).f  = $propertyIsEnumerable;
-  __webpack_require__(40).f = $getOwnPropertySymbols;
+  unexpectedKeys.forEach(function (key) {
+    unexpectedKeyCache[key] = true;
+  });
 
-  if(DESCRIPTORS && !__webpack_require__(38)){
-    redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
-  }
-
-  wksExt.f = function(name){
-    return wrap(wks(name));
+  if (unexpectedKeys.length > 0) {
+    return 'Unexpected ' + (unexpectedKeys.length > 1 ? 'keys' : 'key') + ' ' + ('"' + unexpectedKeys.join('", "') + '" found in ' + argumentName + '. ') + 'Expected to find one of the known reducer keys instead: ' + ('"' + reducerKeys.join('", "') + '". Unexpected keys will be ignored.');
   }
 }
 
-$export($export.G + $export.W + $export.F * !USE_NATIVE, {Symbol: $Symbol});
+function assertReducerSanity(reducers) {
+  Object.keys(reducers).forEach(function (key) {
+    var reducer = reducers[key];
+    var initialState = reducer(undefined, { type: __WEBPACK_IMPORTED_MODULE_0__createStore__["b" /* ActionTypes */].INIT });
 
-for(var symbols = (
-  // 19.4.2.2, 19.4.2.3, 19.4.2.4, 19.4.2.6, 19.4.2.8, 19.4.2.9, 19.4.2.10, 19.4.2.11, 19.4.2.12, 19.4.2.13, 19.4.2.14
-  'hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables'
-).split(','), i = 0; symbols.length > i; )wks(symbols[i++]);
+    if (typeof initialState === 'undefined') {
+      throw new Error('Reducer "' + key + '" returned undefined during initialization. ' + 'If the state passed to the reducer is undefined, you must ' + 'explicitly return the initial state. The initial state may ' + 'not be undefined.');
+    }
 
-for(var symbols = $keys(wks.store), i = 0; symbols.length > i; )wksDefine(symbols[i++]);
-
-$export($export.S + $export.F * !USE_NATIVE, 'Symbol', {
-  // 19.4.2.1 Symbol.for(key)
-  'for': function(key){
-    return has(SymbolRegistry, key += '')
-      ? SymbolRegistry[key]
-      : SymbolRegistry[key] = $Symbol(key);
-  },
-  // 19.4.2.5 Symbol.keyFor(sym)
-  keyFor: function keyFor(key){
-    if(isSymbol(key))return keyOf(SymbolRegistry, key);
-    throw TypeError(key + ' is not a symbol!');
-  },
-  useSetter: function(){ setter = true; },
-  useSimple: function(){ setter = false; }
-});
-
-$export($export.S + $export.F * !USE_NATIVE, 'Object', {
-  // 19.1.2.2 Object.create(O [, Properties])
-  create: $create,
-  // 19.1.2.4 Object.defineProperty(O, P, Attributes)
-  defineProperty: $defineProperty,
-  // 19.1.2.3 Object.defineProperties(O, Properties)
-  defineProperties: $defineProperties,
-  // 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
-  getOwnPropertyDescriptor: $getOwnPropertyDescriptor,
-  // 19.1.2.7 Object.getOwnPropertyNames(O)
-  getOwnPropertyNames: $getOwnPropertyNames,
-  // 19.1.2.8 Object.getOwnPropertySymbols(O)
-  getOwnPropertySymbols: $getOwnPropertySymbols
-});
-
-// 24.3.2 JSON.stringify(value [, replacer [, space]])
-$JSON && $export($export.S + $export.F * (!USE_NATIVE || $fails(function(){
-  var S = $Symbol();
-  // MS Edge converts symbol values to JSON as {}
-  // WebKit converts symbol values to JSON as null
-  // V8 throws on boxed symbols
-  return _stringify([S]) != '[null]' || _stringify({a: S}) != '{}' || _stringify(Object(S)) != '{}';
-})), 'JSON', {
-  stringify: function stringify(it){
-    if(it === undefined || isSymbol(it))return; // IE8 returns string on undefined
-    var args = [it]
-      , i    = 1
-      , replacer, $replacer;
-    while(arguments.length > i)args.push(arguments[i++]);
-    replacer = args[1];
-    if(typeof replacer == 'function')$replacer = replacer;
-    if($replacer || !isArray(replacer))replacer = function(key, value){
-      if($replacer)value = $replacer.call(this, key, value);
-      if(!isSymbol(value))return value;
-    };
-    args[1] = replacer;
-    return _stringify.apply($JSON, args);
-  }
-});
-
-// 19.4.3.4 Symbol.prototype[@@toPrimitive](hint)
-$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__(15)($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);
-// 19.4.3.5 Symbol.prototype[@@toStringTag]
-setToStringTag($Symbol, 'Symbol');
-// 20.2.1.9 Math[@@toStringTag]
-setToStringTag(Math, 'Math', true);
-// 24.3.3 JSON[@@toStringTag]
-setToStringTag(global.JSON, 'JSON', true);
-
-/***/ }),
-/* 165 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(46)('asyncIterator');
-
-/***/ }),
-/* 166 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(46)('observable');
-
-/***/ }),
-/* 167 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(157);
-var global        = __webpack_require__(7)
-  , hide          = __webpack_require__(15)
-  , Iterators     = __webpack_require__(37)
-  , TO_STRING_TAG = __webpack_require__(16)('toStringTag');
-
-for(var collections = ['NodeList', 'DOMTokenList', 'MediaList', 'StyleSheetList', 'CSSRuleList'], i = 0; i < 5; i++){
-  var NAME       = collections[i]
-    , Collection = global[NAME]
-    , proto      = Collection && Collection.prototype;
-  if(proto && !proto[TO_STRING_TAG])hide(proto, TO_STRING_TAG, NAME);
-  Iterators[NAME] = Iterators.Array;
+    var type = '@@redux/PROBE_UNKNOWN_ACTION_' + Math.random().toString(36).substring(7).split('').join('.');
+    if (typeof reducer(undefined, { type: type }) === 'undefined') {
+      throw new Error('Reducer "' + key + '" returned undefined when probed with a random type. ' + ('Don\'t try to handle ' + __WEBPACK_IMPORTED_MODULE_0__createStore__["b" /* ActionTypes */].INIT + ' or other actions in "redux/*" ') + 'namespace. They are considered private. Instead, you must return the ' + 'current state for any unknown actions, unless it is undefined, ' + 'in which case you must return the initial state, regardless of the ' + 'action type. The initial state may not be undefined.');
+    }
+  });
 }
 
+/**
+ * Turns an object whose values are different reducer functions, into a single
+ * reducer function. It will call every child reducer, and gather their results
+ * into a single state object, whose keys correspond to the keys of the passed
+ * reducer functions.
+ *
+ * @param {Object} reducers An object whose values correspond to different
+ * reducer functions that need to be combined into one. One handy way to obtain
+ * it is to use ES6 `import * as reducers` syntax. The reducers may never return
+ * undefined for any action. Instead, they should return their initial state
+ * if the state passed to them was undefined, and the current state for any
+ * unrecognized action.
+ *
+ * @returns {Function} A reducer function that invokes every reducer inside the
+ * passed object, and builds a state object with the same shape.
+ */
+function combineReducers(reducers) {
+  var reducerKeys = Object.keys(reducers);
+  var finalReducers = {};
+  for (var i = 0; i < reducerKeys.length; i++) {
+    var key = reducerKeys[i];
+
+    if (process.env.NODE_ENV !== 'production') {
+      if (typeof reducers[key] === 'undefined') {
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__utils_warning__["a" /* default */])('No reducer provided for key "' + key + '"');
+      }
+    }
+
+    if (typeof reducers[key] === 'function') {
+      finalReducers[key] = reducers[key];
+    }
+  }
+  var finalReducerKeys = Object.keys(finalReducers);
+
+  if (process.env.NODE_ENV !== 'production') {
+    var unexpectedKeyCache = {};
+  }
+
+  var sanityError;
+  try {
+    assertReducerSanity(finalReducers);
+  } catch (e) {
+    sanityError = e;
+  }
+
+  return function combination() {
+    var state = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+    var action = arguments[1];
+
+    if (sanityError) {
+      throw sanityError;
+    }
+
+    if (process.env.NODE_ENV !== 'production') {
+      var warningMessage = getUnexpectedStateShapeWarningMessage(state, finalReducers, action, unexpectedKeyCache);
+      if (warningMessage) {
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__utils_warning__["a" /* default */])(warningMessage);
+      }
+    }
+
+    var hasChanged = false;
+    var nextState = {};
+    for (var i = 0; i < finalReducerKeys.length; i++) {
+      var key = finalReducerKeys[i];
+      var reducer = finalReducers[key];
+      var previousStateForKey = state[key];
+      var nextStateForKey = reducer(previousStateForKey, action);
+      if (typeof nextStateForKey === 'undefined') {
+        var errorMessage = getUndefinedStateErrorMessage(key, action);
+        throw new Error(errorMessage);
+      }
+      nextState[key] = nextStateForKey;
+      hasChanged = hasChanged || nextStateForKey !== previousStateForKey;
+    }
+    return hasChanged ? nextState : state;
+  };
+}
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
+
 /***/ }),
-/* 168 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14743,13 +10069,13 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 /***/ }),
-/* 169 */
+/* 81 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(74);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getRawTag_js__ = __webpack_require__(172);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToString_js__ = __webpack_require__(173);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getRawTag_js__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToString_js__ = __webpack_require__(85);
 
 
 
@@ -14781,7 +10107,7 @@ function baseGetTag(value) {
 
 
 /***/ }),
-/* 170 */
+/* 82 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14790,14 +10116,14 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 
 /* harmony default export */ __webpack_exports__["a"] = (freeGlobal);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(132)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(23)))
 
 /***/ }),
-/* 171 */
+/* 83 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__overArg_js__ = __webpack_require__(174);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__overArg_js__ = __webpack_require__(86);
 
 
 /** Built-in value references. */
@@ -14807,11 +10133,11 @@ var getPrototype = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__overArg_js
 
 
 /***/ }),
-/* 172 */
+/* 84 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(28);
 
 
 /** Used for built-in method references. */
@@ -14861,7 +10187,7 @@ function getRawTag(value) {
 
 
 /***/ }),
-/* 173 */
+/* 85 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14890,7 +10216,7 @@ function objectToString(value) {
 
 
 /***/ }),
-/* 174 */
+/* 86 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14912,11 +10238,11 @@ function overArg(func, transform) {
 
 
 /***/ }),
-/* 175 */
+/* 87 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__ = __webpack_require__(170);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__ = __webpack_require__(82);
 
 
 /** Detect free variable `self`. */
@@ -14929,7 +10255,7 @@ var root = __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__["a" /* default */] || fr
 
 
 /***/ }),
-/* 176 */
+/* 88 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14965,86 +10291,14 @@ function isObjectLike(value) {
 
 
 /***/ }),
-/* 177 */
+/* 89 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetTag_js__ = __webpack_require__(169);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getPrototype_js__ = __webpack_require__(171);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isObjectLike_js__ = __webpack_require__(176);
-
-
-
-
-/** `Object#toString` result references. */
-var objectTag = '[object Object]';
-
-/** Used for built-in method references. */
-var funcProto = Function.prototype,
-    objectProto = Object.prototype;
-
-/** Used to resolve the decompiled source of functions. */
-var funcToString = funcProto.toString;
-
-/** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
-
-/** Used to infer the `Object` constructor. */
-var objectCtorString = funcToString.call(Object);
-
-/**
- * Checks if `value` is a plain object, that is, an object created by the
- * `Object` constructor or one with a `[[Prototype]]` of `null`.
- *
- * @static
- * @memberOf _
- * @since 0.8.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a plain object, else `false`.
- * @example
- *
- * function Foo() {
- *   this.a = 1;
- * }
- *
- * _.isPlainObject(new Foo);
- * // => false
- *
- * _.isPlainObject([1, 2, 3]);
- * // => false
- *
- * _.isPlainObject({ 'x': 0, 'y': 0 });
- * // => true
- *
- * _.isPlainObject(Object.create(null));
- * // => true
- */
-function isPlainObject(value) {
-  if (!__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__isObjectLike_js__["a" /* default */])(value) || __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__baseGetTag_js__["a" /* default */])(value) != objectTag) {
-    return false;
-  }
-  var proto = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__getPrototype_js__["a" /* default */])(value);
-  if (proto === null) {
-    return true;
-  }
-  var Ctor = hasOwnProperty.call(proto, 'constructor') && proto.constructor;
-  return typeof Ctor == 'function' && Ctor instanceof Ctor &&
-    funcToString.call(Ctor) == objectCtorString;
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (isPlainObject);
-
-
-/***/ }),
-/* 178 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_PropTypes__ = __webpack_require__(77);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_warning__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_PropTypes__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_warning__ = __webpack_require__(10);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Provider; });
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -15113,19 +10367,19 @@ Provider.childContextTypes = {
   storeSubscription: __WEBPACK_IMPORTED_MODULE_1__utils_PropTypes__["b" /* subscriptionShape */]
 };
 Provider.displayName = 'Provider';
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 179 */
+/* 90 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_connectAdvanced__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_shallowEqual__ = __webpack_require__(186);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mapDispatchToProps__ = __webpack_require__(180);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mapStateToProps__ = __webpack_require__(181);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mergeProps__ = __webpack_require__(182);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__selectorFactory__ = __webpack_require__(183);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_connectAdvanced__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_shallowEqual__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mapDispatchToProps__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mapStateToProps__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mergeProps__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__selectorFactory__ = __webpack_require__(94);
 /* unused harmony export createConnect */
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -15232,13 +10486,12 @@ function createConnect() {
 /* harmony default export */ __webpack_exports__["a"] = (createConnect());
 
 /***/ }),
-/* 180 */
+/* 91 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_redux__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__wrapMapToProps__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__wrapMapToProps__ = __webpack_require__(30);
 /* unused harmony export whenMapDispatchToPropsIsFunction */
 /* unused harmony export whenMapDispatchToPropsIsMissing */
 /* unused harmony export whenMapDispatchToPropsIsObject */
@@ -15264,11 +10517,11 @@ function whenMapDispatchToPropsIsObject(mapDispatchToProps) {
 /* harmony default export */ __webpack_exports__["a"] = ([whenMapDispatchToPropsIsFunction, whenMapDispatchToPropsIsMissing, whenMapDispatchToPropsIsObject]);
 
 /***/ }),
-/* 181 */
+/* 92 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__wrapMapToProps__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__wrapMapToProps__ = __webpack_require__(30);
 /* unused harmony export whenMapStateToPropsIsFunction */
 /* unused harmony export whenMapStateToPropsIsMissing */
 
@@ -15286,11 +10539,11 @@ function whenMapStateToPropsIsMissing(mapStateToProps) {
 /* harmony default export */ __webpack_exports__["a"] = ([whenMapStateToPropsIsFunction, whenMapStateToPropsIsMissing]);
 
 /***/ }),
-/* 182 */
+/* 93 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(78);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(32);
 /* unused harmony export defaultMergeProps */
 /* unused harmony export wrapMergePropsFunc */
 /* unused harmony export whenMergePropsIsFunction */
@@ -15340,14 +10593,14 @@ function whenMergePropsIsOmitted(mergeProps) {
 }
 
 /* harmony default export */ __webpack_exports__["a"] = ([whenMergePropsIsFunction, whenMergePropsIsOmitted]);
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 183 */
+/* 94 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__verifySubselectors__ = __webpack_require__(184);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__verifySubselectors__ = __webpack_require__(95);
 /* unused harmony export impureFinalPropsSelectorFactory */
 /* unused harmony export pureFinalPropsSelectorFactory */
 /* harmony export (immutable) */ __webpack_exports__["a"] = finalPropsSelectorFactory;
@@ -15453,14 +10706,14 @@ function finalPropsSelectorFactory(dispatch, _ref2) {
 
   return selectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, options);
 }
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 184 */
+/* 95 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_warning__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_warning__ = __webpack_require__(10);
 /* harmony export (immutable) */ __webpack_exports__["a"] = verifySubselectors;
 
 
@@ -15481,7 +10734,7 @@ function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, dis
 }
 
 /***/ }),
-/* 185 */
+/* 96 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15577,7 +10830,7 @@ var Subscription = function () {
 
 
 /***/ }),
-/* 186 */
+/* 97 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15614,64 +10867,10 @@ function shallowEqual(objA, objB) {
 }
 
 /***/ }),
-/* 187 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 98 */
+/***/ (function(module, exports) {
 
-module.exports = { "default": __webpack_require__(133), __esModule: true };
-
-/***/ }),
-/* 188 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(134), __esModule: true };
-
-/***/ }),
-/* 189 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(136), __esModule: true };
-
-/***/ }),
-/* 190 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(137), __esModule: true };
-
-/***/ }),
-/* 191 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(138), __esModule: true };
-
-/***/ }),
-/* 192 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-
-var _defineProperty = __webpack_require__(79);
-
-var _defineProperty2 = _interopRequireDefault(_defineProperty);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = function (obj, key, value) {
-  if (key in obj) {
-    (0, _defineProperty2.default)(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-};
+module.exports = window.jQuery;
 
 /***/ })
 /******/ ]);

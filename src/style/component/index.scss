@@ -1,0 +1,53 @@
+@import './home';
+.box{
+    height: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    header{
+        background: green;
+        height: .44rem;
+    }
+    section{
+        background: #fff;
+        flex: 1;
+        overflow: hidden;
+        @include flexbox();
+    }
+    footer{
+        background:#fff;
+        height: .5rem;
+        @include border(1px 0 0 0, #fff);
+        ul{
+            @include flexbox();
+            @include align-items(center);
+            height: 100%;
+            li{
+                height: 100%;
+                text-align: center;
+                @include flex();
+                font-size: .18rem;
+                a{
+                    height: 100%;
+                    @include flexbox();
+                    @include flex-direction(column);
+                    @include justify-content(center);
+                    
+                    color: rgba(0, 0, 0, 0.8);
+                    i{
+                        font-size: .25rem;
+                        line-height: .25rem;
+                        
+                    }
+                    span{
+                       font-size: .15rem; 
+                    }
+                    &.active i,
+                    &.active span{
+                        font-weight: bold;
+                        color: green;
+                    }
+                }
+            }  
+        }
+    }
+}

@@ -1,0 +1,75 @@
+.preventDefault{
+	touch-action:none;
+}
+.yo-carousel{
+	.lunbo-img{
+		height:1.25rem;
+	}
+	
+}
+.list-widge-top{
+	@include flexbox();
+	a{
+		@include flex();
+		img{
+			width: 100%;
+		}
+	}
+}
+.x-scroll-box{
+	width:16.73rem;
+	height:auto;	
+	img{
+		height: 3.44rem;
+		width: 2.39rem;
+	}
+	
+}
+.jnqingm{
+	img{
+		width: 100%;
+		height: .9rem;
+	}
+}
+.list-img-many{
+	.big-img{
+		img{
+			width: 100%;
+			height: .88rem;
+		}
+	}
+	.small-img{
+		img{
+			width: 100%;
+			height: .24rem;
+		}
+	}
+}
+
+.many-qian{
+	img{
+		width: 100%;
+		height: .76rem;
+	}
+}
+.scroll-loop{
+	img{
+		width: .7rem;
+		height: .4rem;
+	}
+}
+
+.tody-miaosha{
+	img{
+		width: 100%;
+		height: .65rem;
+	}
+}
+
+
+.fantuan{
+	img{
+		width: 100%;
+		height: .65rem;
+	}
+}

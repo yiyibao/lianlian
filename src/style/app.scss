@@ -1,9 +1,16 @@
-@charset "UTF-8";
+@charset "utf-8";
+@import './usage/core/reset';
+@import './common';
+@import './component/index';
+@import './component/my';
+@import './component/register';
+@import './component/car';
+@import './component/list';
+@import './component/detail';
 
-@import "./usage/core/reset";
 
-@import "./usage/module/common";
 
-@import "./usage/module/home";
-@import "./usage/module/kind";
-@import "./usage/module/prolist";
+
+
+
+

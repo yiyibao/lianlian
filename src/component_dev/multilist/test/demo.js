@@ -146,4 +146,5 @@ class MultiListDemo extends Component {
         );
     }
 }
+export default MultiListDemo
 ReactDOM.render(<MultiListDemo />, document.querySelector('#container'));
