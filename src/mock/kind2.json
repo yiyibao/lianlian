@@ -1,0 +1,468 @@
+{
+    "api":"http://m.lianlianlife.com/Api/Category?pid=5296",
+    "statusCode":200,
+    "timestamp":1490680903044,
+    "data":{
+        "categories":[
+            {
+                "id":597726,
+                "name":"洗发护发",
+                "parentId":5296,
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/01/25/635893378689872948_238_238.png"
+            },
+            {
+                "id":597727,
+                "name":"口腔护理",
+                "parentId":5296,
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/01/25/635893378785966617_238_238.png"
+            },
+            {
+                "id":597728,
+                "name":"洗浴用品",
+                "parentId":5296,
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/01/25/635893378859716929_238_238.png"
+            },
+            {
+                "id":597730,
+                "name":"女性护理",
+                "parentId":5296,
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/01/25/635893378967217508_238_238.png"
+            },
+            {
+                "id":597758,
+                "name":"彩妆香氛",
+                "parentId":5296,
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/01/25/635893366585882598_238_238.png"
+            },
+            {
+                "id":597759,
+                "name":"面膜",
+                "parentId":5296,
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/12/13/636172237263495151_800_800.jpg"
+            },
+            {
+                "id":597769,
+                "name":"乳液面霜",
+                "parentId":5296,
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/01/25/635893379174928661_238_238.png"
+            },
+            {
+                "id":601589,
+                "name":"身体护理",
+                "parentId":5296,
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/01/25/635893379253366818_238_238.png"
+            },
+            {
+                "id":677029,
+                "name":"美护工具",
+                "parentId":5296,
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/01/25/635893379334772473_238_238.png"
+            },
+            {
+                "id":1629860,
+                "name":"体验装",
+                "parentId":5296,
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/07/13/636040220925133565_800_800.jpg"
+            },
+            {
+                "id":2854880,
+                "name":"唇膏唇彩",
+                "parentId":5296,
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/09/12/636092959363230970_238_238.png"
+            },
+            {
+                "id":2854881,
+                "name":"护手霜",
+                "parentId":5296,
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/09/12/636092960846681428_238_238.png"
+            },
+            {
+                "id":2854882,
+                "name":"防晒隔离",
+                "parentId":5296,
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/09/12/636092962943590458_238_238.png"
+            },
+            {
+                "id":2854883,
+                "name":"护肤组合",
+                "parentId":5296,
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/09/12/636092965135531809_238_238.png"
+            },
+            {
+                "id":2854906,
+                "name":"洁面皂乳",
+                "parentId":5296,
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/09/12/636092979608056483_238_238.png"
+            },
+            {
+                "id":2854907,
+                "name":"精华",
+                "parentId":5296,
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/09/12/636092981101430227_238_238.png"
+            },
+            {
+                "id":2855083,
+                "name":"爽肤水",
+                "parentId":5296,
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/09/12/636092983296850296_238_238.png"
+            },
+            {
+                "id":2855084,
+                "name":"卸妆",
+                "parentId":5296,
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/09/12/636092984771786760_238_238.png"
+            },
+            {
+                "id":2855085,
+                "name":"眼部护理",
+                "parentId":5296,
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/09/12/636092986042126463_238_238.png"
+            },
+            {
+                "id":2869711,
+                "name":"男士护肤",
+                "parentId":5296,
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/09/18/636098100598142292_238_238.png"
+            },
+            {
+                "id":3033443,
+                "name":"牙刷",
+                "parentId":5296,
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/11/03/636137780782982806_800_800.jpg"
+            },
+            {
+                "id":3041362,
+                "name":"润肤乳",
+                "parentId":5296,
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/11/03/636137891909365705_800_800.jpg"
+            }
+        ],
+        "brands":[
+            {
+                "id":768494,
+                "name":"雪花秀/Sulwhasoo",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/23/635918320693842745_240_240.png",
+                "spell":"XUE HUA XIU/Sulwhasoo"
+            },
+            {
+                "id":79990,
+                "name":"娇韵诗/Clarins",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/04/12/635960834101685554_240_240.png",
+                "spell":"JIAO YUN SHI/Clarins"
+            },
+            {
+                "id":899064,
+                "name":"赫拉/HERA",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/04/12/635960835131843627_240_240.png",
+                "spell":"HE LA/HERA"
+            },
+            {
+                "id":808310,
+                "name":"美迪惠尔/MEDIHEAL",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/03/11/635932995213619378_240_240.png",
+                "spell":"MEI DI HUI ER/MEDIHEAL"
+            },
+            {
+                "id":520651,
+                "name":"皓乐齿/Ora2",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/03/11/635933081622968841_240_240.png",
+                "spell":"HAO LE CHI/Ora2"
+            },
+            {
+                "id":699847,
+                "name":"SK-II",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/01/26/635894018949500207_240_240.png",
+                "spell":"SK-II"
+            },
+            {
+                "id":808325,
+                "name":"悦诗风吟/innisfree",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/23/635918155294564275_240_240.png",
+                "spell":"YUE SHI FENG YIN/innisfree"
+            },
+            {
+                "id":536072,
+                "name":"洗颜专科",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/23/635918316220240222_240_240.png",
+                "spell":"XI YAN ZHUAN KE"
+            },
+            {
+                "id":79988,
+                "name":"香奈儿/CHANEL",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/05/635902666488155496_240_240.png",
+                "spell":"XIANG NAI ER/CHANEL"
+            },
+            {
+                "id":521195,
+                "name":"牛牌/Cow",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/04/12/635960835955283165_240_240.png",
+                "spell":"NIU PAI/Cow"
+            },
+            {
+                "id":666230,
+                "name":"诗蓓欧/SOBIO",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/22/635917462987167680_240_240.png",
+                "spell":"SHI BEI OU/SOBIO"
+            },
+            {
+                "id":808323,
+                "name":"伊思/It's skin",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/23/635918155133626539_240_240.png",
+                "spell":"YI SAI/It's skin"
+            },
+            {
+                "id":79702,
+                "name":"雅漾/Avene",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/23/635918321426656620_240_240.png",
+                "spell":"YA YANG/Avene"
+            },
+            {
+                "id":79704,
+                "name":"水之密语/AQUAIR",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/05/635902685090601844_240_240.png",
+                "spell":"SHUI ZHI MI YU/AQUAIR"
+            },
+            {
+                "id":768472,
+                "name":"A.H.C",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/05/635902669076969528_240_240.png",
+                "spell":"A.H.C"
+            },
+            {
+                "id":79987,
+                "name":"迪奥/DIOR",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/23/635918152239245672_240_240.png",
+                "spell":"DI AO/DIOR"
+            },
+            {
+                "id":79703,
+                "name":"雪肌精/SEKKISEI",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/23/635918320789936886_240_240.png",
+                "spell":"XUE JI JING/SEKKISEI"
+            },
+            {
+                "id":5164,
+                "name":"森田药妆",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/03/08/635930272489640479_240_240.png",
+                "spell":"SEN TIAN YAO ZHUANG"
+            },
+            {
+                "id":768490,
+                "name":"兰芝/LANEIGE",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/23/635918153759405551_240_240.png",
+                "spell":"LAN ZHI/LANEIGE"
+            },
+            {
+                "id":875203,
+                "name":"梦蜗/wellderma",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/03/11/635933082453438815_240_240.png",
+                "spell":"MENG LUO/wellderma"
+            },
+            {
+                "id":79361,
+                "name":"玉兰油/OLAY",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/01/26/635894022093335388_240_240.png",
+                "spell":"YU LAN YOU/OLAY"
+            },
+            {
+                "id":8858,
+                "name":"膜法世家",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/19/635914794387356919_240_240.png",
+                "spell":"MO FA SHI GU"
+            },
+            {
+                "id":839510,
+                "name":"诺丽萝莉/Nonique",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/03/11/635933042521849108_240_240.png",
+                "spell":"NUO LI LUO LI/Nonique"
+            },
+            {
+                "id":602798,
+                "name":"温碧泉",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/23/635918306220031985_240_240.png",
+                "spell":"WEN BI QUAN"
+            },
+            {
+                "id":521196,
+                "name":"奇士美/kiss me",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/22/635917456500882559_240_240.png",
+                "spell":"JI SHI MEI/kiss me"
+            },
+            {
+                "id":808315,
+                "name":"丽得姿/LEADERS",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/23/635918153891124243_240_240.png",
+                "spell":"LI DE ZI/LEADERS"
+            },
+            {
+                "id":520019,
+                "name":"ABC",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/05/635902750458269547_240_240.png",
+                "spell":"ABC"
+            },
+            {
+                "id":79705,
+                "name":"丝蓓绮/TSUBAKI",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/01/26/635894021506771321_240_240.png",
+                "spell":"SI BEI QI/TSUBAKI"
+            },
+            {
+                "id":694610,
+                "name":"吉儿玛/GEOMAR",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/04/12/635960847721556488_240_240.png",
+                "spell":"JI ER MA/GEOMAR"
+            },
+            {
+                "id":83435,
+                "name":"清扬",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/05/635902700289883886_240_240.png",
+                "spell":"QING YANG"
+            },
+            {
+                "id":903560,
+                "name":"肌美精/Kracie",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/04/12/635960841775607883_240_240.png",
+                "spell":"JI MEI JING/Kracie"
+            },
+            {
+                "id":5168,
+                "name":"云南白药",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/01/26/635894022224429174_240_240.png",
+                "spell":"YUN NA BAI YAO"
+            },
+            {
+                "id":880900,
+                "name":"美体小铺/The Body Shop",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/03/11/635932992830639630_240_240.png",
+                "spell":"MEI TI XIAO PU/The Body Shop"
+            },
+            {
+                "id":666235,
+                "name":"SUKI",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/03/11/635933040666532577_240_240.png",
+                "spell":"SUKI"
+            },
+            {
+                "id":79899,
+                "name":"佳洁士",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/05/635902672475278404_240_240.png",
+                "spell":"JIA JIE SHI"
+            },
+            {
+                "id":517244,
+                "name":"瑰珀翠/Crabree & Evelyn",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/03/11/635933041423252841_240_240.png",
+                "spell":"GUI PO CUI/Crabree & Evelyn"
+            },
+            {
+                "id":520020,
+                "name":"美即",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/05/635902692656158280_240_240.png",
+                "spell":"MEI JI"
+            },
+            {
+                "id":2951543,
+                "name":"珀莱雅",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/12/13/636172236343932487_240_240.png",
+                "spell":"PO LAI YA"
+            },
+            {
+                "id":83432,
+                "name":"夏士莲",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/23/635918316641959754_240_240.png",
+                "spell":"XIA SHI LIAN"
+            },
+            {
+                "id":530200,
+                "name":"相宜本草",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/05/635902702439325991_240_240.png",
+                "spell":"XIANG YI BEN CAO"
+            },
+            {
+                "id":768158,
+                "name":"赛嘉/seago",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/22/635917459561068367_240_240.png",
+                "spell":"SAI JIA/seago"
+            },
+            {
+                "id":808299,
+                "name":"蒂佳婷/Dr.Jart+",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/22/635917446231155028_240_240.png",
+                "spell":"DI JIA TING/Dr.Jart+"
+            },
+            {
+                "id":652935,
+                "name":"草舍名院",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/05/635902622294702549_240_240.png",
+                "spell":"CAO SHE MING YUAN"
+            },
+            {
+                "id":666229,
+                "name":"尤妮佳/Unicharm",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/23/635918325588106364_240_240.png",
+                "spell":"YOU NI JIA/Unicharm"
+            },
+            {
+                "id":80764,
+                "name":"沙宣/VS",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/01/26/635894020334034365_240_240.png",
+                "spell":"SHA XUAN/VS"
+            },
+            {
+                "id":839508,
+                "name":"雪本诗/Schaebens",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/23/635918380941482535_240_240.png",
+                "spell":"XUE BEN SHI/Schaebens"
+            },
+            {
+                "id":725811,
+                "name":"蔚蓝海岸/d'Azur Aroma",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/23/635918306124719175_240_240.png",
+                "spell":"WEI LAN HAI AN/d'Azur Aroma"
+            },
+            {
+                "id":83420,
+                "name":"曼秀雷敦/Mentholatum",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/05/635902690870510772_240_240.png",
+                "spell":"MAN XIU LEI DUI/Mentholatum"
+            },
+            {
+                "id":83430,
+                "name":"多芬",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/01/26/635894019197781954_240_240.png",
+                "spell":"DUO FEN"
+            },
+            {
+                "id":899069,
+                "name":"自然乐园/Nature Republic",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/04/12/635960844587177065_240_240.png",
+                "spell":"ZI RAN LE YUAN/Nature Republic"
+            },
+            {
+                "id":750062,
+                "name":"柔舒然/Douce Nature",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/22/635917458328877368_240_240.png",
+                "spell":"ROU SHU RAN/Douce Nature"
+            },
+            {
+                "id":660478,
+                "name":"高露洁/Colgate",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/02/05/635902634764075029_240_240.png",
+                "spell":"GAO LOU JIE/Colgate"
+            },
+            {
+                "id":1199745,
+                "name":"吕/Ryo",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/09/22/636101334505038712_240_240.png",
+                "spell":"LV/Ryo"
+            },
+            {
+                "id":1601506,
+                "name":"狮王/LION",
+                "iconUrl":"http://ecimages.lianlian-resources.com/Mall/2016/09/22/636101335803979752_240_240.png",
+                "spell":"SHI WANG/LION"
+            }
+        ]
+    },
+    "success":true
+}

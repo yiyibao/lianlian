@@ -1579,6 +1579,9 @@ body {
       font-size: .18rem;
       display: inline-block;
       margin-top: .2rem; }
+    .yo-list-fullscreen .prolist .lazyimage {
+      width: 1rem;
+      height: 1rem; }
     .yo-list-fullscreen .prolist img {
       margin-right: .2rem;
       border: 1px solid #fafafa; }

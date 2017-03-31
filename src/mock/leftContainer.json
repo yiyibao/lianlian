@@ -1,0 +1,94 @@
+{
+    "api":"http://m.lianlianlife.com/Api/Category",
+    "statusCode": 200,
+    "timestamp": 1490680626312,
+    "data": {
+        "categories": [
+            {
+                "id": 5296,
+                "name": "美妆个护",
+                "parentId": 0
+            },
+            {
+                "id": 5301,
+                "name": "食品饮料",
+                "parentId": 0
+            },
+            {
+                "id": 5295,
+                "name": "母婴用品",
+                "parentId": 0
+            },
+            {
+                "id": 5575,
+                "name": "厨卫清洁",
+                "parentId": 0
+            },
+            {
+                "id": 5297,
+                "name": "生活家居",
+                "parentId": 0
+            },
+            {
+                "id": 5136,
+                "name": "手机数码",
+                "parentId": 0
+            },
+            {
+                "id": 670536,
+                "name": "电脑办公",
+                "parentId": 0
+            },
+            {
+                "id": 5183,
+                "name": "大小家电",
+                "parentId": 0
+            },
+            {
+                "id": 5751,
+                "name": "运动户外汽车",
+                "parentId": 0
+            },
+            {
+                "id": 5298,
+                "name": "手表珠宝箱包",
+                "parentId": 0
+            },
+            {
+                "id": 5299,
+                "name": "生鲜果蔬",
+                "parentId": 0
+            },
+            {
+                "id": 5300,
+                "name": "鲜花礼券",
+                "parentId": 0
+            },
+            {
+                "id": 1085398,
+                "name": "虚拟商品",
+                "parentId": 0,
+                "iconUrl": "http://ecimages.lianlian-resources.com/Mall/2016/04/21/635968341174306850_240_240.png"
+            },
+            {
+                "id": 528636,
+                "name": "营养保健",
+                "parentId": 0
+            },
+            {
+                "id": 78948,
+                "name": "优惠组合套装",
+                "parentId": 0,
+                "keywords": "限时抢购",
+                "description": "活动商品分类"
+            },
+            {
+                "id": 79036,
+                "name": "9联豆起",
+                "parentId": 0
+            }
+        ],
+        "brands": []
+    },
+    "success": true
+}

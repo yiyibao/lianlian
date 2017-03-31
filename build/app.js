@@ -96,7 +96,7 @@ exports.default = function (instance, Constructor) {
 
 exports.__esModule = true;
 
-var _defineProperty = __webpack_require__(80);
+var _defineProperty = __webpack_require__(79);
 
 var _defineProperty2 = _interopRequireDefault(_defineProperty);
 
@@ -462,7 +462,7 @@ module.exports = function(it, key){
 /***/ (function(module, exports, __webpack_require__) {
 
 var anObject       = __webpack_require__(21)
-  , IE8_DOM_DEFINE = __webpack_require__(67)
+  , IE8_DOM_DEFINE = __webpack_require__(66)
   , toPrimitive    = __webpack_require__(45)
   , dP             = Object.defineProperty;
 
@@ -483,7 +483,7 @@ exports.f = __webpack_require__(9) ? Object.defineProperty : function defineProp
 /***/ (function(module, exports, __webpack_require__) {
 
 // to indexed object, toObject with fallback for non-array-like ES3 strings
-var IObject = __webpack_require__(68)
+var IObject = __webpack_require__(67)
   , defined = __webpack_require__(35);
 module.exports = function(it){
   return IObject(defined(it));
@@ -557,7 +557,7 @@ module.exports = invariant;
 
 var global    = __webpack_require__(7)
   , core      = __webpack_require__(8)
-  , ctx       = __webpack_require__(65)
+  , ctx       = __webpack_require__(64)
   , hide      = __webpack_require__(15)
   , PROTOTYPE = 'prototype';
 
@@ -849,7 +849,7 @@ module.exports = function(it){
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.14 / 15.2.3.14 Object.keys(O)
-var $keys       = __webpack_require__(72)
+var $keys       = __webpack_require__(71)
   , enumBugKeys = __webpack_require__(36);
 
 module.exports = Object.keys || function keys(O){
@@ -937,7 +937,7 @@ module.exports = function(key){
 
 
 
-var emptyFunction = __webpack_require__(52);
+var emptyFunction = __webpack_require__(51);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -1311,7 +1311,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.loading = undefined;
 
-var _objectWithoutProperties2 = __webpack_require__(81);
+var _objectWithoutProperties2 = __webpack_require__(80);
 
 var _objectWithoutProperties3 = _interopRequireDefault(_objectWithoutProperties2);
 
@@ -1351,7 +1351,7 @@ var _loading = __webpack_require__(101);
 
 var _loading2 = _interopRequireDefault(_loading);
 
-__webpack_require__(62);
+__webpack_require__(61);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1513,7 +1513,7 @@ var loading = exports.loading = {
 
 var _prodInvariant = __webpack_require__(20);
 
-var ReactErrorUtils = __webpack_require__(57);
+var ReactErrorUtils = __webpack_require__(56);
 
 var invariant = __webpack_require__(13);
 var warning = __webpack_require__(30);
@@ -1772,7 +1772,7 @@ var anObject    = __webpack_require__(21)
 // Create object with fake `null` prototype: use iframe Object with cleared prototype
 var createDict = function(){
   // Thrash, waste and sodomy: IE GC bug
-  var iframe = __webpack_require__(66)('iframe')
+  var iframe = __webpack_require__(65)('iframe')
     , i      = enumBugKeys.length
     , lt     = '<'
     , gt     = '>'
@@ -1932,7 +1932,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.store = exports.mapDispathToProps = exports.mapStateToProps = undefined;
 
-var _redux = __webpack_require__(82);
+var _redux = __webpack_require__(81);
 
 function changer() {
 	var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : { title: "BANG-DAN" };
@@ -1969,265 +1969,12 @@ exports.store = store;
 
 /***/ }),
 /* 50 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _classCallCheck2 = __webpack_require__(1);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = __webpack_require__(2);
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = __webpack_require__(4);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(3);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _src = __webpack_require__(53);
-
-var _src2 = _interopRequireDefault(_src);
-
-var _homeHeader = __webpack_require__(55);
-
-var _homeHeader2 = _interopRequireDefault(_homeHeader);
-
-var _src3 = __webpack_require__(33);
-
-var _index = __webpack_require__(32);
-
-var _index2 = _interopRequireDefault(_index);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Productlist = function (_React$Component) {
-	(0, _inherits3.default)(Productlist, _React$Component);
-
-	function Productlist(props) {
-		(0, _classCallCheck3.default)(this, Productlist);
-
-		var _this = (0, _possibleConstructorReturn3.default)(this, (Productlist.__proto__ || Object.getPrototypeOf(Productlist)).call(this, props));
-
-		_this.state = {
-			prolist: ["", ""]
-		};
-		return _this;
-	}
-
-	(0, _createClass3.default)(Productlist, [{
-		key: "componentWillMount",
-		value: function componentWillMount() {
-			_src3.loading.show({
-				extraClass: 'yo-loading-b',
-				text: '正在加载...',
-				maskOffset: [200, 100],
-				modalExtraClass: "yo-loading-p"
-			});
-		}
-	}, {
-		key: "sortList",
-		value: function sortList(e) {
-			//通过e事件对象获取DOM节点
-			e.target.style.color = "red";
-			// console.log(e.target);
-			// console.log(this.state.prolist);
-		}
-	}, {
-		key: "render",
-		value: function render() {
-			var _this2 = this;
-
-			// console.log(this.state.prolist)
-			return _react2.default.createElement(
-				"div",
-				null,
-				_react2.default.createElement(_homeHeader2.default, null),
-				_react2.default.createElement(
-					"ul",
-					{ className: "prolistOrd" },
-					_react2.default.createElement(
-						"li",
-						null,
-						"\u7EFC\u5408\u6392\u5E8F"
-					),
-					_react2.default.createElement(
-						"span",
-						null,
-						"|"
-					),
-					_react2.default.createElement(
-						"li",
-						{ className: "newSort", onClick: this.sortList },
-						"\u4E0A\u65B0\u6392\u5E8F"
-					),
-					_react2.default.createElement(
-						"span",
-						null,
-						"|"
-					),
-					_react2.default.createElement(
-						"li",
-						null,
-						"\u4EF7\u683C\u6392\u5E8F",
-						_react2.default.createElement(
-							"i",
-							{ className: "yo-ico" },
-							"\uF07B"
-						)
-					),
-					_react2.default.createElement(
-						"span",
-						null,
-						"|"
-					),
-					_react2.default.createElement(
-						"li",
-						null,
-						"\u7B5B\u9009"
-					)
-				),
-				_react2.default.createElement(_src2.default, {
-					ref: "scroller",
-
-					extraClass: 'yo-list-fullscreen',
-					onItemTap: function onItemTap(item, index, target) {
-						console.log(target);
-						console.log(item);
-						console.log(index);
-					}
-					// infinite = {true}
-					, usePullRefresh: true,
-					onRefresh: function onRefresh() {
-						var that = _this2;
-						fetch("http://localhost:3000/prolist2.php").then(function (res) {
-							return res.json();
-						}).then(function (res) {
-							var Productlist = res.data.items.map(function (val) {
-								val.key = val.id;
-								// console.log(val.key)
-								return val;
-							});
-							that.setState({
-								prolist: Productlist.concat(that.state.prolist)
-							});
-							// console.log(2222,this.state.prolist)
-							that.refs.scroller.stopRefreshing(false); // 这个调用也可以放在异步操作的回调里之后
-						});
-					},
-					useLoadMore: true,
-					onLoad: function onLoad() {
-						fetch("http://localhost:3000/prolist2.php").then(function (res) {
-							return res.json();
-						}).then(function (res) {
-							var Productlist = res.data.items.map(function (val) {
-								val.key = val.id;
-								// console.log(val.key)
-								return val;
-							});
-							_this2.setState({
-								prolist: _this2.state.prolist.concat(Productlist)
-							});
-							// console.log(2222,this.state.prolist)
-							_this2.refs.scroller.stopLoading(false); // 这个调用也可以放在异步操作的回调里之后
-						});
-					},
-					dataSource: this.state.prolist,
-					renderItem: function renderItem(item, i) {
-						// console.log(item)
-						if (item) {
-							return _react2.default.createElement(
-								"div",
-								null,
-								_react2.default.createElement(
-									"li",
-									{ className: "prolist" },
-									_react2.default.createElement(_src2.default.LazyImage, { height: "100", src: item.image }),
-									_react2.default.createElement(
-										"div",
-										null,
-										_react2.default.createElement(
-											"h2",
-											null,
-											item.title
-										),
-										_react2.default.createElement(
-											"span",
-											{ className: "proname" },
-											item.name
-										),
-										_react2.default.createElement(
-											"span",
-											{ className: "keyWords" },
-											item.keyWords
-										),
-										_react2.default.createElement(
-											"span",
-											{ className: "proprice" },
-											"\uFFE5",
-											item.sellingPrice
-										)
-									)
-								)
-							);
-						}
-					},
-					itemHeight: 100
-				})
-			);
-		}
-	}, {
-		key: "componentDidMount",
-		value: function componentDidMount() {
-			var _this3 = this;
-
-			// console.log(this.props.params);
-			//fetch(`http://m.lianlianlife.com/Api/Products?categoryId=${this.props.params}&keywords=%E6%B4%97%E5%8F%91%E6%8A%A4%E5%8F%91&fromp=-1&categoryName=&brandName=&supplierName=&isDesc=true&sortItem=topCarriageAt&pageSize=10&pageNumber=1&imageFormatter=200_200`)
-			fetch("http://localhost:3000/prolist1.php").then(function (res) {
-				return res.json();
-			}).then(function (res) {
-				var Productlist = res.data.items.map(function (val) {
-					val.key = val.id;
-					// console.log(val.key)
-					return val;
-				});
-				// console.log(Productlist)动态添加key值
-				_this3.setState({
-					prolist: Productlist
-				});
-				_src3.loading.hide();
-			});
-		}
-	}]);
-	return Productlist;
-}(_react2.default.Component);
-
-exports.default = Productlist;
-
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "productList.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ }),
-/* 51 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Provider__ = __webpack_require__(178);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__ = __webpack_require__(75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__connect_connect__ = __webpack_require__(179);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Provider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connectAdvanced", function() { return __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__["a"]; });
@@ -2239,7 +1986,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 52 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2283,7 +2030,7 @@ emptyFunction.thatReturnsArgument = function (arg) {
 module.exports = emptyFunction;
 
 /***/ }),
-/* 53 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -2322,7 +2069,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _src = __webpack_require__(54);
+var _src = __webpack_require__(53);
 
 var _src2 = _interopRequireDefault(_src);
 
@@ -3138,7 +2885,7 @@ List.LazyImage = _lazyimage2.default;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 54 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -4892,7 +4639,7 @@ Scroller.LazyImage = _lazyimage2.default;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 55 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -4990,7 +4737,7 @@ exports.default = HomeHeader;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "homeHeader.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 56 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5010,10 +4757,10 @@ var _prodInvariant = __webpack_require__(20);
 
 var EventPluginRegistry = __webpack_require__(115);
 var EventPluginUtils = __webpack_require__(34);
-var ReactErrorUtils = __webpack_require__(57);
+var ReactErrorUtils = __webpack_require__(56);
 
-var accumulateInto = __webpack_require__(58);
-var forEachAccumulated = __webpack_require__(59);
+var accumulateInto = __webpack_require__(57);
+var forEachAccumulated = __webpack_require__(58);
 var invariant = __webpack_require__(13);
 
 /**
@@ -5274,7 +5021,7 @@ module.exports = EventPluginHub;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ }),
-/* 57 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5357,7 +5104,7 @@ module.exports = ReactErrorUtils;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ }),
-/* 58 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5421,7 +5168,7 @@ module.exports = accumulateInto;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ }),
-/* 59 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5457,7 +5204,7 @@ function forEachAccumulated(arr, cb, scope) {
 module.exports = forEachAccumulated;
 
 /***/ }),
-/* 60 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5487,6 +5234,12 @@ function shallowCompare(instance, nextProps, nextState) {
 module.exports = shallowCompare;
 
 /***/ }),
+/* 60 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 61 */
 /***/ (function(module, exports) {
 
@@ -5496,19 +5249,13 @@ module.exports = shallowCompare;
 /* 62 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 63 */
-/***/ (function(module, exports) {
-
 /* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {/* globals __webpack_amd_options__ */
 module.exports = __webpack_amd_options__;
 
 /* WEBPACK VAR INJECTION */}.call(exports, {}))
 
 /***/ }),
-/* 64 */
+/* 63 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -5518,7 +5265,7 @@ module.exports = function(it){
 };
 
 /***/ }),
-/* 65 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // optional / simple context binding
@@ -5543,7 +5290,7 @@ module.exports = function(fn, that, length){
 };
 
 /***/ }),
-/* 66 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(23)
@@ -5555,32 +5302,32 @@ module.exports = function(it){
 };
 
 /***/ }),
-/* 67 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = !__webpack_require__(9) && !__webpack_require__(22)(function(){
-  return Object.defineProperty(__webpack_require__(66)('div'), 'a', {get: function(){ return 7; }}).a != 7;
+  return Object.defineProperty(__webpack_require__(65)('div'), 'a', {get: function(){ return 7; }}).a != 7;
 });
 
 /***/ }),
-/* 68 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // fallback for non-array-like ES3 and non-enumerable old V8 strings
-var cof = __webpack_require__(64);
+var cof = __webpack_require__(63);
 module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
   return cof(it) == 'String' ? it.split('') : Object(it);
 };
 
 /***/ }),
-/* 69 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var LIBRARY        = __webpack_require__(38)
   , $export        = __webpack_require__(14)
-  , redefine       = __webpack_require__(73)
+  , redefine       = __webpack_require__(72)
   , hide           = __webpack_require__(15)
   , has            = __webpack_require__(10)
   , Iterators      = __webpack_require__(37)
@@ -5649,7 +5396,7 @@ module.exports = function(Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCED
 };
 
 /***/ }),
-/* 70 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var pIE            = __webpack_require__(27)
@@ -5657,7 +5404,7 @@ var pIE            = __webpack_require__(27)
   , toIObject      = __webpack_require__(12)
   , toPrimitive    = __webpack_require__(45)
   , has            = __webpack_require__(10)
-  , IE8_DOM_DEFINE = __webpack_require__(67)
+  , IE8_DOM_DEFINE = __webpack_require__(66)
   , gOPD           = Object.getOwnPropertyDescriptor;
 
 exports.f = __webpack_require__(9) ? gOPD : function getOwnPropertyDescriptor(O, P){
@@ -5670,11 +5417,11 @@ exports.f = __webpack_require__(9) ? gOPD : function getOwnPropertyDescriptor(O,
 };
 
 /***/ }),
-/* 71 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
-var $keys      = __webpack_require__(72)
+var $keys      = __webpack_require__(71)
   , hiddenKeys = __webpack_require__(36).concat('length', 'prototype');
 
 exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O){
@@ -5682,7 +5429,7 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O){
 };
 
 /***/ }),
-/* 72 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var has          = __webpack_require__(10)
@@ -5704,13 +5451,13 @@ module.exports = function(object, names){
 };
 
 /***/ }),
-/* 73 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(15);
 
 /***/ }),
-/* 74 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.13 ToObject(argument)
@@ -5720,7 +5467,7 @@ module.exports = function(it){
 };
 
 /***/ }),
-/* 75 */
+/* 74 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5734,7 +5481,7 @@ var Symbol = __WEBPACK_IMPORTED_MODULE_0__root_js__["a" /* default */].Symbol;
 
 
 /***/ }),
-/* 76 */
+/* 75 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5745,7 +5492,7 @@ var Symbol = __WEBPACK_IMPORTED_MODULE_0__root_js__["a" /* default */].Symbol;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_Subscription__ = __webpack_require__(185);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_PropTypes__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_PropTypes__ = __webpack_require__(77);
 /* harmony export (immutable) */ __webpack_exports__["a"] = connectAdvanced;
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -6022,11 +5769,11 @@ selectorFactory) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(5)))
 
 /***/ }),
-/* 77 */
+/* 76 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(79);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(78);
 /* harmony export (immutable) */ __webpack_exports__["b"] = wrapMapToPropsConstant;
 /* unused harmony export getDependsOnOwnProps */
 /* harmony export (immutable) */ __webpack_exports__["a"] = wrapMapToPropsFunc;
@@ -6100,7 +5847,7 @@ function wrapMapToPropsFunc(mapToProps, methodName) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(5)))
 
 /***/ }),
-/* 78 */
+/* 77 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6124,7 +5871,7 @@ var storeShape = __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].shape({
 });
 
 /***/ }),
-/* 79 */
+/* 78 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6141,13 +5888,13 @@ function verifyPlainObject(value, displayName, methodName) {
 }
 
 /***/ }),
-/* 80 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = { "default": __webpack_require__(135), __esModule: true };
 
 /***/ }),
-/* 81 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6168,13 +5915,13 @@ exports.default = function (obj, keys) {
 };
 
 /***/ }),
-/* 82 */
+/* 81 */
 /***/ (function(module, exports) {
 
 module.exports = window.Redux;
 
 /***/ }),
-/* 83 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -6233,7 +5980,7 @@ exports.default = Cart;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "cart.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 84 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -6264,7 +6011,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _homeHeader = __webpack_require__(55);
+var _homeHeader = __webpack_require__(54);
 
 var _homeHeader2 = _interopRequireDefault(_homeHeader);
 
@@ -6343,7 +6090,7 @@ exports.default = Home;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "home.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 85 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -6376,7 +6123,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = __webpack_require__(26);
 
-var _reactRedux = __webpack_require__(51);
+var _reactRedux = __webpack_require__(50);
 
 var _store = __webpack_require__(49);
 
@@ -6510,7 +6257,7 @@ exports.default = (0, _reactRedux.connect)(_store.mapStateToProps, _store.mapDid
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 86 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -6781,7 +6528,7 @@ exports.default = Kind;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "kind.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 87 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -6840,7 +6587,7 @@ exports.default = Liandou;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "liandou.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 88 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -6897,6 +6644,282 @@ var My = function (_React$Component) {
 exports.default = My;
 
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "my.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ }),
+/* 88 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("E:\\lianlianLife\\dev\\node_modules\\.0.4.7@react-hot-api\\modules\\index.js"), RootInstanceProvider = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _classCallCheck2 = __webpack_require__(1);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__(2);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = __webpack_require__(4);
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = __webpack_require__(3);
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _src = __webpack_require__(52);
+
+var _src2 = _interopRequireDefault(_src);
+
+var _homeHeader = __webpack_require__(54);
+
+var _homeHeader2 = _interopRequireDefault(_homeHeader);
+
+var _src3 = __webpack_require__(33);
+
+var _index = __webpack_require__(32);
+
+var _index2 = _interopRequireDefault(_index);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Productlist = function (_React$Component) {
+	(0, _inherits3.default)(Productlist, _React$Component);
+
+	function Productlist(props) {
+		(0, _classCallCheck3.default)(this, Productlist);
+
+		var _this = (0, _possibleConstructorReturn3.default)(this, (Productlist.__proto__ || Object.getPrototypeOf(Productlist)).call(this, props));
+
+		_this.state = {
+			prolist: ["", ""]
+		};
+		return _this;
+	}
+
+	(0, _createClass3.default)(Productlist, [{
+		key: "componentWillMount",
+		value: function componentWillMount() {
+			_src3.loading.show({
+				extraClass: 'yo-loading-b',
+				text: '正在加载...',
+				maskOffset: [200, 100],
+				modalExtraClass: "yo-loading-p"
+			});
+		}
+		// 	// sortList(e){//通过e事件对象获取DOM节点
+		// 	// 	e.target.style.color="red"
+		// 	// 	// console.log(e.target);
+		// 	// 	// console.log(this.state.prolist);
+		// 	// }
+
+	}, {
+		key: "render",
+		value: function render() {
+			var _this2 = this;
+
+			// console.log(this.state.prolist)
+			return _react2.default.createElement(
+				"div",
+				null,
+				_react2.default.createElement(_homeHeader2.default, null),
+				_react2.default.createElement(
+					"ul",
+					{ className: "prolistOrd" },
+					_react2.default.createElement(
+						"li",
+						null,
+						"\u7EFC\u5408\u6392\u5E8F"
+					),
+					_react2.default.createElement(
+						"span",
+						null,
+						"|"
+					),
+					_react2.default.createElement(
+						"li",
+						{ className: "newSort" },
+						"\u4E0A\u65B0\u6392\u5E8F"
+					),
+					_react2.default.createElement(
+						"span",
+						null,
+						"|"
+					),
+					_react2.default.createElement(
+						"li",
+						null,
+						"\u4EF7\u683C\u6392\u5E8F",
+						_react2.default.createElement(
+							"i",
+							{ className: "yo-ico" },
+							"\uF07B"
+						)
+					),
+					_react2.default.createElement(
+						"span",
+						null,
+						"|"
+					),
+					_react2.default.createElement(
+						"li",
+						null,
+						"\u7B5B\u9009"
+					)
+				),
+				_react2.default.createElement(_src2.default, {
+					ref: "scroller",
+
+					extraClass: 'yo-list-fullscreen',
+					onItemTap: function onItemTap(item, index, target) {
+						console.log(target);
+						console.log(item);
+						console.log(index);
+					}
+					// infinite = {true}
+					, usePullRefresh: true,
+					onRefresh: function onRefresh() {
+						var that = _this2;
+						fetch("http://localhost:3000/prolist2.php").then(function (res) {
+							return res.json();
+						}).then(function (res) {
+							var Productlist = res.data.items.map(function (val) {
+								val.key = val.id;
+								// console.log(val.key)
+								return val;
+							});
+							that.setState({
+								prolist: Productlist.concat(that.state.prolist)
+							});
+							// console.log(2222,this.state.prolist)
+							that.refs.scroller.stopRefreshing(false); // 这个调用也可以放在异步操作的回调里之后
+						});
+					},
+					useLoadMore: true,
+					onLoad: function onLoad() {
+						fetch("http://localhost:3000/prolist2.php").then(function (res) {
+							return res.json();
+						}).then(function (res) {
+							var Productlist = res.data.items.map(function (val) {
+								val.key = val.id;
+								// console.log(val.key)
+								return val;
+							});
+							_this2.setState({
+								prolist: _this2.state.prolist.concat(Productlist)
+							});
+							// console.log(2222,this.state.prolist)
+							_this2.refs.scroller.stopLoading(false); // 这个调用也可以放在异步操作的回调里之后
+						});
+					},
+					dataSource: this.state.prolist,
+					renderItem: function renderItem(item, i) {
+						// console.log(item)
+						if (item) {
+							return _react2.default.createElement(
+								"div",
+								null,
+								_react2.default.createElement(
+									"li",
+									{ className: "prolist" },
+									_react2.default.createElement(
+										"div",
+										{ className: "lazyimage" },
+										_react2.default.createElement(_src2.default.LazyImage, { height: "100", src: item.image })
+									),
+									_react2.default.createElement(
+										"div",
+										null,
+										_react2.default.createElement(
+											"h2",
+											null,
+											item.title
+										),
+										_react2.default.createElement(
+											"span",
+											{ className: "proname" },
+											item.name
+										),
+										_react2.default.createElement(
+											"span",
+											{ className: "keyWords" },
+											item.keyWords
+										),
+										_react2.default.createElement(
+											"span",
+											{ className: "proprice" },
+											"\uFFE5",
+											item.sellingPrice
+										)
+									)
+								)
+							);
+						}
+					},
+					itemHeight: 100
+				})
+			);
+		}
+	}, {
+		key: "componentDidMount",
+		value: function componentDidMount() {
+			var _this3 = this;
+
+			console.log(this.props.query);
+			var params1 = this.props.params.type.split("&");
+			if (params1.length == 2) {
+				fetch("http://m.lianlianlife.com/Api/Products?categoryId=" + params1[0] + "&keywords=" + params1[1] + "&fromp=-1&categoryName=&brandName=&supplierName=&isDesc=true&sortItem=topCarriageAt&pageSize=10&pageNumber=1&imageFormatter=200_200")
+				//fetch("http://localhost:3000/prolist1.php")
+				.then(function (res) {
+					return res.json();
+				}).then(function (res) {
+					var Productlist = res.data.items.map(function (val) {
+						val.key = val.id;
+						// console.log(val.key)
+						return val;
+					});
+					// console.log(Productlist)动态添加key值
+					_this3.setState({
+						prolist: Productlist
+					});
+					_src3.loading.hide();
+				});
+			} else if (params1.length == 3) {
+				fetch("http://m.lianlianlife.com/Api/Products?categoryId=" + params1[0] + "&brandId=" + params1[1] + "&keywords=" + params1[2] + "&fromp=-1&categoryName=&brandName=&supplierName=&isDesc=true&sortItem=topCarriageAt&pageSize=10&pageNumber=1&imageFormatter=200_200")
+				//fetch("http://localhost:3000/prolist1.php")
+				.then(function (res) {
+					return res.json();
+				}).then(function (res) {
+					var Productlist = res.data.items.map(function (val) {
+						val.key = val.id;
+						// console.log(val.key)
+						return val;
+					});
+					// console.log(Productlist)动态添加key值
+					_this3.setState({
+						prolist: Productlist
+					});
+					_src3.loading.hide();
+				});
+			}
+		}
+	}]);
+	return Productlist;
+}(_react2.default.Component);
+
+exports.default = Productlist;
+
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("E:\\lianlianLife\\dev\\node_modules\\.1.3.1@react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "productList.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 89 */
@@ -7086,7 +7109,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _objectWithoutProperties2 = __webpack_require__(81);
+var _objectWithoutProperties2 = __webpack_require__(80);
 
 var _objectWithoutProperties3 = _interopRequireDefault(_objectWithoutProperties2);
 
@@ -7291,7 +7314,7 @@ var _inherits2 = __webpack_require__(3);
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
-__webpack_require__(61);
+__webpack_require__(60);
 
 __webpack_require__(31);
 
@@ -7544,7 +7567,7 @@ var _inherits2 = __webpack_require__(3);
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
-__webpack_require__(61);
+__webpack_require__(60);
 
 var _react = __webpack_require__(0);
 
@@ -9351,7 +9374,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
         return new FastClick(layer, options);
     };
 
-    if ("function" === 'function' && (0, _typeof3.default)(__webpack_require__(63)) === 'object' && __webpack_require__(63)) {
+    if ("function" === 'function' && (0, _typeof3.default)(__webpack_require__(62)) === 'object' && __webpack_require__(62)) {
 
         // AMD. Register as an anonymous module.
         !(__WEBPACK_AMD_DEFINE_RESULT__ = function () {
@@ -10251,7 +10274,7 @@ var _classnames = __webpack_require__(6);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-__webpack_require__(62);
+__webpack_require__(61);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10727,7 +10750,7 @@ var _classnames = __webpack_require__(6);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _src = __webpack_require__(53);
+var _src = __webpack_require__(52);
 
 var _src2 = _interopRequireDefault(_src);
 
@@ -12057,35 +12080,35 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _reactRouter = __webpack_require__(26);
 
-var _reactRedux = __webpack_require__(51);
+var _reactRedux = __webpack_require__(50);
 
 var _store = __webpack_require__(49);
 
-var _index = __webpack_require__(85);
+var _index = __webpack_require__(84);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _home = __webpack_require__(84);
+var _home = __webpack_require__(83);
 
 var _home2 = _interopRequireDefault(_home);
 
-var _kind = __webpack_require__(86);
+var _kind = __webpack_require__(85);
 
 var _kind2 = _interopRequireDefault(_kind);
 
-var _liandou = __webpack_require__(87);
+var _liandou = __webpack_require__(86);
 
 var _liandou2 = _interopRequireDefault(_liandou);
 
-var _cart = __webpack_require__(83);
+var _cart = __webpack_require__(82);
 
 var _cart2 = _interopRequireDefault(_cart);
 
-var _my = __webpack_require__(88);
+var _my = __webpack_require__(87);
 
 var _my2 = _interopRequireDefault(_my);
 
-var _productList = __webpack_require__(50);
+var _productList = __webpack_require__(88);
 
 var _productList2 = _interopRequireDefault(_productList);
 
@@ -12231,15 +12254,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _src = __webpack_require__(54);
+var _src = __webpack_require__(53);
 
 var _src2 = _interopRequireDefault(_src);
 
 var _src3 = __webpack_require__(33);
-
-var _productList = __webpack_require__(50);
-
-var _productList2 = _interopRequireDefault(_productList);
 
 var _reactRouter = __webpack_require__(26);
 
@@ -12308,6 +12327,7 @@ var KindList = function (_React$Component) {
 			}).then(function (res) {
 				// console.log(res.data.brands)
 				// console.log(res.data.categories)
+				console.log(_this2.props.url);
 				var categoriesList = res.data.categories.map(function (val) {
 					// console.log(val.id)
 					return _react2.default.createElement(
@@ -12316,7 +12336,7 @@ var KindList = function (_React$Component) {
 						" ",
 						_react2.default.createElement(
 							_reactRouter.Link,
-							{ to: "productList/" + val.id },
+							{ to: "productList/" + val.id + "&" + val.name },
 							_react2.default.createElement(
 								"div",
 								{ className: "listImg" },
@@ -12330,13 +12350,17 @@ var KindList = function (_React$Component) {
 						)
 					);
 				});
+				// console.log(res.data.categories)
+				// console.log(res.data.brands)
 				var brandsList = res.data.brands.map(function (val) {
+					// console.log(val.name.split("/").join("%2F"))
+					var newvname = val.name.split("/").join("%2F"); //字符串处理
 					return _react2.default.createElement(
 						"li",
 						null,
 						_react2.default.createElement(
 							_reactRouter.Link,
-							{ to: "productList/" + val.id },
+							{ to: "productList/" + _this2.props.url + "&" + val.id + "&" + newvname },
 							_react2.default.createElement(
 								"div",
 								{ className: "listImg" },
@@ -12360,12 +12384,14 @@ var KindList = function (_React$Component) {
 				_src3.loading.hide();
 				// setInterval(function () {
 
-				//      },2000)
+				//      },2000)//定时器模拟loading
 			});
 		}
 	}]);
 	return KindList;
 }(_react2.default.Component);
+// import Productlist from "./productList.js"
+
 
 exports.default = KindList;
 
@@ -12381,7 +12407,7 @@ module.exports = __webpack_require__(122);
 /* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(60);
+module.exports = __webpack_require__(59);
 
 /***/ }),
 /* 114 */
@@ -12758,11 +12784,11 @@ module.exports = EventPluginRegistry;
 
 
 
-var EventPluginHub = __webpack_require__(56);
+var EventPluginHub = __webpack_require__(55);
 var EventPluginUtils = __webpack_require__(34);
 
-var accumulateInto = __webpack_require__(58);
-var forEachAccumulated = __webpack_require__(59);
+var accumulateInto = __webpack_require__(57);
+var forEachAccumulated = __webpack_require__(58);
 var warning = __webpack_require__(30);
 
 var getListener = EventPluginHub.getListener;
@@ -13020,7 +13046,7 @@ var _assign = __webpack_require__(168);
 
 var PooledClass = __webpack_require__(117);
 
-var emptyFunction = __webpack_require__(52);
+var emptyFunction = __webpack_require__(51);
 var warning = __webpack_require__(30);
 
 var didWarnForAddedNewProperty = false;
@@ -13426,7 +13452,7 @@ module.exports = getEventTarget;
 
 
 
-var shallowCompare = __webpack_require__(60);
+var shallowCompare = __webpack_require__(59);
 
 /**
  * If your React component's render function is "pure", e.g. it will render the
@@ -13725,7 +13751,7 @@ should be injected by the application.'
 
   alreadyInjected = true;
 
-  __webpack_require__(56).injection.injectEventPluginsByName({
+  __webpack_require__(55).injection.injectEventPluginsByName({
     'TapEventPlugin':       __webpack_require__(123)(shouldRejectClick)
   });
 };
@@ -13966,7 +13992,7 @@ module.exports = __webpack_require__(7).document && document.documentElement;
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.2.2 IsArray(argument)
-var cof = __webpack_require__(64);
+var cof = __webpack_require__(63);
 module.exports = Array.isArray || function isArray(arg){
   return cof(arg) == 'Array';
 };
@@ -14081,8 +14107,8 @@ var meta = module.exports = {
 var getKeys  = __webpack_require__(24)
   , gOPS     = __webpack_require__(40)
   , pIE      = __webpack_require__(27)
-  , toObject = __webpack_require__(74)
-  , IObject  = __webpack_require__(68)
+  , toObject = __webpack_require__(73)
+  , IObject  = __webpack_require__(67)
   , $assign  = Object.assign;
 
 // should work with symbols and should have deterministic property order (V8 bug)
@@ -14134,7 +14160,7 @@ module.exports = __webpack_require__(9) ? Object.defineProperties : function def
 
 // fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
 var toIObject = __webpack_require__(12)
-  , gOPN      = __webpack_require__(71).f
+  , gOPN      = __webpack_require__(70).f
   , toString  = {}.toString;
 
 var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames
@@ -14159,7 +14185,7 @@ module.exports.f = function getOwnPropertyNames(it){
 
 // 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
 var has         = __webpack_require__(10)
-  , toObject    = __webpack_require__(74)
+  , toObject    = __webpack_require__(73)
   , IE_PROTO    = __webpack_require__(42)('IE_PROTO')
   , ObjectProto = Object.prototype;
 
@@ -14187,7 +14213,7 @@ module.exports = {
   set: Object.setPrototypeOf || ('__proto__' in {} ? // eslint-disable-line
     function(test, buggy, set){
       try {
-        set = __webpack_require__(65)(Function.call, __webpack_require__(70).f(Object.prototype, '__proto__').set, 2);
+        set = __webpack_require__(64)(Function.call, __webpack_require__(69).f(Object.prototype, '__proto__').set, 2);
         set(test, []);
         buggy = !(test instanceof Array);
       } catch(e){ buggy = true; }
@@ -14261,7 +14287,7 @@ var addToUnscopables = __webpack_require__(140)
 // 22.1.3.13 Array.prototype.keys()
 // 22.1.3.29 Array.prototype.values()
 // 22.1.3.30 Array.prototype[@@iterator]()
-module.exports = __webpack_require__(69)(Array, 'Array', function(iterated, kind){
+module.exports = __webpack_require__(68)(Array, 'Array', function(iterated, kind){
   this._t = toIObject(iterated); // target
   this._i = 0;                   // next index
   this._k = kind;                // kind
@@ -14334,7 +14360,7 @@ $export($export.S, 'Object', {setPrototypeOf: __webpack_require__(153).set});
 var $at  = __webpack_require__(154)(true);
 
 // 21.1.3.27 String.prototype[@@iterator]()
-__webpack_require__(69)(String, 'String', function(iterated){
+__webpack_require__(68)(String, 'String', function(iterated){
   this._t = String(iterated); // target
   this._i = 0;                // next index
 // 21.1.5.2.1 %StringIteratorPrototype%.next()
@@ -14359,7 +14385,7 @@ var global         = __webpack_require__(7)
   , has            = __webpack_require__(10)
   , DESCRIPTORS    = __webpack_require__(9)
   , $export        = __webpack_require__(14)
-  , redefine       = __webpack_require__(73)
+  , redefine       = __webpack_require__(72)
   , META           = __webpack_require__(148).KEY
   , $fails         = __webpack_require__(22)
   , shared         = __webpack_require__(43)
@@ -14377,7 +14403,7 @@ var global         = __webpack_require__(7)
   , createDesc     = __webpack_require__(28)
   , _create        = __webpack_require__(39)
   , gOPNExt        = __webpack_require__(151)
-  , $GOPD          = __webpack_require__(70)
+  , $GOPD          = __webpack_require__(69)
   , $DP            = __webpack_require__(11)
   , $keys          = __webpack_require__(24)
   , gOPD           = $GOPD.f
@@ -14502,7 +14528,7 @@ if(!USE_NATIVE){
 
   $GOPD.f = $getOwnPropertyDescriptor;
   $DP.f   = $defineProperty;
-  __webpack_require__(71).f = gOPNExt.f = $getOwnPropertyNames;
+  __webpack_require__(70).f = gOPNExt.f = $getOwnPropertyNames;
   __webpack_require__(27).f  = $propertyIsEnumerable;
   __webpack_require__(40).f = $getOwnPropertySymbols;
 
@@ -14721,7 +14747,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getRawTag_js__ = __webpack_require__(172);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToString_js__ = __webpack_require__(173);
 
@@ -14785,7 +14811,7 @@ var getPrototype = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__overArg_js
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(74);
 
 
 /** Used for built-in method references. */
@@ -15017,7 +15043,7 @@ function isPlainObject(value) {
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_PropTypes__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_PropTypes__ = __webpack_require__(77);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_warning__ = __webpack_require__(48);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Provider; });
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -15094,7 +15120,7 @@ Provider.displayName = 'Provider';
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_connectAdvanced__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_connectAdvanced__ = __webpack_require__(75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_shallowEqual__ = __webpack_require__(186);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mapDispatchToProps__ = __webpack_require__(180);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mapStateToProps__ = __webpack_require__(181);
@@ -15210,9 +15236,9 @@ function createConnect() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(81);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_redux__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__wrapMapToProps__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__wrapMapToProps__ = __webpack_require__(76);
 /* unused harmony export whenMapDispatchToPropsIsFunction */
 /* unused harmony export whenMapDispatchToPropsIsMissing */
 /* unused harmony export whenMapDispatchToPropsIsObject */
@@ -15242,7 +15268,7 @@ function whenMapDispatchToPropsIsObject(mapDispatchToProps) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__wrapMapToProps__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__wrapMapToProps__ = __webpack_require__(76);
 /* unused harmony export whenMapStateToPropsIsFunction */
 /* unused harmony export whenMapStateToPropsIsMissing */
 
@@ -15264,7 +15290,7 @@ function whenMapStateToPropsIsMissing(mapStateToProps) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(79);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(78);
 /* unused harmony export defaultMergeProps */
 /* unused harmony export wrapMergePropsFunc */
 /* unused harmony export whenMergePropsIsFunction */
@@ -15626,7 +15652,7 @@ module.exports = { "default": __webpack_require__(138), __esModule: true };
 
 exports.__esModule = true;
 
-var _defineProperty = __webpack_require__(80);
+var _defineProperty = __webpack_require__(79);
 
 var _defineProperty2 = _interopRequireDefault(_defineProperty);
 

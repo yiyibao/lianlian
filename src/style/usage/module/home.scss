@@ -1,0 +1,78 @@
+@import '../fragment/yo-header';
+@import '../fragment/yo-search';
+/*
+*头部yo-header,yo-search,banner采用了yo框架的Carousel
+*
+*/
+@font-face {
+  font-family: yofont;
+  src:
+  url(/iconfont/head-iconfont.woff) format('woff'),
+  url(/iconfont/head-iconfont.ttf) format('truetype')
+}
+@include yo-header(
+    $name:a,
+    $height:.46rem,
+    $item-space:.25rem,
+    $item-ico-size:.22rem,
+    $bgcolor:#fafafa
+    ){
+    @include flexbox();
+    .yo-search{
+       background-color: #fafafa;width:60%;margin:0 auto;border-radius: .15rem;
+       width:70%;padding: 0;margin-top:.12rem;
+       .yo-ico{
+           color:red;
+       }
+       .action .input{
+        background-color: #f0f0f0;-webkit-border-radius: .15rem;height:.3rem;
+       }
+   }
+}
+
+   /*  */
+   
+
+
+/*.yo-header{
+    background-color: #fafafa;
+    
+
+}
+.yo-search > .action > .input{
+    
+}
+.yo-header::after{
+     border-color:#ebebeb;
+
+}
+.yo-header > .regret.yo-ico, .yo-header > .regret > .yo-ico, .yo-header > .affirm.yo-ico, .yo-header > .affirm > .yo-ico{
+    color:#cfcfcf;
+}*/
+.download{
+    height:.5rem;background-color: #262626;color:#fff;padding-left:.14rem;
+    line-height: .5rem;
+    .loadDele{
+        margin-right:.08rem ;color:#5c5c5c;
+    }
+    img{
+        width:.3rem;
+    }
+    .dwname{
+        font-size:.12rem;margin-left:.1rem;
+    }
+    .dwbutton{
+        width:.8rem;height:.25rem;background-color: #ff5554;
+        display: inline-block;text-align: center;margin-left:.25rem;
+        line-height:.25rem;color:#fff;font-size:.12rem;
+    }
+}
+.banner{
+    height:1.25rem;width: 100%;
+    .yo-carousel,ul.cont,li,img{
+        height:100%;
+    }
+    ul.cont{
+        @include flexbox()
+    }
+}
